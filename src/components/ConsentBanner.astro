@@ -1,0 +1,152 @@
+---
+import type { Lang } from '../lib/site';
+import { ADSENSE } from '../lib/adsense';
+
+const { lang } = Astro.props;
+const adsEnabled = ADSENSE.enabled;
+const clientId = ADSENSE.clientId;
+
+const T = lang === 'es'
+  ? {
+      title: 'Tu privacidad importa',
+      body:
+        'Usamos cookies para medir la audiencia y, con tu permiso, mostrar anuncios personalizados de Google. Tú decides cuáles aceptas.',
+      accept: 'Aceptar todas',
+      reject: 'Solo las esenciales',
+      more: 'Más información',
+      optsLabel: 'anuncios personalizados',
+    }
+  : {
+      title: 'Your privacy matters',
+      body:
+        'We use cookies to measure audience and, with your consent, show personalized Google ads. You decide which to accept.',
+      accept: 'Accept all',
+      reject: 'Essential only',
+      more: 'Learn more',
+      optsLabel: 'personalized ads',
+    };
+---
+
+<div
+  id="consent-banner"
+  role="dialog"
+  aria-live="polite"
+  aria-label={T.title}
+  class="fixed inset-x-4 bottom-20 z-50 md:bottom-4 md:inset-x-auto md:right-4 md:max-w-md"
+  hidden
+>
+  <div class="rounded-3xl border border-neutral-800 bg-neutral-900/95 p-6 shadow-2xl shadow-black/50 backdrop-blur-xl">
+    <div class="flex items-start gap-3">
+      <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-brand-pink to-brand-purple text-base">
+        🍪
+      </span>
+      <div>
+        <h2 class="text-base font-black text-white">{T.title}</h2>
+        <p class="mt-1.5 text-sm leading-relaxed text-neutral-400">{T.body}</p>
+      </div>
+    </div>
+
+    <div class="mt-5 grid gap-2 sm:grid-cols-2">
+      <button
+        id="consent-accept"
+        type="button"
+        class="rounded-full bg-gradient-to-r from-brand-pink to-brand-purple px-4 py-2.5 text-sm font-bold text-white shadow-lg shadow-brand-pink/20 transition-transform hover:scale-[1.02]"
+      >
+        {T.accept}
+      </button>
+      <button
+        id="consent-reject"
+        type="button"
+        class="rounded-full border border-neutral-700 px-4 py-2.5 text-sm font-semibold text-neutral-300 transition-colors hover:border-neutral-500 hover:text-white"
+      >
+        {T.reject}
+      </button>
+    </div>
+
+    <a
+      href={lang === 'es' ? '/privacidad/#cookies' : '/en/privacidad/#cookies'}
+      class="mt-3 inline-block text-xs font-medium text-brand-cyan hover:underline"
+      id="consent-more"
+    >
+      {T.more} →
+    </a>
+  </div>
+</div>
+
+<script define:vars={{ lang, adsEnabled, clientId }}>
+  (() => {
+    /* ---------- Consent Mode v2: default = denied, siempre antes de cargar tags de Google ---------- */
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { window.dataLayer.push(arguments); }
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      wait_for_update: 500,
+    });
+
+    const KEY = 'yuuvi_consent';
+    const STORAGE = window.localStorage;
+    const stored = (() => {
+      try { return STORAGE.getItem(KEY); } catch (e) { return null; }
+    })();
+
+    function applyPremiumAd(consent) {
+      gtag('consent', 'update', {
+        ad_storage: consent.personalization ? 'granted' : 'denied',
+        ad_user_data: consent.marketing ? 'granted' : 'denied',
+        ad_personalization: consent.personalization ? 'granted' : 'denied',
+        analytics_storage: consent.analytics ? 'granted' : 'denied',
+      });
+    }
+
+    function loadAds() {
+      if (window.yuuviAdsLoaded || !adsEnabled) return;
+      window.yuuviAdsLoaded = true;
+      const s = document.createElement('script');
+      s.async = true;
+      s.crossOrigin = 'anonymous';
+      s.src = `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${clientId}`;
+      document.head.appendChild(s);
+      document.dispatchEvent(new CustomEvent('yuuvi:ads-ready'));
+    }
+
+    function saveAndHide(consent) {
+      try { STORAGE.setItem(KEY, JSON.stringify(consent)); } catch (e) {}
+      const banner = document.getElementById('consent-banner');
+      if (banner) banner.hidden = true;
+      applyPremiumAd(consent);
+      if (consent.marketing) loadAds();
+    }
+
+    const banner = document.getElementById('consent-banner');
+    if (!stored && banner) {
+      banner.hidden = false;
+    } else if (stored) {
+      try {
+        applyPremiumAd(JSON.parse(stored));
+        const parsed = JSON.parse(stored);
+        if (parsed.marketing) loadAds();
+      } catch (e) {}
+    }
+
+    document.getElementById('consent-accept')?.addEventListener('click', () => {
+      saveAndHide({
+        essential: true,
+        analytics: true,
+        marketing: true,
+        personalization: true,
+      });
+    });
+
+    document.getElementById('consent-reject')?.addEventListener('click', () => {
+      saveAndHide({
+        essential: true,
+        analytics: false,
+        marketing: false,
+        personalization: false,
+      });
+    });
+  })();
+</script>

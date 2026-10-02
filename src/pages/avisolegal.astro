@@ -1,0 +1,55 @@
+---
+import Layout from '@layouts/Layout.astro';
+import { legalAlternates } from '@lib/site';
+---
+
+<Layout
+  title="Aviso Legal | Yuuvi"
+  description="Aviso legal, identificación del responsable y condiciones de uso del sitio web Yuuvi."
+  lang="es"
+  alternates={legalAlternates('legalNotice')}
+>
+
+  <article class="prose prose-invert prose-lg mx-auto max-w-3xl px-4 py-10 sm:px-6 prose-headings:font-black prose-headings:text-white prose-a:text-brand-pink [&_p]:text-neutral-300">
+    <h1>Aviso Legal</h1>
+    <p>Última actualización: {new Date().toLocaleDateString('es-ES')}</p>
+
+    <h2>1. Datos identificativos</h2>
+    <p>
+      En cumplimiento del artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad
+      de la Información y de Comercio Electrónico (LSSI-CE), se informa de los datos identificativos
+      del titular del sitio web <strong>https://yuuvi.com</strong>:
+    </p>
+    <ul>
+      <li><strong>Denominación:</strong> Yuuvi</li>
+      <li><strong>Contacto:</strong> hola@yuuvi.com</li>
+    </ul>
+    <p>Nota: completa estos datos con los reales (nombre, NIF/CIF y teléfono si procede) antes del lanzamiento.</p>
+
+    <h2>2. Objeto</h2>
+    <p>El sitio web Yuuvi es una revista digital de tendencias juveniles con carácter informativo y de entretenimiento.</p>
+
+    <h2>3. Propiedad intelectual e industrial</h2>
+    <p>
+      Todo el contenido editorial (textos, imágenes, diseño y código) es titularidad de Yuuvi o de sus
+      correspondientes autores. Queda prohibida su reproducción total o parcial sin autorización expresa.
+      Las marcas de terceros que puedan citarse pertenecen a sus legítimos titulares.
+    </p>
+
+    <h2>4. Responsabilidad</h2>
+    <p>
+      Yuuvi no se hace responsable del contenido de los anuncios mostrados mediante Google AdSense ni de
+      los sitios externos enlazados. El contenido se ofrece «tal cual» y con fines informativos.
+    </p>
+
+    <h2>5. Legislación aplicable y jurisdicción</h2>
+    <p>
+      Las presentes condiciones se rigen por la legislación española. Para cualquier controversia, las
+      partes se someterán a los juzgados y tribunales de la ciudad del domicilio del titular, salvo que la
+      ley disponga otra cosa.
+    </p>
+
+    <h2>6. Contacto</h2>
+    <p>Para cualquier consulta: hola@yuuvi.com.</p>
+  </article>
+</Layout>

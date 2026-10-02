@@ -1,0 +1,84 @@
+---
+import Layout from '@layouts/Layout.astro';
+import { legalAlternates } from '@lib/site';
+---
+
+<Layout
+  title="Política de Privacidad | Yuuvi"
+  description="Política de privacidad y cookies de Yuuvi, cumpliendo con el RGPD europeo."
+  lang="es"
+  alternates={legalAlternates('privacy')}
+>
+
+  <article class="prose prose-invert prose-lg mx-auto max-w-3xl px-4 py-10 sm:px-6 prose-headings:font-black prose-headings:text-white prose-a:text-brand-pink [&_p]:text-neutral-300">
+    <h1>Política de Privacidad</h1>
+    <p>Última actualización: {new Date().toLocaleDateString('es-ES')}</p>
+
+    <h2>1. ¿Quién es el responsable?</h2>
+    <p>
+      Yuuvi (<strong>https://yuuvi.com</strong>) es una revista digital de tendencias juveniles
+      dirigida al público general (mayor de 16 años). Contacto: hola@yuuvi.com
+    </p>
+
+    <h2>2. ¿Qué datos recogemos?</h2>
+    <p>Esta web es de contenido editorial y no requiere registro. Sin embargo, usamos herramientas de terceros que pueden recoger datos de navegación:</p>
+    <ul>
+      <li><strong>Publicidad (Google AdSense):</strong> Google puede usar cookies para mostrar anuncios personalizados y medir su rendimiento.</li>
+      <li><strong>Analítica (Google Analytics):</strong> datos agregados de visitas, páginas vistas, dispositivo y origen.</li>
+    </ul>
+    <p>Todos los tratamientos de datos de ámbito europeo se rigen por el <strong>Reglamento (UE) 2016/679 (RGPD)</strong>.</p>
+
+    <h2 id="cookies">3. Cookies</h2>
+    <p>Este sitio utiliza cookies propias y de terceros. Las cookies son pequeños archivos que se almacenan en tu dispositivo para recordar información. Las clasificamos así:</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Tipo</th>
+          <th>Finalidad</th>
+          <th>Base</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Esenciales</td>
+          <td>Funcionamiento básico del sitio y preferencias de consentimiento.</td>
+          <td>Necesarias. No requieren consentimiento.</td>
+        </tr>
+        <tr>
+          <td>Analítica</td>
+          <td>Medición de audiencia (Google Analytics).</td>
+          <td>Consentimiento (opt-in).</td>
+        </tr>
+        <tr>
+          <td>Publicitarias</td>
+          <td>Mostrar anuncios de AdSense, incluidos personalizados y control de frecuencia.</td>
+          <td>Consentimiento (opt-in). Sin consentimiento solo se muestran anuncios no personalizados.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Puedes aceptar, rechazar o cambiar tu decisión en cualquier momento desde el banner de consentimiento (botón de cookies). La negativa a las cookies publicitarias no bloquea el acceso al contenido.</p>
+
+    <h2>4. Publicidad y Google AdSense</h2>
+    <p>Utilizamos <strong>Google AdSense</strong> para monetizar el contenido. Google, como proveedor externo, utiliza cookies y podrá usar los datos de navegación para mostrar anuncios personalizados <em>si has dado tu consentimiento</em>. Sin él, solo verás anuncios no personalizados.</p>
+    <p>Puedes consultar cómo Google utiliza los datos en: <a href="https://policies.google.com/technologies/partner-sites">https://policies.google.com/technologies/partner-sites</a> y gestionar la publicidad de Google en <a href="https://adssettings.google.com">https://adssettings.google.com</a>.</p>
+
+    <h2>5. Base legal</h2>
+    <p>Legal bases conforme al RGPD:</p>
+    <ul>
+      <li><strong>Consentimiento</strong> (art. 6.1.a): cookies de analítica y publicidad.</li>
+      <li><strong>Interés legítimo</strong> (art. 6.1.f): cookies estrictamente técnicas.</li>
+    </ul>
+    <p>El consentimiento se gestiona mediante un banner y puede retirarse en cualquier momento.</p>
+
+    <h2>6. Derechos</h2>
+    <p>Puedes ejercer tus derechos de <strong>acceso, rectificación, supresión, oposición, limitación y portabilidad</strong> escribiendo a hola@yuuvi.com. También puedes reclamar ante la Agencia Española de Protección de Datos (AEPD).</p>
+
+    <h2>7. Menores</h2>
+    <p>Este sitio no recoge deliberadamente datos de menores de 16 años. Si eres menor de 16, no facilites datos personales.</p>
+
+    <h2>8. Contacto</h2>
+    <p>Para cualquier duda sobre privacidad: hola@yuuvi.com.</p>
+  </article>
+</Layout>

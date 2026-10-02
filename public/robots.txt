@@ -1,0 +1,6 @@
+# Yuuvi - robots.txt
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://yuuvi.com/sitemap-index.xml

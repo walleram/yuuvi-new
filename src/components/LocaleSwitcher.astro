@@ -1,0 +1,143 @@
+---
+import { getCollection } from 'astro:content';
+import { LEGAL_ROUTES, type Lang } from '../lib/site';
+import {
+  articleSlug,
+  authorSlug,
+  categoryHref,
+  collectAuthors,
+  collectTags,
+} from '../lib/articles';
+
+interface Props {
+  lang: Lang;
+  currentPath: string;
+}
+
+const { lang, currentPath } = Astro.props;
+
+const published = await getCollection('articles', ({ data }) => data.published);
+const translationIndex = new Map<string, string>();
+for (const a of published) {
+  translationIndex.set(`${a.data.lang}:${a.data.translationKey ?? articleSlug(a)}`, articleSlug(a));
+}
+
+// Rutas que existen en cada idioma, derivadas del contenido real.
+const esPaths = new Set<string>(['/']);
+const enPaths = new Set<string>(['/en/']);
+
+for (const a of published) {
+  const slug = articleSlug(a);
+  if (a.data.lang === 'es') esPaths.add(`/${slug}/`);
+  else enPaths.add(`/en/${slug}/`);
+}
+for (const category of new Set(published.map((a) => a.data.category))) {
+  esPaths.add(categoryHref(category, 'es'));
+  enPaths.add(categoryHref(category, 'en'));
+}
+for (const entry of collectTags(published.filter((a) => a.data.lang === 'es'))) {
+  esPaths.add(`/tag/${entry.slug}/`);
+}
+for (const entry of collectTags(published.filter((a) => a.data.lang === 'en'))) {
+  enPaths.add(`/en/tag/${entry.slug}/`);
+}
+for (const name of collectAuthors(published.filter((a) => a.data.lang === 'es')).keys()) {
+  esPaths.add(`/autor/${authorSlug(name)}/`);
+}
+for (const name of collectAuthors(published.filter((a) => a.data.lang === 'en')).keys()) {
+  enPaths.add(`/en/autor/${authorSlug(name)}/`);
+}
+// Legales: cada idioma tiene su propia ruta, así que no se derivan por prefijo.
+const ES_TO_EN_LEGAL = new Map<string, string>(
+  (Object.keys(LEGAL_ROUTES) as (keyof typeof LEGAL_ROUTES)[]).map((k) => [
+    LEGAL_ROUTES[k].es,
+    LEGAL_ROUTES[k].en,
+  ]),
+);
+const EN_TO_ES_LEGAL = new Map<string, string>([...ES_TO_EN_LEGAL].map(([es, en]) => [en, es]));
+
+for (const es of ES_TO_EN_LEGAL.keys()) esPaths.add(es);
+for (const en of EN_TO_ES_LEGAL.keys()) enPaths.add(en);
+
+function buildHref(targetLang: Lang): string | null {
+  const path = currentPath.split('?')[0] ?? '/';
+  const known = targetLang === 'es' ? esPaths : enPaths;
+  if (known.has(path)) return path;
+
+  const currentLang: Lang = path.startsWith('/en/') ? 'en' : 'es';
+  const otherLang: Lang = currentLang === 'es' ? 'en' : 'es';
+  if (targetLang !== otherLang) return null;
+
+  // Las legales no comparten nombre de ruta entre idiomas: /privacidad/ es
+  // /en/privacy/. Sin este mapa, el intercambio por prefijo daría un 404.
+  const legal = currentLang === 'es' ? ES_TO_EN_LEGAL.get(path) : EN_TO_ES_LEGAL.get(path);
+  if (legal && known.has(legal)) return legal;
+
+  // Listados, tags, autores y portada: la página equivalente es la misma
+  // con el prefijo /en/ puesto o quitado.
+  const swapped =
+    otherLang === 'en'
+      ? path === '/'
+        ? '/en/'
+        : '/en' + path
+      : path === '/en/'
+        ? '/'
+        : path.replace(/^\/en/, '');
+  if (known.has(swapped)) return swapped;
+
+  // Artículos: los slugs difieren entre idiomas, se emparejan por translationKey.
+  const slug = path.replace(/^\/en\//, '/').replace(/^\/(es|en)\//, '/');
+  for (const a of published) {
+    if (a.data.lang !== currentLang) continue;
+    if (articleSlug(a) !== slug.replace(/^\//, '').replace(/\/$/, '')) continue;
+    const key = a.data.translationKey ?? articleSlug(a);
+    const translated = translationIndex.get(`${otherLang}:${key}`);
+    if (!translated) return null;
+    return otherLang === 'es' ? `/${translated}/` : `/en/${translated}/`;
+  }
+
+  return null;
+}
+
+const esHref = buildHref('es');
+const enHref = buildHref('en');
+---
+
+{
+  (esHref || enHref) && (
+    <div class="relative">
+      <div class="flex items-center gap-1 rounded-full border border-neutral-700 p-1 text-sm font-semibold">
+        {
+          esHref && (
+            <a
+              href={esHref}
+              class:list={[
+                'rounded-full px-3 py-1 transition-colors',
+                lang === 'es' ? 'bg-brand-pink text-white' : 'text-neutral-400 hover:text-white',
+              ]}
+              aria-current={lang === 'es' ? 'page' : undefined}
+              hreflang="es"
+            >
+              ES
+            </a>
+          )
+        }
+        {
+          enHref && (
+            <a
+              href={enHref}
+              class:list={[
+                'rounded-full px-3 py-1 transition-colors',
+                lang === 'en' ? 'bg-brand-pink text-white' : 'text-neutral-400 hover:text-white',
+              ]}
+              aria-current={lang === 'en' ? 'page' : undefined}
+              hreflang="en"
+            >
+              EN
+            </a>
+          )
+        }
+      </div>
+    </div>
+  )
+}

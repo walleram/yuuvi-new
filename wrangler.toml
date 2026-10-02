@@ -1,0 +1,18 @@
+name = "yuuvi-new"
+compatibility_date = "2026-09-29"
+pages_build_output_dir = "dist"
+
+# Cloudflare Pages (plan Free):
+#   - 500 builds/mes
+#   - ancho de banda ilimitado
+#   - 20.000 ficheros por despliegue
+#
+# Deploy manual:  npm run deploy:prod
+# Deploy en CI:    ver .github/workflows/deploy.yml
+#
+# Autenticación local (una vez):
+#   npx wrangler login
+#
+# Secrets en CI (una vez, en GitHub > Settings > Secrets and variables > Actions):
+#   CLOUDFLARE_ACCOUNT_ID
+#   CLOUDFLARE_API_TOKEN   (permisos: Account > Cloudflare Pages > Edit)

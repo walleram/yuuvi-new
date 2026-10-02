@@ -1,0 +1,77 @@
+---
+import '../styles/global.css';
+import { ADSENSE, adsenseScriptSrc } from '../lib/adsense';
+import SeoHead from '@components/SeoHead.astro';
+import Header from '@components/Header.astro';
+import Footer from '@components/Footer.astro';
+import BottomNav from '@components/BottomNav.astro';
+import ConsentBanner from '@components/ConsentBanner.astro';
+import type { Lang } from '../lib/site';
+
+interface Props {
+  title: string;
+  description: string;
+  lang: Lang;
+  canonicalURL?: string;
+  ogImage?: string;
+  noindex?: boolean;
+  type?: string;
+  jsonLd?: object | object[];
+  article?: {
+    publishedTime: string;
+    modifiedTime?: string;
+    section?: string;
+    tags?: string[];
+    authors?: string[];
+  };
+  alternates?: { hreflang: string; href: string }[];
+  rssHref?: string;
+}
+
+const { title, description, lang, canonicalURL, ogImage, noindex, type, jsonLd, article, alternates, rssHref } =
+  Astro.props;
+
+const defaultCanonical = new URL(Astro.url.pathname, Astro.site).toString();
+---
+
+<!doctype html>
+<html lang={lang} class="dark">
+  <head>
+    <SeoHead
+      title={title}
+      description={description}
+      lang={lang}
+      canonicalURL={canonicalURL ?? defaultCanonical}
+      ogImage={ogImage}
+      noindex={noindex}
+      type={type}
+      jsonLd={jsonLd}
+      article={article}
+      alternates={alternates}
+      rssHref={rssHref}
+    />
+    <script async src={adsenseScriptSrc()} crossorigin="anonymous"></script>
+    <meta name="theme-color" content="#0b0b12" />
+    <!-- Preconnect para rendimiento -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-ink text-neutral-100">
+    <ConsentBanner lang={lang} />
+    <Header lang={lang} currentPath={Astro.url.pathname} />
+  <main class="relative isolate pb-20 md:pb-0">
+    {/* Halos de fondo: dan profundidad al negro puro sin cargar ninguna imagen */}
+    <div class="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[520px] overflow-hidden" aria-hidden="true">
+      <div class="absolute -left-24 -top-32 h-[420px] w-[420px] rounded-full bg-brand-pink/20 blur-3xl"></div>
+      <div class="absolute -right-20 -top-24 h-[380px] w-[380px] rounded-full bg-brand-cyan/15 blur-3xl"></div>
+    </div>
+    <slot />
+  </main>
+    <Footer lang={lang} />
+    <BottomNav lang={lang} currentPath={Astro.url.pathname} />
+  </body>
+</html>

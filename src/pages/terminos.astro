@@ -1,0 +1,35 @@
+---
+import Layout from '@layouts/Layout.astro';
+import { legalAlternates } from '@lib/site';
+---
+
+<Layout
+  title="Términos de Uso | Yuuvi"
+  description="Términos y condiciones de uso de Yuuvi."
+  lang="es"
+  alternates={legalAlternates('terms')}
+>
+
+  <article class="prose prose-invert prose-lg mx-auto max-w-3xl px-4 py-10 sm:px-6 prose-headings:font-black prose-headings:text-white prose-a:text-brand-pink [&_p]:text-neutral-300">
+    <h1>Términos de Uso</h1>
+    <p>Última actualización: {new Date().toLocaleDateString('es-ES')}</p>
+
+    <h2>1. Aceptación de los términos</h2>
+    <p>Al acceder y utilizar la web de Yuuvi aceptas estos términos de uso. Si no estás de acuerdo, por favor no utilices el sitio.</p>
+
+    <h2>2. Uso del contenido</h2>
+    <p>Todo el contenido editorial de Yuuvi es original y está protegido por derechos de autor. No está permitida la reproducción total o parcial sin autorización previa.</p>
+
+    <h2>3. Publicidad</h2>
+    <p>El sitio muestra publicidad de terceros (Google AdSense). No somos responsables del contenido de los anuncios ni de las páginas a las que enlazan.</p>
+
+    <h2>4. Exención de responsabilidad</h2>
+    <p>El contenido se ofrece con fines informativos y de entretenimiento. Yuuvi no se hace responsable de las decisiones tomadas a partir de la información publicada.</p>
+
+    <h2>5. Modificaciones</h2>
+    <p>Podemos actualizar estos términos en cualquier momento. Los cambios serán publicados en esta página.</p>
+
+    <h2>6. Contacto</h2>
+    <p>Para consultas sobre estos términos: hola@yuuvi.com.</p>
+  </article>
+</Layout>

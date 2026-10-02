@@ -1,0 +1,86 @@
+---
+import { SITE, UI_TEXT, CATEGORIES, LEGAL_ROUTES, type Lang } from '../lib/site';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = UI_TEXT[lang];
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-neutral-800/60 bg-ink pb-24 md:pb-0">
+  <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6">
+    <div class="grid grid-cols-1 gap-10 sm:grid-cols-3">
+      {/* Marca */}
+      <div>
+        <a href={lang === 'es' ? '/' : '/en/'} class="flex items-center gap-2">
+          <span class="flex h-8 w-8 items-center justify-center rounded-xl bg-gradient-to-br from-brand-pink to-brand-purple text-base font-black text-white">
+            Y
+          </span>
+          <span class="text-xl font-black tracking-tight text-white">
+            yuuvi<span class="text-brand-pink">.</span>
+          </span>
+        </a>
+        <p class="mt-4 max-w-xs text-sm text-neutral-400">
+          {lang === 'es'
+            ? SITE.tagline + ' para la generación que define el futuro.'
+            : "Your trends magazine for the generation defining tomorrow."}
+        </p>
+      </div>
+
+      {/* Categorías */}
+      <div>
+        <h3 class="mb-4 text-sm font-bold uppercase tracking-wider text-neutral-400">
+          {t.footer.categories}
+        </h3>
+        <ul class="space-y-2">
+          {Object.entries(CATEGORIES).map(([slug, meta]) => (
+            <li>
+              <a
+                href={`/${lang === 'es' ? '' : 'en/'}categoria/${slug}/`}
+                class="text-neutral-400 transition-colors hover:text-brand-pink"
+              >
+                {meta.label[lang]}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* Legal */}
+      <div>
+        <h3 class="mb-4 text-sm font-bold uppercase tracking-wider text-neutral-400">
+          {t.footer.legal}
+        </h3>
+        <ul class="space-y-2">
+          <li>
+            <a href={LEGAL_ROUTES.privacy[lang]} class="text-neutral-400 transition-colors hover:text-brand-pink">
+              {t.footer.privacy}
+            </a>
+          </li>
+          <li>
+            <a href={LEGAL_ROUTES.terms[lang]} class="text-neutral-400 transition-colors hover:text-brand-pink">
+              {t.footer.terms}
+            </a>
+          </li>
+          <li>
+            <a href={LEGAL_ROUTES.legalNotice[lang]} class="text-neutral-400 transition-colors hover:text-brand-pink">
+              {t.footer.legalNotice}
+            </a>
+          </li>
+          <li>
+            <a href={LEGAL_ROUTES.cookies[lang]} class="text-neutral-400 transition-colors hover:text-brand-pink">
+              {t.footer.cookies}
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-12 border-t border-neutral-800/60 pt-6 text-center text-xs text-neutral-400">
+      © {year} {t.footer.rights}
+    </div>
+  </div>
+</footer>

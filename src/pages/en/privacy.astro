@@ -1,0 +1,84 @@
+---
+import Layout from '@layouts/Layout.astro';
+import { legalAlternates } from '@lib/site';
+---
+
+<Layout
+  title="Privacy Policy | Yuuvi"
+  description="Yuuvi privacy and cookie policy, in compliance with EU GDPR."
+  lang="en"
+  alternates={legalAlternates('privacy')}
+>
+
+  <article class="prose prose-invert prose-lg mx-auto max-w-3xl px-4 py-10 sm:px-6 prose-headings:font-black prose-headings:text-white prose-a:text-brand-pink [&_p]:text-neutral-300">
+    <h1>Privacy Policy</h1>
+    <p>Last updated: {new Date().toLocaleDateString('en-GB')}</p>
+
+    <h2>1. Who is responsible?</h2>
+    <p>
+      Yuuvi (<strong>https://yuuvi.com</strong>) is a digital magazine covering trends for a general
+      audience (16 and over). Contact: hola@yuuvi.com
+    </p>
+
+    <h2>2. What data do we collect?</h2>
+    <p>This site publishes editorial content and requires no account. However, we use third-party tools that may collect browsing data:</p>
+    <ul>
+      <li><strong>Advertising (Google AdSense):</strong> Google may use cookies to serve personalised ads and measure their performance.</li>
+      <li><strong>Analytics (Google Analytics):</strong> aggregated data on visits, page views, device and referrer.</li>
+    </ul>
+    <p>All data processing within the European Union is governed by <strong>Regulation (EU) 2016/679 (GDPR)</strong>.</p>
+
+    <h2 id="cookies">3. Cookies</h2>
+    <p>This site uses its own and third-party cookies. Cookies are small files stored on your device to remember information. We classify them as follows:</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Purpose</th>
+          <th>Basis</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Essential</td>
+          <td>Basic site operation and consent preferences.</td>
+          <td>Necessary. No consent required.</td>
+        </tr>
+        <tr>
+          <td>Analytics</td>
+          <td>Audience measurement (Google Analytics).</td>
+          <td>Consent (opt-in).</td>
+        </tr>
+        <tr>
+          <td>Advertising</td>
+          <td>Serving AdSense ads, including personalised ones and frequency capping.</td>
+          <td>Consent (opt-in). Without consent only non-personalised ads are shown.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>You can accept, reject or change your decision at any time from the consent banner (cookies button). Refusing advertising cookies does not block access to the content.</p>
+
+    <h2>4. Advertising and Google AdSense</h2>
+    <p>We use <strong>Google AdSense</strong> to monetise the content. As an external provider, Google uses cookies and may use browsing data to serve personalised ads <em>if you have given consent</em>. Without it, you will only see non-personalised ads.</p>
+    <p>You can read how Google uses data at <a href="https://policies.google.com/technologies/partner-sites">https://policies.google.com/technologies/partner-sites</a> and manage your Google ad settings at <a href="https://adssettings.google.com">https://adssettings.google.com</a>.</p>
+
+    <h2>5. Legal basis</h2>
+    <p>Legal bases under the GDPR:</p>
+    <ul>
+      <li><strong>Consent</strong> (art. 6.1.a): analytics and advertising cookies.</li>
+      <li><strong>Legitimate interest</strong> (art. 6.1.f): strictly technical cookies.</li>
+    </ul>
+    <p>Consent is managed through a banner and can be withdrawn at any time.</p>
+
+    <h2>6. Your rights</h2>
+    <p>You can exercise your rights of <strong>access, rectification, erasure, objection, restriction and portability</strong> by writing to hola@yuuvi.com. You may also lodge a complaint with your local data protection authority.</p>
+
+    <h2>7. Minors</h2>
+    <p>This site does not knowingly collect data from anyone under 16. If you are under 16, please do not submit personal data.</p>
+
+    <h2>8. Contact</h2>
+    <p>For any privacy questions: hola@yuuvi.com.</p>
+  </article>
+</Layout>

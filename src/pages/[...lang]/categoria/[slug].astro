@@ -1,0 +1,94 @@
+---
+import Layout from '@layouts/Layout.astro';
+import ArticleCard from '@components/ArticleCard.astro';
+import AdSlot from '@components/AdSlot.astro';
+import { getCollection } from 'astro:content';
+import { CATEGORIES, type Lang } from '../../../lib/site';
+
+export function getStaticPaths() {
+  const categorySlugs = Object.keys(CATEGORIES);
+  const paths = [];
+  for (const slug of categorySlugs) {
+    // Español: sin prefijo /categoria/[slug]/
+    paths.push({ params: { lang: undefined, slug }, props: { lang: 'es' } });
+    // Inglés: /en/categoria/[slug]/
+    paths.push({ params: { lang: 'en', slug }, props: { lang: 'en' } });
+  }
+  return paths;
+}
+
+const rawLang = Astro.params.lang as string | undefined;
+const lang: Lang = rawLang === 'en' ? 'en' : 'es';
+const slug = Astro.params.slug as string;
+
+const categoryMeta = CATEGORIES[slug];
+
+const articles = (await getCollection('articles', ({ data }) =>
+  data.published && data.lang === lang && data.category === slug
+))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const colorBySlug: Record<string, string> = {
+  cultura: 'from-brand-cyan to-blue-500',
+  estetica: 'from-brand-pink to-red-500',
+  gaming: 'from-brand-purple to-indigo-500',
+  tecnologia: 'from-brand-lime to-green-500',
+  musica: 'from-brand-yellow to-amber-500',
+};
+
+const iconBySlug: Record<string, string> = {
+  cultura: '💬',
+  estetica: '✨',
+  gaming: '🎮',
+  tecnologia: '🤖',
+  musica: '🎧',
+};
+---
+
+<Layout
+  title={`${categoryMeta.label[lang]} | Yuuvi`}
+  description={`${categoryMeta.label[lang]} en Yuuvi: las últimas tendencias y noticias para jóvenes.`}
+  lang={lang}
+>
+  <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6">
+    <div class="mb-8 flex items-center gap-4">
+      <span
+        class:list={[
+          'flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br text-2xl font-black text-white shadow-lg',
+          colorBySlug[slug] ?? 'from-brand-pink to-brand-purple',
+        ]}
+      >
+        {iconBySlug[slug] ?? '✨'}
+      </span>
+      <div>
+        <h1 class="text-3xl font-black tracking-tight text-white">{categoryMeta.label[lang]}</h1>
+        <p class="mt-1 text-sm text-neutral-400">
+          {articles.length} {lang === 'es' ? 'artículos' : 'articles'}
+        </p>
+      </div>
+    </div>
+
+    {articles.length > 0 ? (
+      <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        {articles.map((article, index) => (
+          <>
+            {index === 1 && (
+              <div class="flex items-stretch" aria-label="Publicidad">
+                <AdSlot className="w-full" minHeight="200px" />
+              </div>
+            )}
+            <ArticleCard article={article} lang={lang} />
+          </>
+        ))}
+      </div>
+    ) : (
+      <div class="rounded-3xl border border-dashed border-neutral-700 p-16 text-center">
+        <p class="text-neutral-400">
+          {lang === 'es'
+            ? 'Próximamente: estamos preparando contenido de esta categoría.'
+            : 'Coming soon: we are preparing content for this category.'}
+        </p>
+      </div>
+    )}
+  </div>
+</Layout>

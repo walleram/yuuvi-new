@@ -1,0 +1,30 @@
+---
+import Layout from '@layouts/Layout.astro';
+
+const lang = 'es';
+---
+
+<Layout
+  title="Página no encontrada | Yuuvi"
+  description="La página que buscas no existe o fue movida."
+  lang={lang}
+  noindex
+>
+  <div class="mx-auto flex max-w-3xl flex-col items-center px-4 py-24 text-center sm:px-6">
+    <div class="animate-float text-7xl">📱</div>
+    <h1 class="mt-8 text-6xl font-black text-white">
+      4<span class="text-brand-pink">0</span>4
+    </h1>
+    <p class="mt-4 text-lg text-neutral-400">
+      {lang === 'es'
+        ? 'Ups, esta página se ha viralizado demasiado y desapareció.'
+        : 'Oops, this page went too viral and vanished.'}
+    </p>
+    <a
+      href="/"
+      class="mt-8 rounded-full bg-gradient-to-r from-brand-pink to-brand-purple px-8 py-3 font-bold text-white shadow-lg shadow-brand-pink/30 transition-transform hover:scale-105"
+    >
+      {lang === 'es' ? 'Volver al inicio' : 'Back to home'}
+    </a>
+  </div>
+</Layout>

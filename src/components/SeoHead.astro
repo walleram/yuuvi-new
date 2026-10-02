@@ -1,0 +1,113 @@
+---
+interface ArticleMeta {
+  publishedTime: string;
+  modifiedTime?: string;
+  section?: string;
+  tags?: string[];
+  authors?: string[];
+}
+
+interface Hreflang {
+  hreflang: string;
+  href: string;
+}
+
+interface Props {
+  title: string;
+  description: string;
+  lang: 'es' | 'en';
+  canonicalURL?: string;
+  ogImage?: string;
+  type?: string;
+  noindex?: boolean;
+   jsonLd?: object | object[];
+  article?: ArticleMeta;
+  /** Traducciones reales verificadas por la página. Nunca inventar URLs aquí. */
+  alternates?: Hreflang[];
+  /** Ruta del feed RSS, relativo a la raíz del sitio. */
+  rssHref?: string;
+}
+
+const {
+  title,
+  description,
+  lang = 'es',
+  canonicalURL,
+  ogImage,
+  type = 'website',
+  noindex = false,
+  jsonLd,
+  article,
+  alternates = [],
+  rssHref,
+} = Astro.props;
+
+const siteName = 'Yuuvi';
+const defaultOgImage = '/og-default.png';
+const finalOgImage = ogImage ?? defaultOgImage;
+const ogUrl = new URL(finalOgImage, Astro.site).toString();
+const localeAlt = lang === 'es' ? 'en_US' : 'es_ES';
+
+// Solo se emiten los hreflang que la página confirma que existen.
+// El hreflang que apunta a la propia URL es legítimo y se conserva.
+const seen = new Set<string>();
+const hreflangLinks = alternates.filter((a) => {
+  if (!a.hreflang || !a.href) return false;
+  if (seen.has(a.hreflang)) return false;
+  seen.add(a.hreflang);
+  return true;
+});
+const xDefault = hreflangLinks.find((a) => a.hreflang === 'x-default');
+const otherLangs = hreflangLinks.filter((a) => a.hreflang !== 'x-default');
+---
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="generator" content={Astro.generator} />
+
+<title>{title}</title>
+<meta name="description" content={description} />
+
+<link rel="canonical" href={canonicalURL} />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+<meta name="robots" content={noindex ? 'noindex, nofollow' : 'index, follow'} />
+
+{/* Open Graph */}
+<meta property="og:type" content={type} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:image" content={ogUrl} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content={title} />
+<meta property="og:site_name" content={siteName} />
+<meta property="og:locale" content={lang === 'es' ? 'es_ES' : 'en_US'} />
+<meta property="og:locale:alternate" content={localeAlt} />
+
+{/* Meta específicas de artículo */}
+{article && (
+  <>
+    <meta property="article:published_time" content={article.publishedTime} />
+    {article.modifiedTime && <meta property="article:modified_time" content={article.modifiedTime} />}
+    {article.section && <meta property="article:section" content={article.section} />}
+    {article.tags?.map((tag) => <meta property="article:tag" content={tag} />)}
+    {article.authors?.map((author) => <meta property="article:author" content={author} />)}
+  </>
+)}
+
+{/* Twitter Card */}
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={ogUrl} />
+
+{/* Alternates: solo traducciones verificadas */}
+{otherLangs.map((a) => <link rel="alternate" hreflang={a.hreflang} href={a.href} />)}
+{xDefault && <link rel="alternate" hreflang="x-default" href={xDefault.href} />}
+
+{/* Feed RSS */}
+{rssHref && <link rel="alternate" type="application/rss+xml" title={`${siteName} RSS`} href={new URL(rssHref, Astro.site).toString()} />}
+
+{jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}

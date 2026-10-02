@@ -1,0 +1,63 @@
+---
+import { ADSENSE, type AdSlotProps } from '../lib/adsense';
+
+interface Props extends AdSlotProps {
+  label?: string;
+}
+
+const { slot, format = 'auto', className = '', minHeight, label } = Astro.props;
+
+const adSlot = slot ?? ADSENSE.defaultSlot;
+const adsEnabled = ADSENSE.enabled && adSlot !== '';
+---
+
+<div
+  class:list={['ad-container', className]}
+  style={minHeight ? `min-height:${minHeight}` : undefined}
+  data-ad-slot-hash={adSlot || 'placeholder'}
+>
+  {adsEnabled ? (
+    <ins
+      class="adsbygoogle block"
+      style="display:block"
+      data-ad-client={ADSENSE.clientId}
+      data-ad-slot={adSlot}
+      data-ad-format={format}
+      data-full-width-responsive="true"
+    ></ins>
+  ) : (
+    <span class="sr-only">publicidad</span>
+  )}
+
+  {!adsEnabled && (
+    <div
+      class="flex h-full w-full items-center justify-center rounded-2xl border border-dashed border-neutral-700/70 bg-neutral-900/40 px-4 py-8"
+      style={minHeight ? undefined : 'min-height:100px'}
+    >
+      <span class="text-[11px] font-semibold uppercase tracking-[0.2em] text-neutral-600">
+        {label ?? 'Publicidad'}
+      </span>
+    </div>
+  )}
+</div>
+
+<script define:vars={{ adSlot }}>
+  (() => {
+    // Cuando el consentimiento ya se dio, AdSense inyecta el anuncio en cada <ins>.
+    // Si el script aún no ha cargado, escuchamos el evento que dispara ConsentBanner.
+    function pushAd() {
+      if (window.adsbygoogle) {
+        try {
+          window.adsbygoogle.push({});
+        } catch (e) {
+          /* anuncio ya rellenado */
+        }
+      }
+    }
+    if (window.yuuviAdsLoaded) {
+      pushAd();
+    } else {
+      document.addEventListener('yuuvi:ads-ready', pushAd, { once: true });
+    }
+  })();
+</script>

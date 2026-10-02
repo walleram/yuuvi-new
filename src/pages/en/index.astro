@@ -1,0 +1,112 @@
+---
+import Layout from '@layouts/Layout.astro';
+import ArticleCard from '@components/ArticleCard.astro';
+import AdSlot from '@components/AdSlot.astro';
+import { AD_AFTER, MIN_ARTICLES_FOR_SECTION_AD } from '../../lib/adsense';
+import { getCollection } from 'astro:content';
+import { SITE, UI_TEXT } from '../../lib/site';
+
+const lang = 'en';
+const t = UI_TEXT[lang];
+
+const allArticles = (await getCollection('articles', ({ data }) => data.published && data.lang === lang))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const featured = allArticles.find((a) => a.data.featured) ?? allArticles[0];
+const trending = allArticles.slice(0, 4);
+const latest = allArticles.filter((a) => a.id !== featured?.id).slice(0, 8);
+// Banners de sección solo si el idioma tiene suficiente contenido.
+const showSectionAds = allArticles.length >= MIN_ARTICLES_FOR_SECTION_AD;
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: SITE.name,
+    url: new URL('/en/', Astro.site).toString(),
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: SITE.name,
+    url: new URL('/en/', Astro.site).toString(),
+    logo: new URL('/favicon.svg', Astro.site).toString(),
+    sameAs: [],
+  },
+];
+---
+
+<Layout
+  title="Yuuvi | Teen trends magazine"
+  description="The latest fashion, music, tech and lifestyle trends for the young generation. Discover what's viral right now."
+  lang={lang}
+  jsonLd={jsonLd}
+>
+  <section class="mx-auto max-w-7xl px-4 pt-6 sm:px-6" aria-label="Featured">
+    {featured && (
+      <div class="animate-fade-in-up">
+        <div class="mb-3 inline-flex items-center gap-2 rounded-full bg-brand-pink/15 px-4 py-1.5 text-sm font-bold text-brand-pink ring-1 ring-brand-pink/30">
+          <span class="relative flex h-2 w-2">
+            <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-pink opacity-75"></span>
+            <span class="relative inline-flex h-2 w-2 rounded-full bg-brand-pink"></span>
+          </span>
+          {t.home.heroBadge}
+        </div>
+        <ArticleCard article={featured} lang={lang} size="lg" />
+      </div>
+    )}
+  </section>
+
+  <section class="mx-auto max-w-7xl px-4 pt-10 sm:px-6" aria-label={t.home.sectionTrending}>
+    <div class="mb-5 flex items-center justify-between">
+      <h2 class="flex items-center gap-2 text-xl font-black tracking-tight text-white sm:text-2xl">
+        <span class="inline-block h-5 w-1 rounded-full bg-gradient-to-b from-brand-pink to-brand-purple"></span>
+        {t.home.sectionTrending}
+      </h2>
+    </div>
+    <div class="grid grid-cols-2 gap-4 sm:grid-cols-4">
+      {trending.map((article, i) => (
+        <div class={i === 0 ? 'col-span-2 row-span-2' : ''}>
+          <ArticleCard article={article} lang={lang} size={i === 0 ? 'lg' : 'sm'} />
+        </div>
+      ))}
+    </div>
+
+    {/* Banner de cierre del apartado, sin meterse en la rejilla de tarjetas */}
+    {showSectionAds && (
+      <div class="mt-4">
+        <AdSlot className="w-full" minHeight="100px" label="Advertisement" />
+      </div>
+    )}
+  </section>
+
+  <section class="mx-auto max-w-7xl px-4 py-10 sm:px-6" aria-label={t.home.sectionLatest}>
+    <div class="mb-5 flex items-center justify-between">
+      <h2 class="flex items-center gap-2 text-xl font-black tracking-tight text-white sm:text-2xl">
+        <span class="inline-block h-5 w-1 rounded-full bg-gradient-to-b from-brand-cyan to-brand-purple"></span>
+        {t.home.sectionLatest}
+      </h2>
+      <span class="text-sm font-medium text-neutral-400">
+        {allArticles.length} articles
+      </span>
+    </div>
+    <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      {latest.map((article, index) => (
+        <>
+      {AD_AFTER.includes(index) && (
+        <div class="flex items-stretch" aria-label="Advertisement">
+          <AdSlot className="w-full" minHeight="200px" />
+        </div>
+      )}
+          <ArticleCard article={article} lang={lang} />
+          {/* Última celda de la rejilla: cuadrada, pegada al último artículo */}
+          {showSectionAds && index === latest.length - 1 && (
+            <div class="flex items-stretch" aria-label="Advertisement">
+              <AdSlot className="w-full" format="rectangle" minHeight="300px" />
+            </div>
+          )}
+        </>
+      ))}
+    </div>
+  </section>
+</Layout>

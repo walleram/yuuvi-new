@@ -1,0 +1,288 @@
+---
+import Layout from '@layouts/Layout.astro';
+import ArticleCard from '@components/ArticleCard.astro';
+import AdSlot from '@components/AdSlot.astro';
+import InlineAd from '@components/InlineAd.astro';
+import { getCollection, render } from 'astro:content';
+import { getImage } from 'astro:assets';
+import { CATEGORIES, UI_TEXT, SITE, findAuthor, type Lang } from '../lib/site';
+import { formatDate } from '../lib/format';
+import {
+  articleSlug,
+  articleUrl,
+  authorHref,
+  buildTranslationIndex,
+  categoryHref,
+  countWords,
+  findTranslation,
+  homeHref,
+  readingTime,
+  tagHref,
+} from '../lib/articles';
+import { inlineAdPlacements } from '../lib/adsense';
+
+interface Props {
+  lang: Lang;
+  slug: string;
+}
+
+export async function getStaticPaths() {
+  const articles = await getCollection('articles', ({ data }) => data.published);
+  return articles.map((article) => {
+    const cleanSlug = articleSlug(article);
+    const lang = article.data.lang;
+    // Cada artículo solo se sirve en el idioma en el que existe.
+    // Generar la ruta del otro idioma produciría un 404 y una alternates rota.
+    return {
+      params: { slug: lang === 'en' ? `en/${cleanSlug}` : cleanSlug },
+      props: { lang, slug: cleanSlug },
+    };
+  });
+}
+
+const { lang, slug } = Astro.props;
+const t = UI_TEXT[lang];
+
+const allArticles = await getCollection('articles', ({ data }) => data.published && data.lang === lang);
+const article = allArticles.find((a) => articleSlug(a) === slug);
+
+// En SSG solo se generan rutas válidas, pero guardamos por seguridad
+if (!article) {
+  return new Response(null, { status: 404 });
+}
+
+const { Content } = await render(article);
+const { data } = article;
+
+const catMeta = CATEGORIES[data.category];
+const canonicalURL = articleUrl(slug, lang, Astro.site!);
+const adLabel = lang === 'es' ? 'Publicidad' : 'Advertisement';
+
+// Hreflang: solo si la traducción existe de verdad.
+// La URL de cada idioma sale del artículo de ese idioma, no del actual.
+const publishedAll = await getCollection('articles', ({ data }) => data.published);
+const translation = findTranslation(buildTranslationIndex(publishedAll), article);
+
+let alternates: { hreflang: string; href: string }[];
+if (translation) {
+  const esArticle = lang === 'es' ? article : translation;
+  const enArticle = lang === 'en' ? article : translation;
+  const esHref = articleUrl(articleSlug(esArticle), 'es', Astro.site!);
+  alternates = [
+    { hreflang: 'es', href: esHref },
+    { hreflang: 'en', href: articleUrl(articleSlug(enArticle), 'en', Astro.site!) },
+    { hreflang: 'x-default', href: esHref },
+  ];
+} else {
+  alternates = [{ hreflang: 'x-default', href: canonicalURL }];
+}
+
+const isSvg = data.coverImage.src.endsWith('.svg');
+const cover = await getImage({
+  src: data.coverImage,
+  widths: [400, 800, 1200],
+  sizes: '100vw',
+  format: isSvg ? 'svg' : 'webp',
+});
+
+// schema.org exige URLs absolutas
+const coverAbsolute = new URL(cover.src, Astro.site!).toString();
+const author = findAuthor(data.author);
+const minutes = readingTime(article);
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    '@id': `${canonicalURL}#article`,
+    mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalURL },
+    url: canonicalURL,
+    headline: data.title,
+    description: data.description,
+    image: [coverAbsolute],
+    inLanguage: lang,
+    datePublished: data.pubDate.toISOString(),
+    dateModified: (data.updatedDate ?? data.pubDate).toISOString(),
+    articleSection: catMeta.label[lang],
+    keywords: data.tags.join(', '),
+    wordCount: (article.body ?? '').split(/\s+/).filter(Boolean).length,
+    timeRequired: `PT${minutes}M`,
+    author: {
+      '@type': 'Person',
+      name: data.author,
+      ...(author ? { url: new URL(authorHref(data.author, lang), Astro.site!).toString() } : {}),
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: SITE.name,
+      url: new URL('/', Astro.site!).toString(),
+      logo: { '@type': 'ImageObject', url: new URL('/og-default.png', Astro.site!).toString() },
+    },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: lang === 'es' ? 'Inicio' : 'Home',
+        item: new URL(homeHref(lang), Astro.site!).toString(),
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: catMeta.label[lang],
+        item: new URL(categoryHref(data.category, lang), Astro.site!).toString(),
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: data.title,
+        item: canonicalURL,
+      },
+    ],
+  },
+];
+
+const articleMeta = {
+  publishedTime: data.pubDate.toISOString(),
+  modifiedTime: (data.updatedDate ?? data.pubDate).toISOString(),
+  section: catMeta.label[lang],
+  tags: data.tags,
+  authors: [data.author],
+};
+
+const related = allArticles
+  .filter((a) => a.data.category === data.category && a.id !== article.id)
+  .slice(0, 3);
+---
+
+<Layout
+  title={data.seoTitle ?? data.title}
+  description={data.seoDescription ?? data.description}
+  lang={lang}
+  canonicalURL={canonicalURL}
+  ogImage={cover.src}
+  type="article"
+  jsonLd={jsonLd}
+  article={articleMeta}
+  alternates={alternates}
+  rssHref={lang === 'es' ? '/rss.xml' : '/en/rss.xml'}
+>
+  <article class="mx-auto max-w-3xl px-4 py-8 sm:px-6">
+    {/* Migas de pan */}
+    <nav aria-label="Breadcrumb" class="mb-6 flex items-center gap-2 text-sm text-neutral-400">
+      <a href={lang === 'es' ? '/' : '/en/'} class="transition-colors hover:text-white">
+        {t.nav.home}
+      </a>
+      <span aria-hidden="true">/</span>
+      <a
+        href={categoryHref(data.category, lang)}
+        class="transition-colors hover:text-white"
+      >
+        {catMeta.label[lang]}
+      </a>
+    </nav>
+
+    {/* Cabecera del artículo */}
+    <header class="mb-8">
+      <div class="mb-4 flex items-center gap-2">
+        <span class="rounded-full bg-brand-pink/15 px-3 py-1 text-xs font-bold text-brand-pink ring-1 ring-brand-pink/30">
+          {catMeta.label[lang]}
+        </span>
+        <span class="text-xs text-neutral-400">
+          {formatDate(data.pubDate, lang)}
+        </span>
+        <span aria-hidden="true" class="text-xs text-neutral-400">·</span>
+        <span class="text-xs text-neutral-400">
+          {minutes} {lang === 'es' ? 'min de lectura' : 'min read'}
+        </span>
+      </div>
+
+      <h1 class="text-3xl font-black leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl">
+        {data.title}
+      </h1>
+
+      <p class="mt-4 text-lg text-neutral-400">{data.description}</p>
+
+      {/* Meta del autor */}
+      <div class="mt-6 flex items-center gap-3">
+        <a href={authorHref(data.author, lang)} class="shrink-0" aria-label={data.author}>
+          <div class="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-brand-pink to-brand-purple text-sm font-black text-white">
+            {author?.initials ?? data.author.charAt(0).toUpperCase()}
+          </div>
+        </a>
+        <div>
+          <p class="text-sm font-semibold text-white">
+            <a href={authorHref(data.author, lang)} class="hover:text-brand-pink">
+              {data.author}
+            </a>
+          </p>
+          <p class="text-xs text-neutral-400">
+            {author ? author.role[lang] : catMeta.label[lang]}
+          </p>
+        </div>
+      </div>
+    </header>
+
+    {/* Imagen destacada */}
+    <figure class="mb-8">
+      <img
+        src={cover.src}
+        srcset={cover.srcSet?.attribute}
+        sizes="100vw"
+        alt={data.coverAlt}
+        width={cover.attributes.width}
+        height={cover.attributes.height}
+        decoding="async"
+        class="w-full rounded-3xl object-cover shadow-2xl shadow-brand-pink/5"
+      />
+    </figure>
+
+    {/* Contenido */}
+    <div
+      class="article-content prose prose-invert prose-lg max-w-none prose-headings:font-black prose-headings:text-white prose-a:text-brand-pink prose-strong:text-white prose-blockquote:border-brand-pink [&_p]:text-neutral-300 [&_li]:text-neutral-300"
+    >
+      <Content />
+    </div>
+
+    {/* Anuncios repartidos dentro del texto, en proporción a su longitud */}
+    {inlineAdPlacements(countWords(article)).map((pct) => (
+      <InlineAd afterPct={pct} label={adLabel} />
+    ))}
+
+    {/* Anuncio de cierre, antes de las etiquetas */}
+    <AdSlot className="mt-8" label={adLabel} />
+
+    {/* Etiquetas */}
+    {data.tags.length > 0 && (
+      <div class="mt-10 flex flex-wrap gap-2">
+        {data.tags.map((tag) => (
+          <a
+            href={tagHref(tag, lang)}
+            rel="tag"
+            class="rounded-full border border-neutral-700 px-3 py-1 text-xs font-medium text-neutral-400 transition-colors hover:border-brand-pink hover:text-brand-pink"
+          >
+            #{tag}
+          </a>
+        ))}
+      </div>
+    )}
+  </article>
+
+  {/* Artículos relacionados */}
+  {related.length > 0 && (
+    <section class="mx-auto max-w-7xl px-4 py-10 sm:px-6">
+      <h2 class="mb-5 flex items-center gap-2 text-xl font-black tracking-tight text-white sm:text-2xl">
+        <span class="inline-block h-5 w-1 rounded-full bg-gradient-to-b from-brand-pink to-brand-purple"></span>
+        {lang === 'es' ? 'Relacionados' : 'Related'}
+      </h2>
+      <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        {related.map((a) => (
+          <ArticleCard article={a} lang={lang} size="sm" />
+        ))}
+      </div>
+    </section>
+  )}
+</Layout>

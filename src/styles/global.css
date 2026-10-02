@@ -1,0 +1,75 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+/* Modo oscuro por defecto */
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  @apply bg-ink;
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-ink text-neutral-100 antialiased;
+}
+
+/* Configuración del tema juvenil con acentos vibrantes */
+@theme {
+  /* Negro de fondo de la casa: un punto más claro que neutral-950 (#0a0a0a)
+     y con un punto de azul, para que no se vea como un vacío plano. */
+  --color-ink: #0b0b12;
+  --color-brand-pink: #ff2d78;
+  --color-brand-purple: #a855f7;
+  --color-brand-cyan: #22d3ee;
+  --color-brand-yellow: #facc15;
+  --color-brand-lime: #a3e635;
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Scrollbar sutil acorde al modo oscuro */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #3f3f46 transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-thumb {
+  @apply bg-neutral-700 rounded-full;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Animaciones suaves para la UI tipo feed */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.5s ease-out both;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}

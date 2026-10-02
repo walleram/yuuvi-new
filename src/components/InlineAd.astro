@@ -1,0 +1,39 @@
+---
+import AdSlot from './AdSlot.astro';
+
+interface Props {
+  /** Porcentaje del texto tras el que se inserta (0-100). */
+  afterPct: number;
+  label?: string;
+}
+
+const { afterPct, label } = Astro.props;
+---
+
+<aside class="my-8" data-inline-ad data-after-pct={afterPct} aria-label={label}>
+  <AdSlot label={label} />
+</aside>
+
+<script>
+  (() => {
+    const article = document.querySelector('.article-content');
+    if (!article) return;
+    // Solo los párrafos del propio artículo: los anidados en citas o listas
+    // no sirven de ancla, meterían el anuncio dentro del bloque equivocado.
+    const paragraphs = article.querySelectorAll(':scope > p');
+    if (paragraphs.length === 0) return;
+
+    // Varios anuncios por artículo. Antes usaba querySelector, que solo
+    // devolvía el primero y dejaba el resto al final de la página.
+    for (const container of document.querySelectorAll<HTMLElement>('[data-inline-ad]')) {
+      if (container.dataset.moved === '1') continue;
+      const pct = Number(container.getAttribute('data-after-pct')) || 30;
+      const index = Math.min(
+        paragraphs.length - 1,
+        Math.max(0, Math.round((pct / 100) * paragraphs.length) - 1),
+      );
+      paragraphs[index].after(container);
+      container.dataset.moved = '1';
+    }
+  })();
+</script>

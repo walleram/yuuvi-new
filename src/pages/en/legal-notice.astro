@@ -1,0 +1,54 @@
+---
+import Layout from '@layouts/Layout.astro';
+import { legalAlternates } from '@lib/site';
+---
+
+<Layout
+  title="Legal Notice | Yuuvi"
+  description="Legal notice, identification of the site operator and terms of use of the Yuuvi website."
+  lang="en"
+  alternates={legalAlternates('legalNotice')}
+>
+
+  <article class="prose prose-invert prose-lg mx-auto max-w-3xl px-4 py-10 sm:px-6 prose-headings:font-black prose-headings:text-white prose-a:text-brand-pink [&_p]:text-neutral-300">
+    <h1>Legal Notice</h1>
+    <p>Last updated: {new Date().toLocaleDateString('en-GB')}</p>
+
+    <h2>1. Identifying details</h2>
+    <p>
+      In compliance with article 10 of the Spanish law 34/2002 of 11 July on Information Society Services
+      and Electronic Commerce (LSSI-CE), the identifying details of the owner of the website
+      <strong>https://yuuvi.com</strong> are as follows:
+    </p>
+    <ul>
+      <li><strong>Name:</strong> Yuuvi</li>
+      <li><strong>Contact:</strong> hola@yuuvi.com</li>
+    </ul>
+    <p>Note: fill in the real details (name, tax ID and phone number where applicable) before launch.</p>
+
+    <h2>2. Purpose</h2>
+    <p>The Yuuvi website is a digital magazine covering trends, with an informative and entertainment purpose.</p>
+
+    <h2>3. Intellectual and industrial property</h2>
+    <p>
+      All editorial content (text, images, design and code) is owned by Yuuvi or by its respective authors.
+      Total or partial reproduction without express permission is prohibited. Any third-party trademarks
+      mentioned belong to their legitimate owners.
+    </p>
+
+    <h2>4. Liability</h2>
+    <p>
+      Yuuvi is not responsible for the content of ads served through Google AdSense nor for external linked
+      sites. Content is provided «as is» and for informational purposes.
+    </p>
+
+    <h2>5. Applicable law and jurisdiction</h2>
+    <p>
+      These conditions are governed by Spanish law. Any dispute will be submitted to the courts and
+      tribunals of the city where the owner is based, unless otherwise required by law.
+    </p>
+
+    <h2>6. Contact</h2>
+    <p>For any enquiry: hola@yuuvi.com.</p>
+  </article>
+</Layout>
