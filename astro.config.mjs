@@ -5,7 +5,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://yuuvi.com',
+  site: 'https://yuuvi-new.pages.dev',
   output: 'static',
   integrations: [sitemap()],
   i18n: {
