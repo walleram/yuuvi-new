@@ -72,6 +72,60 @@ const CONFIG = [
       { emoji: '⚠️', text: 'El error de todo el mundo', file: 'setlist-error' },
     ],
   },
+  {
+    slug: 'hacer-trend-tiktok-paso-a-paso',
+    pillar: 'cultura',
+    sections: [
+      { emoji: '🎬', text: 'Qué es exactamente el Ramalama', file: 'trend-que-es' },
+      { emoji: '🎵', text: 'El sonido y el momento perfecto', file: 'trend-sonido' },
+      { emoji: '🚶', text: 'Cómo grabarlo paso a paso', file: 'trend-pasos' },
+    ],
+  },
+  {
+    slug: 'que-significa-brainrot-tiktok',
+    pillar: 'cultura',
+    sections: [
+      { emoji: '🕰️', text: 'De dónde viene', file: 'brainrot-origen' },
+      { emoji: '🧠', text: 'Los tres usos de la palabra', file: 'brainrot-usos' },
+      { emoji: '🗣️', text: 'Cómo se usa bien', file: 'brainrot-usar' },
+    ],
+  },
+  {
+    slug: 'setup-streamer-2026',
+    pillar: 'gaming',
+    sections: [
+      { emoji: '🎤', text: 'El orden correcto: micrófono primero', file: 'setup-orden' },
+      { emoji: '💡', text: 'Tres montajes por presupuesto', file: 'setup-presupuesto' },
+      { emoji: '🎮', text: 'Si streamas desde consola', file: 'setup-consola' },
+    ],
+  },
+  {
+    slug: 'donde-comprar-ropa-core-barata',
+    pillar: 'estetica',
+    sections: [
+      { emoji: '👗', text: 'Qué es el estilo core (y por qué todo acaba en "-core")', file: 'ropa-estilo' },
+      { emoji: '🏬', text: 'Tiendas físicas: dónde ir', file: 'ropa-tiendas' },
+      { emoji: '📱', text: 'Online: descuentos, dupes y apps', file: 'ropa-online' },
+    ],
+  },
+  {
+    slug: 'mejores-juegos-indie-2026',
+    pillar: 'gaming',
+    sections: [
+      { emoji: '🎮', text: 'Los imprescindibles de 2026', file: 'indie-imprescindibles' },
+      { emoji: '🆓', text: 'Gratis de verdad (sin truco)', file: 'indie-gratis' },
+      { emoji: '📅', text: 'Los que están por llegar', file: 'indie-por-llegar' },
+    ],
+  },
+  {
+    slug: 'conseguir-entradas-conciertos-espana',
+    pillar: 'musica',
+    sections: [
+      { emoji: '✅', text: 'Compra solo en el canal oficial (y a reconocerlo)', file: 'entradas-oficial' },
+      { emoji: '🎫', text: 'Cómo conseguir entradas cuando se agota todo', file: 'entradas-agotado' },
+      { emoji: '🚩', text: 'Señales de que es una estafa', file: 'entradas-estafa' },
+    ],
+  },
 ];
 
 function svgFor({ emoji, text, colors, brand }) {

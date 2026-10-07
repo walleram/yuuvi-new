@@ -39,6 +39,10 @@ for (const page of pages) {
   const route = toRoute(page);
   const html = await readFile(page, 'utf8');
 
+  // Ficheros de verificación de buscadores (Google Search Console, etc.):
+  // no son páginas y no llevan SEO.
+  if (html.startsWith('google-site-verification:')) continue;
+
   // 1. canonical
   const canonical = html.match(/<link rel="canonical" href="([^"]*)"/)?.[1];
   if (!canonical) fail(`${route} — falta canonical`);
