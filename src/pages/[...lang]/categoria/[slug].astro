@@ -1,7 +1,6 @@
 ---
 import Layout from '@layouts/Layout.astro';
 import ArticleCard from '@components/ArticleCard.astro';
-import AdSlot from '@components/AdSlot.astro';
 import { getCollection } from 'astro:content';
 import { CATEGORIES, type Lang } from '../../../lib/site';
 
@@ -70,15 +69,8 @@ const iconBySlug: Record<string, string> = {
 
     {articles.length > 0 ? (
       <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {articles.map((article, index) => (
-          <>
-            {index === 1 && (
-              <div class="flex items-stretch" aria-label="Publicidad">
-                <AdSlot className="w-full" minHeight="200px" />
-              </div>
-            )}
-            <ArticleCard article={article} lang={lang} />
-          </>
+        {articles.map((article) => (
+          <ArticleCard article={article} lang={lang} />
         ))}
       </div>
     ) : (

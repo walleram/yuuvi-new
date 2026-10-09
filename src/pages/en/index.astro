@@ -1,8 +1,6 @@
 ---
 import Layout from '@layouts/Layout.astro';
 import ArticleCard from '@components/ArticleCard.astro';
-import AdSlot from '@components/AdSlot.astro';
-import { AD_AFTER, MIN_ARTICLES_FOR_SECTION_AD } from '../../lib/adsense';
 import { getCollection } from 'astro:content';
 import { SITE, UI_TEXT } from '../../lib/site';
 
@@ -15,8 +13,6 @@ const allArticles = (await getCollection('articles', ({ data }) => data.publishe
 const featured = allArticles.find((a) => a.data.featured) ?? allArticles[0];
 const trending = allArticles.slice(0, 4);
 const latest = allArticles.filter((a) => a.id !== featured?.id).slice(0, 8);
-// Banners de sección solo si el idioma tiene suficiente contenido.
-const showSectionAds = allArticles.length >= MIN_ARTICLES_FOR_SECTION_AD;
 
 const jsonLd = [
   {
@@ -71,13 +67,6 @@ const jsonLd = [
         </div>
       ))}
     </div>
-
-    {/* Banner de cierre del apartado, sin meterse en la rejilla de tarjetas */}
-    {showSectionAds && (
-      <div class="mt-4">
-        <AdSlot className="w-full" minHeight="100px" label="Advertisement" />
-      </div>
-    )}
   </section>
 
   <section class="mx-auto max-w-7xl px-4 py-10 sm:px-6" aria-label={t.home.sectionLatest}>
@@ -91,21 +80,8 @@ const jsonLd = [
       </span>
     </div>
     <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
-      {latest.map((article, index) => (
-        <>
-      {AD_AFTER.includes(index) && (
-        <div class="flex items-stretch" aria-label="Advertisement">
-          <AdSlot className="w-full" minHeight="200px" />
-        </div>
-      )}
-          <ArticleCard article={article} lang={lang} />
-          {/* Última celda de la rejilla: cuadrada, pegada al último artículo */}
-          {showSectionAds && index === latest.length - 1 && (
-            <div class="flex items-stretch" aria-label="Advertisement">
-              <AdSlot className="w-full" format="rectangle" minHeight="300px" />
-            </div>
-          )}
-        </>
+      {latest.map((article) => (
+        <ArticleCard article={article} lang={lang} />
       ))}
     </div>
   </section>

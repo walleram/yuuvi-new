@@ -40,9 +40,9 @@ Dos cosas que ya han costado tiempo:
   centralizadas en `src/lib/site.ts:LEGAL_ROUTES`. El `LocaleSwitcher` antes las
   excluía a propósito y el `Footer` las tenía fijas en español. Ahora las 6 tienen
   selector de idioma y hreflang recíproco.
-- Publicidad con densidad proporcional al largo del artículo, topada:
-  artículo = 3 (2 en línea al 30% y 75% del texto + 1 de cierre),
-  portada ES = 4, portada EN = 1, categorías = 1. Todo en `src/lib/adsense.ts`.
+- Publicidad: se eliminaron los slots manuales (`AdSlot` / `InlineAd`) y su
+  lógica de densidad. Ahora todo lo coloca **AdSense Auto Ads**; el sitio solo
+  carga el script y mantiene el banner de consentimiento.
 
 ### Publicidad: decisiones que conviene no re-litigar
 
@@ -101,10 +101,10 @@ Si hay que volver a medir, ese es el método.
 
 ### 1. Publicidad real (bloqueante para ingresos)
 
-`src/lib/adsense.ts` tiene `clientId: 'ca-pub-0000000000000000'` y
-`defaultSlot: ''`, así que `enabled` es **false** y no se sirve ningún anuncio:
-solo cajas grises placeholder. Hay que poner los IDs reales de la cuenta AdSense.
-Todo lo demás de la publicidad ya está montado y aparece solo al activarlo.
+`src/lib/adsense.ts` tiene `clientId: 'ca-pub-0000000000000000'`, así que
+`enabled` es **false** y no se carga el script de AdSense. Hay que poner el ID
+real de la cuenta AdSense. Los slots manuales se eliminaron: AdSense Auto Ads
+coloca los bloques por su cuenta.
 
 ### 2. Commit y publicación
 

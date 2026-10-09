@@ -77,20 +77,18 @@ Contenido del artículo en Markdown.
 
 ## Monetización (Google AdSense + RGPD)
 
-Todo listo para AdSense. Configura en `src/lib/adsense.ts`:
+AdSense **Auto Ads**: la red coloca los bloques sola, así que el sitio solo carga
+el script con el ID de editor. Configura en `src/lib/adsense.ts`:
 
 ```ts
 export const ADSENSE = {
   clientId: 'ca-pub-XXXXXXXXXXXXXXXX', // ID de tu cuenta AdSense
-  defaultSlot: '1234567890',          // ID del bloque de anuncios
   ...
 };
 ```
 
 Componentes incluidos:
 
-- **`AdSlot.astro`** — espacio publicitario (`<ins class="adsbygoogle">`) integrado en las grillas de inicio/categorías y tras la portada de los artículos. Sin configurar muestra un placeholder estético ("Publicidad"). Propagación de `window.adsbygoogle.push()`.
-- **`InlineAd.astro`** — inserta un anuncio **dentro del texto** del artículo (tras el 2º párrafo) vía DOM, manteniendo la estética del feed.
 - **`ConsentBanner.astro`** — banner RGPD con **Consent Mode v2** (`denied` por defecto → `granted` al aceptar). Almacena la decisión en `localStorage`, solo carga el script de AdSense si el usuario acepta (anuncios no personalizados en caso contrario). Aceptar / Rechazar / Más info.
 
 Legal incluido:

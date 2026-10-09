@@ -1,8 +1,6 @@
 ---
 import Layout from '@layouts/Layout.astro';
 import ArticleCard from '@components/ArticleCard.astro';
-import AdSlot from '@components/AdSlot.astro';
-import InlineAd from '@components/InlineAd.astro';
 import { getCollection, render } from 'astro:content';
 import { getImage } from 'astro:assets';
 import { CATEGORIES, UI_TEXT, SITE, findAuthor, type Lang } from '../lib/site';
@@ -13,13 +11,11 @@ import {
   authorHref,
   buildTranslationIndex,
   categoryHref,
-  countWords,
   findTranslation,
   homeHref,
   readingTime,
   tagHref,
 } from '../lib/articles';
-import { inlineAdPlacements } from '../lib/adsense';
 
 interface Props {
   lang: Lang;
@@ -56,7 +52,6 @@ const { data } = article;
 
 const catMeta = CATEGORIES[data.category];
 const canonicalURL = articleUrl(slug, lang, Astro.site!);
-const adLabel = lang === 'es' ? 'Publicidad' : 'Advertisement';
 
 // Hreflang: solo si la traducción existe de verdad.
 // La URL de cada idioma sale del artículo de ese idioma, no del actual.
@@ -246,14 +241,6 @@ const related = allArticles
     >
       <Content />
     </div>
-
-    {/* Anuncios repartidos dentro del texto, en proporción a su longitud */}
-    {inlineAdPlacements(countWords(article)).map((pct) => (
-      <InlineAd afterPct={pct} label={adLabel} />
-    ))}
-
-    {/* Anuncio de cierre, antes de las etiquetas */}
-    <AdSlot className="mt-8" label={adLabel} />
 
     {/* Etiquetas */}
     {data.tags.length > 0 && (
