@@ -24,7 +24,7 @@ async function walk(dir, out = []) {
 }
 
 const pages = (await walk(DIST)).sort();
-const site = 'https://yuuvi.com';
+const site = 'https://www.yuuvi.cat';
 
 // Astro sirve /ruta/ desde /ruta.html, así que normalizamos igual que el canonical
 const toRoute = (p) => '/' + relative(DIST, p).replace(/index\.html$/, '').replace(/\.html$/, '/');

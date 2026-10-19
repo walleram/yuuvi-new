@@ -22,8 +22,10 @@ Cloudflare detecta los ajustes solos, pero **verifica**:
 |Root directory|`/`|
 |Node.js version|`22`|
 
-5. Crea el dominio `yuuvi.pages.dev` (gratis) y luego añade `yuuvi.com` en
-   **Custom domains**. Cloudflare emite el certificado TLS automáticamente.
+5. Añade `www.yuuvi.cat` en **Custom domains** (la zona debe estar *Active* en
+   Cloudflare). `yuuvi.cat` (apex) redirige 301 a `www` en
+   `functions/_middleware.js`. Cloudflare emite el certificado TLS
+   automáticamente.
 
 ## 2. Una sola vez: secrets en GitHub
 
@@ -105,11 +107,12 @@ Evita los `.com` a 3 €/año de los registradores biodegradables: suelen meter
 
 ## Después de publicar
 
-1. **Google Search Console** → añadir `yuuvi.com` → verificar por DNS.
-2. Enviar `https://yuuvi.com/sitemap-index.xml`.
+1. **Google Search Console** → añadir `yuuvi.cat` (propiedad de dominio, cubre
+   `www` y apex) → verificar por DNS.
+2. Enviar `https://www.yuuvi.cat/sitemap-index.xml`.
 3. **Bing Webmaster Tools** → importar desde Search Console.
 4. **Google AdSense** → añadir el dominio (ver `ADSENSES.md`).
-5. Comprobar `https://yuuvi.com/robots.txt` y `/sitemap-index.xml` en vivo.
+5. Comprobar `https://www.yuuvi.cat/robots.txt` y `/sitemap-index.xml` en vivo.
 
 ## Comandos útiles
 

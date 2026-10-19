@@ -60,6 +60,14 @@ If your group likes projects, this is your long-term pick. Build a base, go mini
 ### Roblox
 Not one game, a platform. Find a game everyone likes (obby, tycoons, murder mysteries, simulators). Good variety for mixed tastes.
 
+## Data, storage and battery: what to expect
+
+Party games are light. Gartic Phone, Skribbl.io and Among Us rarely pass a few hundred MB of data per hour and run fine on a phone with 2 GB of RAM. The heavy ones are Minecraft and Call of Duty: Mobile: both want several GB of free storage and a big download before the first match.
+
+- **Install in advance**: the first launch usually pulls assets, maps or updates. Nothing kills a game night faster than four people waiting on a 3 GB download.
+- **Keep a charger close**: max brightness plus voice chat drains a battery fast. Playing plugged in is the difference between two rounds and two hours.
+- **Watch your data plan**: on 4G, a few hundred MB per hour is normal for casual games. If your plan is limited, do the heavy downloads over WiFi and keep the actual sessions light.
+
 ## Quick recommendations
 
 - For laughs only: Gartic Phone, Skribbl.io
@@ -81,3 +89,9 @@ Absolutely. Most of these use global matchmaking or invite links. Latency varies
 
 **Are they really free?**
 Yes, all listed are free-to-play. Some have cosmetics/ads, but you don't need to pay to play with friends.
+
+**What if a friend has an old or low-end phone?**
+Start with something light: Skribbl.io runs in any mobile browser, Gartic Phone barely breaks a sweat, and Among Us is comfortable on almost anything. Save Minecraft and Call of Duty: Mobile for the people with newer devices, and nobody has to be left out of the call.
+
+**What's the fastest way to start tonight?**
+Pick one game, agree on a voice channel, and create a private room before anyone installs anything. Gartic Phone and Skribbl.io need no install at all: send the link and you're playing in under two minutes.

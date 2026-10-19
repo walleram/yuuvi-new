@@ -1,6 +1,6 @@
 export const SITE = {
   name: 'Yuuvi',
-  url: 'https://yuuvi-new.pages.dev',
+  url: 'https://www.yuuvi.cat',
   tagline: 'Tu revista de tendencias',
   localeTags: {
     es: 'es-ES',
