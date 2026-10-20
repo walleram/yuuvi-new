@@ -38,6 +38,10 @@ jobs:
             exit 1
           fi
 
+      - name: Publica la clave IndexNow
+        if: env.INDEXNOW_KEY != ''
+        run: printf '%s' "$INDEXNOW_KEY" > "public/$INDEXNOW_KEY.txt"
+
       - name: Tipos (astro check)
         run: npm run check
 
@@ -49,10 +53,6 @@ jobs:
 
       - name: SEO (canonical, hreflang, JSON-LD, enlaces)
         run: npm run check:seo
-
-      - name: Publica la clave IndexNow
-        if: env.INDEXNOW_KEY != ''
-        run: printf '%s' "$INDEXNOW_KEY" > "public/$INDEXNOW_KEY.txt"
 
       - name: Deploy a Cloudflare Pages
         run: npx wrangler pages deploy dist --project-name=yuuvi-new --branch main
