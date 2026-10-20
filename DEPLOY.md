@@ -49,36 +49,44 @@ introduzcas a mano en el repositorio.
 |`npm run check:content`|un artículo tiene caracteres corruptos o menos de 800 palabras|
 |`npm run build`|el build de Astro falla|
 |`npm run check:seo`|faltan canonical, hreflang, JSON-LD, o hay enlaces rotos|
+|`node scripts/indexnow.mjs`|solo si hay `INDEXNOW_KEY`; avisa a Bing tras el deploy. Nunca bloquea (se omite si falla)|
 
-> Si prefieres que Cloudflare construya directamente desde Git, no necesitas nada de esto:
-> el build ya ocurre en Cloudflare. El workflow de `.github/workflows/deploy.yml` es
-> para builds locales o si quieres el chequeo de SEO bloqueando el deploy.
+> El chequeo **bloquea el deploy** solo si publica el workflow de GitHub Actions.
+> Si Cloudflare sigue desplegando desde Git en paralelo, un push roto puede colarse
+> (ver «Deploy con GitHub Actions»).
 
 ## 3. Publicar
 
+Con el workflow activo (recomendado): `git push` a `main` y GitHub Actions
+comprueba, construye y publica. Estado del pipeline:
+<https://github.com/walleram/yuuvi-new/actions>
+
+Manualmente (cualquier caso):
+
 ```bash
-# Primer despliegue, con la build y la verificación de SEO
-npm run check:seo
+npm run check:all     # tipos + build + SEO + contenido
 npm run deploy:prod
 ```
 
-O simplemente:
-
-```bash
-git add -A && git commit -m "Deploy Yuuvi" && git push
-```
-
-Cloudflare compila y publica en unos minutos.
-
 ---
 
-## Deploy alternativo: GitHub Actions
+## Deploy con GitHub Actions
 
-`.github/workflows/deploy.yml` construye, valida y publica, y además avisa a
-IndexNow para que Bing indexe al instante.
+`.github/workflows/deploy.yml` ejecuta en cada push a `main`:
+`check` → `check:content` → `build` → `check:seo` → **deploy con wrangler** →
+aviso a IndexNow (si hay `INDEXNOW_KEY`). Si algo falla, **no publica**.
 
-Para usarlo, añade los dos secrets de arriba. El proyecto de Pages en Cloudflare
-se puede entonces poner en modo *Direct Upload* para evitar builds duplicados.
+Para que sea el único que despliegue (y los checks realmente bloqueen):
+
+1. Añade los secrets de la sección 2 (`CLOUDFLARE_ACCOUNT_ID`, `CLOUDFLARE_API_TOKEN`).
+2. En el dashboard de Cloudflare: **Workers & Pages → proyecto `yuuvi-new` →
+   Build → Branch control → desactiva «Enable automatic production branch deployments»**
+   y guarda.
+
+Sin el paso 2 hay **builds duplicados** (Cloudflare construye desde Git *y*
+Actions sube `dist/`), y un push con errores de tipos/SEO seguiría publicándose
+desde el lado de Cloudflare. Un proyecto Git **no puede pasarse a Direct Upload**;
+la única vía es desactivar los deploys automáticos de rama.
 
 ---
 

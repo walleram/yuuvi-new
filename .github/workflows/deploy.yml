@@ -1,0 +1,63 @@
+name: Checks and deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-main
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          cache: npm
+
+      - name: Instala dependencias
+        run: npm ci
+
+      - name: Comprueba secrets
+        run: |
+          if [ -z "$CLOUDFLARE_ACCOUNT_ID" ] || [ -z "$CLOUDFLARE_API_TOKEN" ]; then
+            echo "::error::Faltan CLOUDFLARE_ACCOUNT_ID / CLOUDFLARE_API_TOKEN. Créalos en GitHub → Settings → Secrets and variables → Actions (ver DEPLOY.md)."
+            exit 1
+          fi
+
+      - name: Tipos (astro check)
+        run: npm run check
+
+      - name: Contenido (corrupción + 800 palabras)
+        run: npm run check:content
+
+      - name: Build
+        run: npm run build
+
+      - name: SEO (canonical, hreflang, JSON-LD, enlaces)
+        run: npm run check:seo
+
+      - name: Publica la clave IndexNow
+        if: env.INDEXNOW_KEY != ''
+        run: printf '%s' "$INDEXNOW_KEY" > "public/$INDEXNOW_KEY.txt"
+
+      - name: Deploy a Cloudflare Pages
+        run: npx wrangler pages deploy dist --project-name=yuuvi-new --branch main
+
+      - name: Avisa a IndexNow (Bing/Yandex)
+        if: env.INDEXNOW_KEY != ''
+        continue-on-error: true
+        run: node scripts/indexnow.mjs
