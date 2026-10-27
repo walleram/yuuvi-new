@@ -1,0 +1,84 @@
+---
+import Layout from '@layouts/Layout.astro';
+import { legalAlternates } from '@lib/site';
+---
+
+<Layout
+  title="Política de Privacitat | Yuuvi"
+  description="Política de privacitat i galetes de Yuuvi, d'acord amb el RGPD europeu."
+  lang="ca"
+  alternates={legalAlternates('privacy')}
+>
+
+  <article class="prose prose-invert prose-lg mx-auto max-w-3xl px-4 py-10 sm:px-6 prose-headings:font-black prose-headings:text-white prose-a:text-brand-pink [&_p]:text-neutral-300">
+    <h1>Política de Privacitat</h1>
+    <p>Última actualització: {new Date().toLocaleDateString('ca-ES')}</p>
+
+    <h2>1. Qui és el responsable?</h2>
+    <p>
+      Yuuvi (<strong>https://www.yuuvi.cat</strong>) és una revista digital de tendències juvenils
+      adreçada al públic general (majors de 16 anys). Contacte: hola@yuuvi.cat
+    </p>
+
+    <h2>2. Quines dades recollim?</h2>
+    <p>Aquest lloc web és de contingut editorial i no requereix registre. Tot i això, fem servir eines de tercers que poden recollir dades de navegació:</p>
+    <ul>
+      <li><strong>Publicitat (Google AdSense):</strong> Google pot utilitzar galetes per mostrar anuncis personalitzats i mesurar-ne el rendiment.</li>
+      <li><strong>Analítica (Google Analytics):</strong> dades agregades de visites, pàgines vistes, dispositiu i origen.</li>
+    </ul>
+    <p>Tots els tractaments de dades d'àmbit europeu es regeixen pel <strong>Reglament (UE) 2016/679 (RGPD)</strong>.</p>
+
+    <h2 id="cookies">3. Galetes</h2>
+    <p>Aquest lloc utilitza galetes pròpies i de tercers. Les galetes són petits arxius que s'emmagatzemen al teu dispositiu per recordar informació. Les classifiquem així:</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Tipus</th>
+          <th>Finalitat</th>
+          <th>Base</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Essencials</td>
+          <td>Funcionament bàsic del lloc i preferències de consentiment.</td>
+          <td>Necessàries. No requereixen consentiment.</td>
+        </tr>
+        <tr>
+          <td>Analítica</td>
+          <td>Mesura d'audiència (Google Analytics).</td>
+          <td>Consentiment (opt-in).</td>
+        </tr>
+        <tr>
+          <td>Publicitàries</td>
+          <td>Mostrar anuncis d'AdSense, incloent-hi els personalitzats i el control de freqüència.</td>
+          <td>Consentiment (opt-in). Sense consentiment només es mostren anuncis no personalitzats.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Pots acceptar, rebutjar o canviar la teva decisió en qualsevol moment des del bàner de consentiment (botó de galetes). Negar-te a les galetes publicitàries no bloqueja l'accés al contingut.</p>
+
+    <h2>4. Publicitat i Google AdSense</h2>
+    <p>Utilitzem <strong>Google AdSense</strong> per monetitzar el contingut. Google, com a proveïdor extern, utilitza galetes i podrà fer servir les dades de navegació per mostrar anuncis personalitzats <em>si has donat el teu consentiment</em>. Sense ell, només veuràs anuncis no personalitzats.</p>
+    <p>Pots consultar com Google utilitza les dades a: <a href="https://policies.google.com/technologies/partner-sites">https://policies.google.com/technologies/partner-sites</a> i gestionar la publicitat de Google a <a href="https://adssettings.google.com">https://adssettings.google.com</a>.</p>
+
+    <h2>5. Base legal</h2>
+    <p>Bases legals d'acord amb el RGPD:</p>
+    <ul>
+      <li><strong>Consentiment</strong> (art. 6.1.a): galetes d'analítica i publicitat.</li>
+      <li><strong>Interès legítim</strong> (art. 6.1.f): galetes estrictament tècniques.</li>
+    </ul>
+    <p>El consentiment es gestiona mitjançant un bàner i es pot retirar en qualsevol moment.</p>
+
+    <h2>6. Drets</h2>
+    <p>Pots exercir els teus drets d'<strong>accés, rectificació, supressió, oposició, limitació i portabilitat</strong> escrivint a hola@yuuvi.cat. També pots reclamar davant l'Autoritat Catalana de Protecció de Dades (APDCAT) o l'Agència Espanyola de Protecció de Dades (AEPD).</p>
+
+    <h2>7. Menors</h2>
+    <p>Aquest lloc no recull deliberadament dades de menors de 16 anys. Si ets menor de 16, no facilitis dades personals.</p>
+
+    <h2>8. Contacte</h2>
+    <p>Per a qualsevol dubte sobre privacitat: hola@yuuvi.cat.</p>
+  </article>
+</Layout>

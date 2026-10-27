@@ -1,0 +1,55 @@
+---
+import Layout from '@layouts/Layout.astro';
+import { legalAlternates } from '@lib/site';
+---
+
+<Layout
+  title="Avís Legal | Yuuvi"
+  description="Avís legal, identificació del responsable i condicions d'ús del lloc web Yuuvi."
+  lang="ca"
+  alternates={legalAlternates('legalNotice')}
+>
+
+  <article class="prose prose-invert prose-lg mx-auto max-w-3xl px-4 py-10 sm:px-6 prose-headings:font-black prose-headings:text-white prose-a:text-brand-pink [&_p]:text-neutral-300">
+    <h1>Avís Legal</h1>
+    <p>Última actualització: {new Date().toLocaleDateString('ca-ES')}</p>
+
+    <h2>1. Dades identificatives</h2>
+    <p>
+      En compliment de l'article 10 de la Llei 34/2002, d'11 de juliol, de Serveis de la Societat
+      de la Informació i de Comerç Electrònic (LSSI-CE), s'informa de les dades identificatives
+      del titular del lloc web <strong>https://www.yuuvi.cat</strong>:
+    </p>
+    <ul>
+      <li><strong>Denominació:</strong> Yuuvi</li>
+      <li><strong>Contacte:</strong> hola@yuuvi.cat</li>
+    </ul>
+    <p>Nota: completa aquestes dades amb les reals (nom, NIF/CIF i telèfon si escau) abans del llançament.</p>
+
+    <h2>2. Objecte</h2>
+    <p>El lloc web Yuuvi és una revista digital de tendències juvenils amb caràcter informatiu i d'entreteniment.</p>
+
+    <h2>3. Propietat intel·lectual i industrial</h2>
+    <p>
+      Tot el contingut editorial (textos, imatges, disseny i codi) és titularitat de Yuuvi o dels seus
+      autors corresponents. Queda prohibida la seva reproducció total o parcial sense autorització expressa.
+      Les marques de tercers que es puguin citar pertanyen als seus legítims titulars.
+    </p>
+
+    <h2>4. Responsabilitat</h2>
+    <p>
+      Yuuvi no es fa responsable del contingut dels anuncis mostrats mitjançant Google AdSense ni dels
+      llocs externs enllaçats. El contingut s'ofereix «tal com és» i amb finalitats informatives.
+    </p>
+
+    <h2>5. Legislació aplicable i jurisdicció</h2>
+    <p>
+      Les presents condicions es regeixen per la legislació espanyola. Per a qualsevol controvèrsia, les
+      parts se sotmetran als jutjats i tribunals de la ciutat del domicili del titular, llevat que la
+      llei disposi una altra cosa.
+    </p>
+
+    <h2>6. Contacte</h2>
+    <p>Per a qualsevol consulta: hola@yuuvi.cat.</p>
+  </article>
+</Layout>

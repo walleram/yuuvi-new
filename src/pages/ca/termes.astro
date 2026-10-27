@@ -1,0 +1,35 @@
+---
+import Layout from '@layouts/Layout.astro';
+import { legalAlternates } from '@lib/site';
+---
+
+<Layout
+  title="Termes d'Ús | Yuuvi"
+  description="Termes i condicions d'ús de Yuuvi."
+  lang="ca"
+  alternates={legalAlternates('terms')}
+>
+
+  <article class="prose prose-invert prose-lg mx-auto max-w-3xl px-4 py-10 sm:px-6 prose-headings:font-black prose-headings:text-white prose-a:text-brand-pink [&_p]:text-neutral-300">
+    <h1>Termes d'Ús</h1>
+    <p>Última actualització: {new Date().toLocaleDateString('ca-ES')}</p>
+
+    <h2>1. Acceptació dels termes</h2>
+    <p>En accedir i utilitzar el lloc web de Yuuvi acceptes aquests termes d'ús. Si no hi estàs d'acord, si us plau no utilitzis el lloc.</p>
+
+    <h2>2. Ús del contingut</h2>
+    <p>Tot el contingut editorial de Yuuvi és original i està protegit per drets d'autor. No es permet la reproducció total o parcial sense autorització prèvia.</p>
+
+    <h2>3. Publicitat</h2>
+    <p>El lloc mostra publicitat de tercers (Google AdSense). No som responsables del contingut dels anuncis ni de les pàgines a què enllacen.</p>
+
+    <h2>4. Exempció de responsabilitat</h2>
+    <p>El contingut s'ofereix amb finalitats informatives i d'entreteniment. Yuuvi no es fa responsable de les decisions preses a partir de la informació publicada.</p>
+
+    <h2>5. Modificacions</h2>
+    <p>Podem actualitzar aquests termes en qualsevol moment. Els canvis es publicaran en aquesta pàgina.</p>
+
+    <h2>6. Contacte</h2>
+    <p>Per a consultes sobre aquests termes: hola@yuuvi.cat.</p>
+  </article>
+</Layout>

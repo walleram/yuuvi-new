@@ -1,12 +1,15 @@
 ---
 import { getCollection } from 'astro:content';
-import { LEGAL_ROUTES, type Lang } from '../lib/site';
+import { LEGAL_ROUTES, type Lang, type LegalKey } from '../lib/site';
 import {
   articleSlug,
   authorSlug,
   categoryHref,
   collectAuthors,
   collectTags,
+  homeHref,
+  LANGS,
+  LANG_PREFIX,
 } from '../lib/articles';
 
 interface Props {
@@ -16,127 +19,110 @@ interface Props {
 
 const { lang, currentPath } = Astro.props;
 
+// Etiquetas de cada idioma en el selector.
+const LANG_LABEL: Record<Lang, string> = { en: 'EN', es: 'ES', ca: 'CA' };
+
 const published = await getCollection('articles', ({ data }) => data.published);
+
+// Índice `${lang}:${key}` -> slug del artículo en ese idioma.
 const translationIndex = new Map<string, string>();
 for (const a of published) {
   translationIndex.set(`${a.data.lang}:${a.data.translationKey ?? articleSlug(a)}`, articleSlug(a));
 }
 
 // Rutas que existen en cada idioma, derivadas del contenido real.
-const esPaths = new Set<string>(['/']);
-const enPaths = new Set<string>(['/en/']);
+const pathsByLang: Record<Lang, Set<string>> = {
+  es: new Set<string>(['/']),
+  en: new Set<string>(['/en/']),
+  ca: new Set<string>(['/ca/']),
+};
 
 for (const a of published) {
   const slug = articleSlug(a);
-  if (a.data.lang === 'es') esPaths.add(`/${slug}/`);
-  else enPaths.add(`/en/${slug}/`);
+  pathsByLang[a.data.lang].add(`${LANG_PREFIX[a.data.lang]}/${slug}/`);
 }
 for (const category of new Set(published.map((a) => a.data.category))) {
-  esPaths.add(categoryHref(category, 'es'));
-  enPaths.add(categoryHref(category, 'en'));
+  for (const l of LANGS) pathsByLang[l].add(categoryHref(category, l));
 }
-for (const entry of collectTags(published.filter((a) => a.data.lang === 'es'))) {
-  esPaths.add(`/tag/${entry.slug}/`);
+for (const l of LANGS) {
+  for (const entry of collectTags(published.filter((a) => a.data.lang === l))) {
+    pathsByLang[l].add(`${LANG_PREFIX[l]}/tag/${entry.slug}/`);
+  }
+  for (const name of collectAuthors(published.filter((a) => a.data.lang === l)).keys()) {
+    pathsByLang[l].add(`${LANG_PREFIX[l]}/autor/${authorSlug(name)}/`);
+  }
 }
-for (const entry of collectTags(published.filter((a) => a.data.lang === 'en'))) {
-  enPaths.add(`/en/tag/${entry.slug}/`);
-}
-for (const name of collectAuthors(published.filter((a) => a.data.lang === 'es')).keys()) {
-  esPaths.add(`/autor/${authorSlug(name)}/`);
-}
-for (const name of collectAuthors(published.filter((a) => a.data.lang === 'en')).keys()) {
-  enPaths.add(`/en/autor/${authorSlug(name)}/`);
-}
+
 // Legales: cada idioma tiene su propia ruta, así que no se derivan por prefijo.
-const ES_TO_EN_LEGAL = new Map<string, string>(
-  (Object.keys(LEGAL_ROUTES) as (keyof typeof LEGAL_ROUTES)[]).map((k) => [
-    LEGAL_ROUTES[k].es,
-    LEGAL_ROUTES[k].en,
-  ]),
-);
-const EN_TO_ES_LEGAL = new Map<string, string>([...ES_TO_EN_LEGAL].map(([es, en]) => [en, es]));
+// Mapa ruta -> clave legal, para traducir cualquier legal a su equivalente.
+const LEGAL_KEYS: LegalKey[] = ['privacy', 'terms', 'legalNotice'];
+const legalByRoute = new Map<string, LegalKey>();
+for (const key of LEGAL_KEYS) {
+  for (const l of LANGS) legalByRoute.set(LEGAL_ROUTES[key][l], key);
+}
 
-for (const es of ES_TO_EN_LEGAL.keys()) esPaths.add(es);
-for (const en of EN_TO_ES_LEGAL.keys()) enPaths.add(en);
+// Detecta el idioma de una ruta por su prefijo.
+function routeLang(path: string): Lang {
+  if (path.startsWith('/en/') || path === '/en') return 'en';
+  if (path.startsWith('/ca/') || path === '/ca') return 'ca';
+  return 'es';
+}
 
-function buildHref(targetLang: Lang): string | null {
+function buildHref(target: Lang): string | null {
   const path = currentPath.split('?')[0] ?? '/';
-  const known = targetLang === 'es' ? esPaths : enPaths;
+  const known = pathsByLang[target];
   if (known.has(path)) return path;
 
-  const currentLang: Lang = path.startsWith('/en/') ? 'en' : 'es';
-  const otherLang: Lang = currentLang === 'es' ? 'en' : 'es';
-  if (targetLang !== otherLang) return null;
+  const from = routeLang(path);
+  if (target === from) return path;
 
-  // Las legales no comparten nombre de ruta entre idiomas: /privacidad/ es
-  // /en/privacy/. Sin este mapa, el intercambio por prefijo daría un 404.
-  const legal = currentLang === 'es' ? ES_TO_EN_LEGAL.get(path) : EN_TO_ES_LEGAL.get(path);
-  if (legal && known.has(legal)) return legal;
+  // Legales: los nombres de ruta difieren por idioma (/ca/privacitat/ vs /privacy/).
+  const legalKey = legalByRoute.get(path);
+  if (legalKey) {
+    const href = LEGAL_ROUTES[legalKey][target];
+    if (known.has(href)) return href;
+  }
 
-  // Listados, tags, autores y portada: la página equivalente es la misma
-  // con el prefijo /en/ puesto o quitado.
-  const swapped =
-    otherLang === 'en'
-      ? path === '/'
-        ? '/en/'
-        : '/en' + path
-      : path === '/en/'
-        ? '/'
-        : path.replace(/^\/en/, '');
+  // Listados, tags, autores y portada: la misma ruta con otro prefijo de idioma.
+  const bare = path.replace(/^\/(en|ca)(?=\/|$)/, '');
+  const swapped = bare === '/' || bare === '' ? homeHref(target) : `${LANG_PREFIX[target]}${bare}`;
   if (known.has(swapped)) return swapped;
 
   // Artículos: los slugs difieren entre idiomas, se emparejan por translationKey.
-  const slug = path.replace(/^\/en\//, '/').replace(/^\/(es|en)\//, '/');
+  const slug = bare.replace(/^\//, '').replace(/\/$/, '');
   for (const a of published) {
-    if (a.data.lang !== currentLang) continue;
-    if (articleSlug(a) !== slug.replace(/^\//, '').replace(/\/$/, '')) continue;
+    if (a.data.lang !== from) continue;
+    if (articleSlug(a) !== slug) continue;
     const key = a.data.translationKey ?? articleSlug(a);
-    const translated = translationIndex.get(`${otherLang}:${key}`);
+    const translated = translationIndex.get(`${target}:${key}`);
     if (!translated) return null;
-    return otherLang === 'es' ? `/${translated}/` : `/en/${translated}/`;
+    return `${LANG_PREFIX[target]}/${translated}/`;
   }
 
   return null;
 }
 
-const esHref = buildHref('es');
-const enHref = buildHref('en');
+const hrefs = Object.fromEntries(LANGS.map((l) => [l, buildHref(l)])) as Record<Lang, string | null>;
+const available = LANGS.filter((l) => hrefs[l] || l === lang);
 ---
 
 {
-  (esHref || enHref) && (
+  available.length > 1 && (
     <div class="relative">
       <div class="flex items-center gap-1 rounded-full border border-neutral-700 p-1 text-sm font-semibold">
-        {
-          esHref && (
-            <a
-              href={esHref}
-              class:list={[
-                'rounded-full px-3 py-1 transition-colors',
-                lang === 'es' ? 'bg-brand-pink text-white' : 'text-neutral-400 hover:text-white',
-              ]}
-              aria-current={lang === 'es' ? 'page' : undefined}
-              hreflang="es"
-            >
-              ES
-            </a>
-          )
-        }
-        {
-          enHref && (
-            <a
-              href={enHref}
-              class:list={[
-                'rounded-full px-3 py-1 transition-colors',
-                lang === 'en' ? 'bg-brand-pink text-white' : 'text-neutral-400 hover:text-white',
-              ]}
-              aria-current={lang === 'en' ? 'page' : undefined}
-              hreflang="en"
-            >
-              EN
-            </a>
-          )
-        }
+        {available.map((l) => (
+          <a
+            href={hrefs[l] ?? currentPath}
+            class:list={[
+              'rounded-full px-3 py-1 transition-colors',
+              lang === l ? 'bg-brand-pink text-white' : 'text-neutral-400 hover:text-white',
+            ]}
+            aria-current={lang === l ? 'page' : undefined}
+            hreflang={l}
+          >
+            {LANG_LABEL[l]}
+          </a>
+        ))}
       </div>
     </div>
   )

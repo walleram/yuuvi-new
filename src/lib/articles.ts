@@ -3,16 +3,23 @@ import { CATEGORIES, type Lang } from './site';
 
 export type Article = CollectionEntry<'articles'>;
 
-export const OTHER_LANG: Record<Lang, Lang> = { es: 'en', en: 'es' };
+export const LANGS: readonly Lang[] = ['en', 'es', 'ca'];
 
-/** Quita el prefijo de idioma del id de la colección (`es/foo` -> `foo`). */
+/** Prefijo de ruta por idioma. El español es el idioma raíz (sin prefijo). */
+export const LANG_PREFIX: Record<Lang, string> = {
+  es: '',
+  en: '/en',
+  ca: '/ca',
+};
+
+/** Quita el prefijo de idioma del id de la colección (`en/foo` -> `foo`). */
 export function articleSlug(article: Article): string {
-  return article.id.replace(/^\/?(es|en)\//, '');
+  return article.id.replace(/^\/?(es|en|ca)\//, '');
 }
 
 /** Ruta pública de un artículo, respetando el prefijo de idioma. */
 export function articleHref(slug: string, lang: Lang): string {
-  return lang === 'es' ? `/${slug}/` : `/en/${slug}/`;
+  return `${LANG_PREFIX[lang]}/${slug}/`;
 }
 
 export function articleUrl(slug: string, lang: Lang, site: URL): string {
@@ -20,19 +27,19 @@ export function articleUrl(slug: string, lang: Lang, site: URL): string {
 }
 
 export function categoryHref(category: string, lang: Lang): string {
-  return lang === 'es' ? `/categoria/${category}/` : `/en/categoria/${category}/`;
+  return `${LANG_PREFIX[lang]}/categoria/${category}/`;
 }
 
 export function tagHref(tag: string, lang: Lang): string {
-  return lang === 'es' ? `/tag/${tagSlug(tag)}/` : `/en/tag/${tagSlug(tag)}/`;
+  return `${LANG_PREFIX[lang]}/tag/${tagSlug(tag)}/`;
 }
 
 export function authorHref(author: string, lang: Lang): string {
-  return lang === 'es' ? `/autor/${authorSlug(author)}/` : `/en/autor/${authorSlug(author)}/`;
+  return `${LANG_PREFIX[lang]}/autor/${authorSlug(author)}/`;
 }
 
 export function homeHref(lang: Lang): string {
-  return lang === 'es' ? '/' : '/en/';
+  return lang === 'es' ? '/' : `${LANG_PREFIX[lang]}/`;
 }
 
 /** Normaliza un tag libre a un slug estable para URLs. */
@@ -56,9 +63,9 @@ export function authorSlug(author: string): string {
 }
 
 /**
- * Índice de traducciones: `${lang}:${key}` -> artículo del otro idioma.
+ * Índice de traducciones: `${lang}:${key}` -> artículo de ese idioma.
  * La clave es `translationKey` si existe; si no, se cae al slug.
- * Así "gadgets-adolescentes" (es) y "gadgets-teens" (en) se emparejan bien.
+ * Así "gadgets-adolescentes" (es) y "gadgets-teens" (en/ca) se emparejan bien.
  */
 export function buildTranslationIndex(articles: Article[]): Map<string, Article> {
   const index = new Map<string, Article>();
@@ -69,10 +76,20 @@ export function buildTranslationIndex(articles: Article[]): Map<string, Article>
   return index;
 }
 
-export function findTranslation(index: Map<string, Article>, article: Article): Article | undefined {
-  const other = OTHER_LANG[article.data.lang];
+/** Todas las traducciones de un artículo en los demás idiomas, por `translationKey`. */
+export function findTranslations(
+  index: Map<string, Article>,
+  article: Article,
+  languages: readonly Lang[] = LANGS,
+): Partial<Record<Lang, Article>> {
   const key = article.data.translationKey ?? articleSlug(article);
-  return index.get(`${other}:${key}`);
+  const out: Partial<Record<Lang, Article>> = {};
+  for (const lang of languages) {
+    if (lang === article.data.lang) continue;
+    const found = index.get(`${lang}:${key}`);
+    if (found) out[lang] = found;
+  }
+  return out;
 }
 
 /** Nº de palabras del cuerpo del artículo (solo prosa, ignora imágenes). */
