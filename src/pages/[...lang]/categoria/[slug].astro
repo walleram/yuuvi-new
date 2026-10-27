@@ -2,22 +2,24 @@
 import Layout from '@layouts/Layout.astro';
 import ArticleCard from '@components/ArticleCard.astro';
 import { getCollection } from 'astro:content';
-import { CATEGORIES, type Lang } from '../../../lib/site';
+import { CATEGORIES, UI_TEXT, type Lang } from '../../../lib/site';
+import { LANG_PREFIX, LANGS } from '../../../lib/articles';
 
 export function getStaticPaths() {
   const categorySlugs = Object.keys(CATEGORIES);
   const paths = [];
   for (const slug of categorySlugs) {
-    // Español: sin prefijo /categoria/[slug]/
-    paths.push({ params: { lang: undefined, slug }, props: { lang: 'es' } });
-    // Inglés: /en/categoria/[slug]/
-    paths.push({ params: { lang: 'en', slug }, props: { lang: 'en' } });
+    for (const lang of LANGS) {
+      // Español: sin prefijo /categoria/[slug]/
+      paths.push({ params: { lang: LANG_PREFIX[lang].replace(/^\//, '') || undefined, slug }, props: { lang } });
+    }
   }
   return paths;
 }
 
 const rawLang = Astro.params.lang as string | undefined;
-const lang: Lang = rawLang === 'en' ? 'en' : 'es';
+const lang: Lang = rawLang === 'en' ? 'en' : rawLang === 'ca' ? 'ca' : 'es';
+const t = UI_TEXT[lang];
 const slug = Astro.params.slug as string;
 
 const categoryMeta = CATEGORIES[slug];
@@ -46,11 +48,11 @@ const iconBySlug: Record<string, string> = {
 
 <Layout
   title={`${categoryMeta.label[lang]} | Yuuvi`}
-  description={`${categoryMeta.label[lang]} en Yuuvi: las últimas tendencias y noticias para jóvenes.`}
+  description={`${categoryMeta.label[lang]} a Yuuvi: les últimes tendències i notícies per a joves.`}
   lang={lang}
 >
   <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6">
-    <div class="mb-8 flex items-center gap-4">
+    <div class="mb-6 flex items-center gap-4">
       <span
         class:list={[
           'flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br text-2xl font-black text-white shadow-lg',
@@ -62,10 +64,21 @@ const iconBySlug: Record<string, string> = {
       <div>
         <h1 class="text-3xl font-black tracking-tight text-white">{categoryMeta.label[lang]}</h1>
         <p class="mt-1 text-sm text-neutral-400">
-          {articles.length} {lang === 'es' ? 'artículos' : 'articles'}
+          {articles.length} {articles.length === 1 ? t.article : t.articles}
         </p>
       </div>
     </div>
+
+    <section class="mb-8 max-w-3xl">
+      <p class="leading-relaxed text-neutral-300">
+        {lang === 'es' &&
+          `En Yuuvi recopilamos los mejores artículos de ${categoryMeta.label[lang].toLowerCase()} para mantenerte al día con las últimas tendencias, curiosidades y novedades.`}
+        {lang === 'en' &&
+          `On Yuuvi we collect the latest articles about ${categoryMeta.label[lang].toLowerCase()} to keep you up to date with trends, insights and what's new.`}
+        {lang === 'ca' &&
+          `A Yuuvi recopilem els últims articles de ${categoryMeta.label[lang].toLowerCase()} per mantenir-te al dia amb les tendències, curiositats i novetats.`}
+      </p>
+    </section>
 
     {articles.length > 0 ? (
       <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -76,9 +89,7 @@ const iconBySlug: Record<string, string> = {
     ) : (
       <div class="rounded-3xl border border-dashed border-neutral-700 p-16 text-center">
         <p class="text-neutral-400">
-          {lang === 'es'
-            ? 'Próximamente: estamos preparando contenido de esta categoría.'
-            : 'Coming soon: we are preparing content for this category.'}
+          {t.comingSoon}
         </p>
       </div>
     )}

@@ -15,6 +15,7 @@ interface Props {
   canonicalURL?: string;
   ogImage?: string;
   noindex?: boolean;
+  robots?: string;
   type?: string;
   jsonLd?: object | object[];
   article?: {
@@ -28,8 +29,9 @@ interface Props {
   rssHref?: string;
 }
 
-const { title, description, lang, canonicalURL, ogImage, noindex, type, jsonLd, article, alternates, rssHref } =
+const { title, description, lang, canonicalURL, ogImage, noindex, robots, type, jsonLd, article, alternates, rssHref } =
   Astro.props;
+const robotsContent = robots ?? (noindex ? 'noindex, follow' : undefined);
 
 const defaultCanonical = new URL(Astro.url.pathname, Astro.site).toString();
 ---
@@ -43,13 +45,14 @@ const defaultCanonical = new URL(Astro.url.pathname, Astro.site).toString();
       lang={lang}
       canonicalURL={canonicalURL ?? defaultCanonical}
       ogImage={ogImage}
-      noindex={noindex}
+      noindex={noindex || robotsContent?.startsWith('noindex')}
       type={type}
       jsonLd={jsonLd}
       article={article}
       alternates={alternates}
       rssHref={rssHref}
     />
+    {robotsContent && <meta name="robots" content={robotsContent} />}
     <script async src={adsenseScriptSrc()} crossorigin="anonymous"></script>
     <meta name="theme-color" content="#0b0b12" />
     <!-- Preconnect para rendimiento -->
