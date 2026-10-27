@@ -8,7 +8,7 @@ translationKey: core-fashion-cheap-spain
 category: "estetica"
 tags: ["moda", "core", "roba-barata", "dupes"]
 author: "Lucía Fernández"
-coverImage: "src/assets/covers/cover-ropa-core-CA.webp"
+coverImage: "src/assets/covers/cover-ropa-core-CA.jpg"
 coverAlt: "Portada de l'article de moda: fons gris clar amb detalls rosa i ocres"
 published: true
 ---

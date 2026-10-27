@@ -8,7 +8,7 @@ translationKey: streamer-setup-2026
 category: "gaming"
 tags: ["gaming", "streaming", "setup", "twitch"]
 author: "Diego Morales"
-coverImage: "src/assets/covers/cover-setup-streamer-CA.webp"
+coverImage: "src/assets/covers/cover-setup-streamer-CA.jpg"
 coverAlt: "Portada de l'article sobre gaming: fons blau amb detalls vermells"
 published: true
 ---
