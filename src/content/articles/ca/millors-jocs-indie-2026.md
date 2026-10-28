@@ -8,7 +8,7 @@ translationKey: best-indie-games-2026
 category: "gaming"
 tags: ["gaming", "indie", "steam", "jocs"]
 author: "Diego Morales"
-coverImage: "src/assets/covers/cover-juegos-indie-CA.png"
+coverImage: "src/assets/covers/cover-juegos-indie-CA.webp"
 coverAlt: "Portada de l'article sobre gaming: fons blau amb detalls vermells"
 published: true
 ---

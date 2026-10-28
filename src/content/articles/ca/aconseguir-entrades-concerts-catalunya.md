@@ -8,7 +8,7 @@ translationKey: concert-tickets-spain
 category: "musica"
 tags: ["musica", "concerts", "entrades", "estafes"]
 author: "Diego Morales"
-coverImage: "src/assets/covers/cover-entradas-conciertos-CA.png"
+coverImage: "src/assets/covers/cover-entradas-conciertos-CA.webp"
 coverAlt: "Portada sobre concerts: fons crema amb detalls magenta i violeta"
 published: true
 ---

@@ -8,7 +8,7 @@ category: "cultura"
 tags: ["slang", "tiktok", "delulu", "significats"]
 author: "Valentina Ruiz"
 translationKey: delulu-meaning
-coverImage: "src/assets/covers/cover-cultura-alt-CA.jpg"
+coverImage: "src/assets/covers/cover-cultura-alt-CA.webp"
 coverAlt: "Portada de la secció cultura sobre el slang delulu, en tons rosa i préssec"
 featured: true
 published: true

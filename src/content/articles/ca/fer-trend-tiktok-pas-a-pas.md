@@ -8,7 +8,7 @@ translationKey: tiktok-trend-step-by-step
 category: "cultura"
 tags: ["tiktok", "tendencies", "tutorial", "halloween"]
 author: "Valentina Ruiz"
-coverImage: "src/assets/covers/cover-trend-tiktok-CA.jpg"
+coverImage: "src/assets/covers/cover-trend-tiktok-CA.webp"
 coverAlt: "Portada en tons rosa i préssec amb detalls de la secció cultura"
 published: true
 ---
