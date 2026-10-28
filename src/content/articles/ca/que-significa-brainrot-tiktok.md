@@ -8,7 +8,7 @@ translationKey: brainrot-meaning
 category: "cultura"
 tags: ["slang", "tiktok", "brainrot", "significats"]
 author: "Valentina Ruiz"
-coverImage: "src/assets/covers/cover-brainrot-CA.png"
+coverImage: "src/assets/covers/cover-brainrot-CA.webp"
 coverAlt: "Portada de tendències amb fons clar i detalls magenta i vermells"
 published: true
 ---
