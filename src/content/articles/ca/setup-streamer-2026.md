@@ -20,8 +20,6 @@ published: true
 A continuació hi ha tres muntatges reals: un d'uns 120 € per començar aquest cap de setmana, un d'uns 380 € quan ja puges cada setmana, i un de més de 800 € que només compensa si fas *streaming* seriosament. Tots fan servir OBS Studio, que és gratis. Els preus són orientatius, perquè canvien cada setmana segons la botiga.
 
 ## L'ordre correcte: micròfon primer
-![L'ordre correcte: micròfon primer](src/content/articles/images/setup-streamer-2026-setup-orden.png)
-
 Hi ha una regla que repeteixen totes les guies d'equipament i que sona estranya fins que la proves: **l'àudio determina la retenció més que el vídeo**. La gent tolera una webcam justa; tanca la pestanya amb un so amb eco, teclat en cada pulsació o veu retallada.
 
 L'ordre de compra, sempre:
@@ -34,8 +32,6 @@ L'ordre de compra, sempre:
 Un detall que ho canvia tot: **escolta't com et sent la gent**. OBS pot reenviar el teu propi micròfon als auriculars en directe. Una setmana escoltant-te ensenya molt més que qualsevol tutorial.
 
 ## Tres muntatges per pressupost
-![Tres muntatges per pressupost](src/content/articles/images/setup-streamer-2026-setup-presupuesto.png)
-
 **Muntatge d'inici: uns 120 €**
 - Micròfon: Blue Snowball iCE o similar FIFINE, uns 45-50 €.
 - Webcam: Logitech C920, uns 65 € (si el pressupost apreta, queda't amb el micròfon i fes servir el mòbil com a càmera).
@@ -62,8 +58,6 @@ Aquest és el sostre útil per a gairebé tothom. Si pugen vídeos de manera con
 Aquí ja no compres qualitat proporcional: compres comoditat i control. Té sentit quan el *streaming* és la teva feina o quan gestiones escenes complicades cada dia.
 
 ## Si fas streaming des de consola
-![Si fas streaming des de consola](src/content/articles/images/setup-streamer-2026-setup-consola.png)
-
 PlayStation, Xbox i Switch transmeten de manera diferent, i aquí hi ha una peça obligatòria: **la targeta de captura**. Des d'un PC, el joc entra per programari a l'OBS i no necessites res. Des de consola, necessites un aparell que capturi la HDMI.
 
 - Opció mínima: un *dongle* USB d'uns 25 € que rendeix a 1080p60.

@@ -20,9 +20,6 @@ published: true
 Cada vez que un artista anuncia gira en España se repite el mismo patrón: preventa, cola, agotado en minutos y un mercado paralelo que aparece en redes. La Policía Nacional, INCIBE y el Centro Europeo del Consumidor coinciden en lo mismo: la prisa es la herramienta principal del estafador. Aquí va la guía para conseguirlo sin perder el dinero ni el concierto.
 
 ## Compra solo en el canal oficial (y a reconocerlo)
-![Compra solo en el canal oficial (y a reconocerlo)](src/content/articles/images/conseguir-entradas-conciertos-espana-entradas-oficial.png)
-
-
 El circuito oficial empieza en la web del artista o del promotor: ahí está el enlace a la ticketera autorizada, la única que garantiza que la entrada existe y te dará acceso. Aparecer el primero en Google no significa ser oficial: muchas plataformas de reventa pagan publicidad y se cuelan por encima en los resultados.
 
 Tres comprobaciones antes de pagar:
@@ -34,9 +31,6 @@ Tres comprobaciones antes de pagar:
 Dentro de la oficial, usa el método de pago normal. Las ticketeras grandes recomiendan además tener la cuenta al día: contraseña única, teléfono actualizado (llegan códigos por SMS) y la lista de deseos preparada para el día de la preventa.
 
 ## Cómo conseguir entradas cuando se agota todo
-![Cómo conseguir entradas cuando se agota todo](src/content/articles/images/conseguir-entradas-conciertos-espana-entradas-agotado.png)
-
-
 Agotado no significa fin del camino, significa que hay que cambiar de estrategia. En este orden:
 
 **Preventas registradas.** Artistas como Harry Styles o Madonna usan sistemas tipo Verified Fan: te registras antes, la plataforma filtra a los robots y si te toca recibes un código de acceso. Es la manera más limpia de saltarse la cola de bots.
@@ -50,9 +44,6 @@ Agotado no significa fin del camino, significa que hay que cambiar de estrategia
 Y el consejo que incomoda: **si la venta oficial todavía no ha abierto, nadie tiene entradas reales**. Cualquiera que te venda "entradas anticipadas" está especulando con algo que aún no existe, o directamente mintiendo.
 
 ## Señales de que es una estafa
-![Señales de que es una estafa](src/content/articles/images/conseguir-entradas-conciertos-espana-entradas-estafa.png)
-
-
 - **Precio imposible.** Entradas agotadas a la mitad de lo que costaron. El chollo no existe en los eventos demandados.
 - **Pago sin protección.** Bizum, transferencia o efectivo "para reservar". Ningún canal oficial te pide eso, y es la vía que más cuesta recuperar.
 - **Captura de QR como única prueba.** El formato más frágil que hay: una imagen no prueba que la entrada sea tuya.

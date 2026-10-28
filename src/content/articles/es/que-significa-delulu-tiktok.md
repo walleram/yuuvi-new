@@ -7,6 +7,7 @@ pubDate: 2026-09-05
 category: "cultura"
 tags: ["slang", "tiktok", "delulu", "significados"]
 author: "Valentina Ruiz"
+translationKey: delulu-meaning
 coverImage: "src/assets/covers/cover-cultura-alt.webp"
 coverAlt: "Portada de la sección cultura sobre el slang delulu, en tonos rosa y melocotón"
 featured: true
@@ -20,9 +21,6 @@ published: true
 Es una de esas palabras que aparece en un vídeo, en un audio de diez segundos y en dos semanas la estás usando tú sin darte cuenta. No hay ningún misterio: es una forma corta y divertida de decir "esto que quiero es una locura". Te contamos de dónde viene, cómo se dice y, lo más importante, cuándo ya no queda bien.
 
 ## De dónde viene
-
-![De dónde viene](src/content/articles/images/que-significa-delulu-tiktok-delulu-origen.png)
-
 La raíz es *delusional*, que en inglés significa "delirante" o "que delira". La forma *delulu* es un recorte fonético: se queda con la sílaba que suena bien repetida y tira el resto. Ese tipo de recortes son habituales en el slang español (friki, cosy, chachi) y en inglés, y funcionan porque la palabra se puede decir rápido, escribir rápido y memearse rápido.
 
 Se combinó con un audio viral que circulaba por TikTok a finales de 2022, con frases tipo "somos todos delulu". A partir de ahí la palabra se soltó del audio y empezó a usarse para cualquier situación: un crush improbable, un final de serie, una práctica de empresa, un examen de mates. Y como se entiende en dos segundos, acabó entendiéndose fuera de TikTok: aparece en comentarios de YouTube, en hilos de Twitter, en chats de grupo y en conversaciones normales entre gente joven.
@@ -42,9 +40,6 @@ La pronunciación se acerca a "de-LOO-lu", con el acento en la sílaba del medio
 Y aquí va la frase que más has visto: **"Delulu is the solulu"** (*la ilusión es la solución*). Suena tonto porque es un juego de palabras con *solution*, pero funciona: la idea es que robarse un poco de fantasía no hace daño, y a veces hasta ayuda.
 
 ## Cómo usarlo bien
-
-![Cómo usarlo bien](src/content/articles/images/que-significa-delulu-tiktok-delulu-como-usarlo.png)
-
 La palabra funciona cuando **tú reconoces que es irracional**. Esa es la condición. Si no la compartes, suena condescendiente; si la compartes, suena a complicidad.
 
 **FORMAS QUE SUENAN NATURALES:**
@@ -83,9 +78,6 @@ La palabra se ha desinflado mucho. Estos son los tres casos en los que suena for
 3. **Con gente que no la conoce.** Fuera de internet la palabra todavía no es universal. En una entrevista de trabajo, no.
 
 ## Significados similares que debes conocer
-
-![Significados similares que debes conocer](src/content/articles/images/que-significa-delulu-tiktok-delulu-slangs.png)
-
 Si este slang te ha sonado raro, apunta también estos:
 
 1. **Rizz** → capacidad de ligar / carismo

@@ -18,9 +18,6 @@ published: true
 > Resposta curta: per riure, *Among Us* o *Fall Guys*. Per passar fred, *Dead by Daylight Mobile*. Per planejar, *Clash Royale* o *Brawl Stars*. I per no discutir, res de shooters a mort des del minut u.
 
 ## Els cozy de debò
-
-![Jocs per jugar TUMBAT al sofà](src/content/articles/images/mejores-juegos-movil-amigos-distancia-gaming-cozy.png)
-
 - **Stardew Valley** → de pagament únic i amb multijugador. Tu plantes, el teu amic rega i un altre s'hi passa la partida reformant la casa. Ningú va guanyant, i per això s'aguanta una trucada de tres hores
 - **Minecraft** → construir plegats, amb mons propis per a cada grup i sales sempre obertes. El pla per defecte quan quatre persones no saben què fer un dimarts
 - **Sky: Children of the Light** → online, bonic i sense amagatalls. Ideal per anar comentant cada moviment, perquè el mapa és enorme
@@ -30,9 +27,6 @@ published: true
 La cosa bona dels cozy és que no hi ha rellotge: entreu, feu quatre coses i ja heu passat una hora. Ningú crida i la trucada continua viva.
 
 ## Els jocs de riure i festa
-
-![Jocs per RIURE'S com a estúpids](src/content/articles/images/mejores-juegos-movil-amigos-distancia-gaming-risas.png)
-
 - **Among Us** → el clàssic. Crees sala privada amb codi, dius qui ment i aguantes la traïció
 - **Fall Guys** → free-to-play, amb gent d'altres plataformes i caos certificat. Ningú mira la tècnica, tots empenyen en el tram final
 - **Stumble Guys** → la versió curta del mateix. Partides ràpides que caben entre una story i una altra
@@ -41,9 +35,6 @@ La cosa bona dels cozy és que no hi ha rellotge: entreu, feu quatre coses i ja 
 Aquí no hi ha estratègia real: cal saber qui ha desaparegut, quan i per on ha passat. Aquesta informació només la teniu si aneu parlant, així que el micro obert no és opcional. Sol haver-hi dos impostors en partides de deu, així que repartiu la sospita.
 
 ## Els jocs serios i d'estratègia
-
-![Jocs per JUGAR DE DEBÒ (competitius)](src/content/articles/images/mejores-juegos-movil-amigos-distancia-gaming-serio.png)
-
 - **Clash Royale** → el que més es juga. Curses curtes, molt poca espera i revenja a l'instant. A la guerra de clans es decideix qui posa la ma
 - **Brawl Stars** → tres contra tres, s'apren en deu minuts i la resposta arriba ràpid. Té sistema d'amistats, així que muntes partida només amb qui vols
 - **Marvel Snap** → cartes, el SNAP i la decisió en tres segons. Allà no hi ha excusa: si no llences el SNAP abans de veure l'última carta, ho perds
@@ -52,9 +43,6 @@ Aquí no hi ha estratègia real: cal saber qui ha desaparegut, quan i per on ha 
 Aquí guanya qui comunica. A *Clash Royale* es veu la ma del rival abans de la partida, així que el treball real és mental i es fa parlant: «guarda'm la contrarrap». A *Brawl Stars* al revés, la partida dura dos minuts i la revenja entra al moment.
 
 ## Els jocs de terror
-
-![Jocs per MOSSEGAR-SE les ungles (terror)](src/content/articles/images/mejores-juegos-movil-amigos-distancia-gaming-terror.png)
-
 - **Dead by Daylight Mobile** → un supervivent contra quatre assassins. És el que més veu demana i el que més ensurt dona
 - **Roblox, un altre cop** → dins hi ha experiències de terror que funcionen molt bé en trucada, amb llums apagades
 - **Genshin Impact** → no és de terror, però les seves coves i masmorres obliguen a anar plegats, i de nit en un grup de veu sí que fa por

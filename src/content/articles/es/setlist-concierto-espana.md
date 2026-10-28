@@ -7,6 +7,7 @@ pubDate: 2026-09-01
 category: "musica"
 tags: ["musica", "conciertos", "setlist", "urbano", "fandoms"]
 author: "Diego Morales"
+translationKey: concert-setlist-spain
 coverImage: "src/assets/covers/cover-musica-setlist.webp"
 coverAlt: "Portada sobre el posible setlist del concierto del momento: fondo crema con detalles magenta y violeta"
 published: true
@@ -19,9 +20,6 @@ published: true
 Suele ser un set de unas dos horas, con invitados y sin pausa larga. Quien va pensando que verá los temas en orden de disco se lleva la sorpresa a casa.
 
 ## La estructura de un buen setlist
-
-![La estructura típica](src/content/articles/images/setlist-concierto-espana-setlist-estructura.png)
-
 Un setlist que funciona tiene cuatro bloques, y el orden importa casi tanto como la lista.
 
 **1. Arranque rápido.** Los primeros minutos no son para calentar. La banda entra con el tema que más gente corea, sin presentaciones largas, y en el minuto uno ya estás cantando.
@@ -35,9 +33,6 @@ Un setlist que funciona tiene cuatro bloques, y el orden importa casi tanto como
 La lógica es puro control de energía: sube, sostiene, baja y vuelve a subir. Un concierto al máximo durante hora y media se acaba plano. El valle le da sentido al pico.
 
 ## Cómo predecir lo que va a sonar
-
-![Cómo se predice un setlist](src/content/articles/images/setlist-concierto-espana-setlist-predecir.png)
-
 Cuatro fuentes, y en este orden.
 
 **setlist.fm.** Es la base. Entras en la página del artista, abres los conciertos de los últimos meses y buscas ciudades parecidas a la tuya. No copies la lista: mira la frecuencia. Si un tema aparece en ocho de los diez shows, entra. Si sale una vez al año, es un extra, no una certeza. El último concierto es el más parecido al tuyo.
@@ -51,9 +46,6 @@ Cuatro fuentes, y en este orden.
 No hace falta acertar la lista entera: con clavar el arranque y el cierre, ganas.
 
 ## Cinco errores que arruinan un concierto
-
-![El error que comete todo el mundo](src/content/articles/images/setlist-concierto-espana-setlist-error.png)
-
 1. **Contar con duraciones exactas.** Nadie canta igual un viernes que un jueves. Un tema que dura tres minutos en el vídeo puede durar cinco en directo. Comparar tiempos al segundo arruina la noche.
 2. **Dar por hecho que el hit nuevo suena.** Si el tema lleva poco fuera, puede quedarse en camerinos. Las canciones recién estrenadas se prueban, y hasta que no suenan en directo nadie sabe cómo funcionan.
 3. **Echarle la culpa a la banda cuando algo no cuadra.** Si un tema suena raro, la culpa no es suya: es la gira, el horario o una prueba de sonido. Enfadaste por dentro y el mal humor te acompaña toda la noche.

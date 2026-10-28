@@ -20,9 +20,6 @@ published: true
 Por debajo hay tres montajes reales: uno de unos 120 € para empezar este finde, otro de unos 380 € para cuando ya subes cada semana, y uno de más de 800 € que solo compensa si streamas en serio. Todos usan OBS Studio, que es gratis. Precios orientativos, porque cambian cada semana según la tienda.
 
 ## El orden correcto: micrófono primero
-![El orden correcto: micrófono primero](src/content/articles/images/setup-streamer-2026-setup-orden.png)
-
-
 Hay una regla que repiten todas las guías de equipo y que suena rara hasta que la pruebas: **el audio determina la retención más que el vídeo**. La gente tolera una webcam justa; cierra la pestaña con un sonido con eco, teclado en cada pulsación o voz recortada.
 
 El orden de compra, siempre:
@@ -35,9 +32,6 @@ El orden de compra, siempre:
 Un detalle que cambia todo: **escúchate como te escucha la gente**. OBS puede reenviar tu propio micrófono a los auriculares en directo. Una semana escuchándote enseña más que cualquier tutorial.
 
 ## Tres montajes por presupuesto
-![Tres montajes por presupuesto](src/content/articles/images/setup-streamer-2026-setup-presupuesto.png)
-
-
 **Montaje starter: unos 120 €**
 - Micrófono: Blue Snowball iCE o similar FIFINE, unos 45-50 €.
 - Webcam: Logitech C920, unos 65 € (si el presupuesto aprieta, quédate con el micrófono y usa el móvil como cámara).
@@ -64,9 +58,6 @@ Este es el techo útil para casi todos. Si subes vídeos de forma constante y ti
 Aquí ya no compras calidad proporcional: compras comodidad y control. Tiene sentido cuando el streaming es tu trabajo o cuando gestionas escenas complicadas a diario.
 
 ## Si streamas desde consola
-![Si streamas desde consola](src/content/articles/images/setup-streamer-2026-setup-consola.png)
-
-
 PlayStation, Xbox y Switch transmiten distinto, y aquí hay una pieza obligatoria: **la tarjeta de captura**. Desde una PC, el juego entra por software en OBS y no necesitas nada. Desde consola, necesitas un aparato que capture la HDMI.
 
 - Opción mínima: un dongle USB de unos 25 € que rinde a 1080p60.

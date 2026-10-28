@@ -20,8 +20,6 @@ published: true
 El boom no es un capricho pasajero: es nostalgia convertida en rutina diaria.
 
 ## Por qué estas zapatillas
-![Por qué estas zapatillas](src/content/articles/images/zapatillas-combinan-con-todo-y2k-y2k-por-que.png)
-
 El estilo Y2K vuelve con fuerza y las zapatillas son su rey. Son la prenda más rápida de adaptar: en los 2000 el look pedía un flash enorme y plataformas imposibles hoy. Ahora esa estética vive en las redes y se entiende en una foto de un segundo.
 
 - **Plateadas o metálicas** → vibra a robot de los 2000, brillan en la foto y dan luz junto a un jersey gris. El cromado no es un color, así que no pasa de moda.
@@ -31,8 +29,6 @@ El estilo Y2K vuelve con fuerza y las zapatillas son su rey. Son la prenda más 
 Y el regreso tiene dos motores. Uno es la nostalgia: quien se crió con el pop de los 2000 ya puede comprarse lo que tocó de su infancia. El otro es que la estética funciona: silueta amplia y brillo se adaptan mejor a la ropa de hoy.
 
 ## El Top 10 definitivo
-![El Top 10 definitivo](src/content/articles/images/zapatillas-combinan-con-todo-y2k-y2k-top10.png)
-
 1. **Bailarinas de plataforma** → el MVP del año: van con faldas y pantalones. Busca las de punta Mary Jane, con tira cruzada y suela gruesa. Funcionan con vaqueros crop. Evita la versión fina: ahí se pierde el efecto.
 2. **Zapatillas metálicas plateadas** → triunfan en TikTok desde 2025. Sin complicarte: unas Converse Chuck 70 plateadas o unas ASICS Gel con la parte de arriba metálica. Van con negro, gris o denim. No con tops de pedreras.
 3. **Chunky blancas** → las clásicas, sientan bien siempre. Piensa en las New Balance 550, las Nike Air Force 1 o unas Adidas Yeezy 350. Son el comodín: valen con cargo o con traje. No las lleves sucias.
@@ -45,8 +41,6 @@ Y el regreso tiene dos motores. Uno es la nostalgia: quien se crió con el pop d
 10. **Las de toda la vida reinventadas** → el más inteligente de la lista. Si ya tienes Chucks, 550, Veja Campo, On Running o Salomon XT6, no necesitas comprar. Cámbiales los calcetines y ponte otro cinturón.
 
 ## Cómo combinarlas (sin romperte la cabeza)
-![Cómo combinarlas (sin romperte la cabeza)](src/content/articles/images/zapatillas-combinan-con-todo-y2k-y2k-combinar.png)
-
 - **Pantalón ancho + zapatilla chunky** → holgada arriba y abajo solo funciona con suela alta.
 - **Calcetines cortos visibles** → el truco favorito de TikTok. Blancos con pitillo, negros con cargo, asomando.
 - **Todo neutro + zapatilla metálica** → gris, negro y blanco con plata, lo más fácil de copiar.

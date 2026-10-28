@@ -20,9 +20,6 @@ published: true
 La paraula va néixer per descriure una cosa i va acabar descrivint una altra: primer el verí, després el símptoma, després una estètica sencera. Oxford la va escollir Paraula de l'Any el 2024 i el 2026 segueix viva, mentre el vocabulari que l'envolta es renova cada temporada. T'expliquem d'on ve, com es fa servir bé i què ve amb ella.
 
 ## D'on ve
-![D'on ve](src/content/articles/images/que-significa-brainrot-tiktok-brainrot-origen.png)
-
-
 La frase no és d'internet. Ja apareix al segle XIX: Henry David Thoreau va fer servir *brain rot* a *Walden* (1854) per queixar-se de la gent que prefereix el pensament fàcil al pensament complex. Tres segles després, la idea encaixa tant que la recuperem sense canviar-li una coma.
 
 A internet apareix als fòrums i a Tumblr dels anys deu com a autodiagnòstic graciós: «porto tot el dia online, m'està donant brain rot». L'ús era modest fins que passen dues coses el 2023. D'una banda, *Skibidi Toilet* es converteix en la sèrie web més vista de la història i arrossega tota una generació a un humor sense cap. De l'altra, el cercle de streamers de Kai Cenat solta un munt de paraules que s'estenen per tot arreu: *rizz*, *gyatt*, *fanum tax*, *sigma*.
@@ -30,9 +27,6 @@ A internet apareix als fòrums i a Tumblr dels anys deu com a autodiagnòstic gr
 En menys d'un any, totes aquestes paraules es fonen en un mateix registre, i joves i adults tenen un nom per al fenomen: **brainrot**. Entre el 2023 i el 2024 l'ús de la paraula va créixer un 230% segons Oxford, i el 2 de desembre de 2024 es va anunciar Paraula de l'Any, per davant de *demure*, *slop* o *romantasy*.
 
 ## Els tres usos de la paraula
-![Els tres usos de la paraula](src/content/articles/images/que-significa-brainrot-tiktok-brainrot-usos.png)
-
-
 La confusió ve que brainrot significa tres coses segons el context, i les tres s'usen el mateix dia:
 
 1. **L'estat.** «Tinc brainrot» és la boira mental després d'una hora de scroll: ja no pots llegir un text llarg ni escoltar una conversa sencera. És el símptoma, no la malaltia.
@@ -42,9 +36,6 @@ La confusió ve que brainrot significa tres coses segons el context, i les tres 
 El truc és que ningú ho diu de debò. Anomenar brainrot al que mires és una manera de criticar el costum sense renunciar-hi. La investigadora Mimi Ito ho anomena «gènere de participació»: hi ha qui estudia a TikTok, qui espia gent i qui baixa el cervell a zero a propòsit. Brainrot és la tercera porta.
 
 ## Com es fa servir bé
-![Com es fa servir bé](src/content/articles/images/que-significa-brainrot-tiktok-brainrot-usar.png)
-
-
 Funciona quan **reconeixes que estàs mirant brossa i ho gaudeixes igual**. Aquesta és la condició. La paraula és una confessió graciosa, no un consell sanitari.
 
 **FORMES QUE SONEN NATURALS:**

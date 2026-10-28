@@ -20,9 +20,6 @@ published: true
 Cada vegada que un artista anuncia gira a Espanya es repeteix el mateix patró: preventa, cua, esgotat en minuts i un mercat paral·lel que apareix a les xarxes. La Policia Nacional, l'INCIBE i el Centre Europeu del Consumidor coincideixen en el mateix: la pressa és l'eina principal de l'estafador. Aquí va la guia per a aconseguir-ho sense perdre els diners ni el concert.
 
 ## Compra només al canal oficial (i a reconèixer-lo)
-![Compra només al canal oficial (i a reconèixer-lo)](src/content/articles/images/conseguir-entradas-conciertos-espana-entradas-oficial.png)
-
-
 El circuit oficial comença a la web de l'artista o del promotor: allà hi ha l'enllaç a la taquilla autoritzada, l'única que garanteix que l'entrada existeix i et donarà accés. Aparèixer el primer al Google no vol dir ser oficial: moltes plataformes de reventa paguen publicitat i es col·loquen a dalt als resultats.
 
 Tres comprovacions abans de pagar:
@@ -34,9 +31,6 @@ Tres comprovacions abans de pagar:
 A dins de l'oficial, fes servir el mètode de pagament normal. Les taquilles grans recomanen a més tenir el compte al dia: contrasenya única, telèfon actualitzat (arriben codis per SMS) i la llista de desitjos preparada per al dia de la preventa.
 
 ## Com aconseguir entrades quan s'esgoti tot
-![Com aconseguir entrades quan s'esgoti tot](src/content/articles/images/conseguir-entradas-conciertos-espana-entradas-agotado.png)
-
-
 Esgotat no vol dir fi del camí, vol dir que cal canviar d'estratègia. En aquest ordre:
 
 **Preventes registrades.** Artistes com Harry Styles o Madonna fan servir sistemes tipus Verified Fan: t'hi registres abans, la plataforma filtra els robots i, si et toca, reps un codi d'accés. És la manera més neta de saltar-se la cua de bots.
@@ -50,9 +44,6 @@ Esgotat no vol dir fi del camí, vol dir que cal canviar d'estratègia. En aques
 I el consell que incomoda: **si la venda oficial encara no s'ha obert, ningú té entrades reals**. Qui et vengui «entrades anticipades» està especulant amb quelcom que encara no existeix, o directament mentint.
 
 ## Senyals que és una estafa
-![Senyals que és una estafa](src/content/articles/images/conseguir-entradas-conciertos-espana-entradas-estafa.png)
-
-
 - **Preu impossible.** Entrades esgotades a la meitat del que van costar. El xollo no existeix als esdeveniments demandats.
 - **Pagament sense protecció.** Bizum, transferència o efectiu «per a reservar». Cap canal oficial et demana això, i és la via que més costa recuperar.
 - **Captura de QR com a única prova.** El format més fràgil que hi ha: una imatge no prova que l'entrada sigui teva.

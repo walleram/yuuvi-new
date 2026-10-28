@@ -20,9 +20,6 @@ published: true
 El truco no es encontrar la tienda mágica: es saber qué buscar en cada sitio. Un vaquero de tendencia no se compra donde las zapatillas de diario, y la prenda que parece cara a veces es de outlet con etiqueta nueva. Aquí va el mapa completo.
 
 ## Qué es el estilo core (y por qué todo acaba en "-core")
-![Qué es el estilo core (y por qué todo acaba en "-core")](src/content/articles/images/donde-comprar-ropa-core-barata-ropa-estilo.png)
-
-
 En TikTok, los estilos se nombran con el sufijo **-core**: *clean girl*, *old money*, *balletcore*, *cottagecore*, *Y2K core*, *mob wife*. El sufijo marca una estética completa: colores, tejidos, cortes y hasta el tipo de zapato. Por eso una prenda sola puede no parecer nada hasta que la combinas con el resto del código.
 
 Lo interesante para el bolsillo es que **casi todos los estilos -core se montan con básicos**. El *clean girl* es una camiseta blanca bien cortada y un pantalón negro. El *old money* es un jersey de punto fino y unos mocasines. La estética cara, en realidad, la pone la combinación y el cuidado de la prenda, no la etiqueta.
@@ -30,9 +27,6 @@ Lo interesante para el bolsillo es que **casi todos los estilos -core se montan 
 Eso significa que la base se compra barata y el ahorro se queda en las piezas de impacto, que son las que más se ven en vídeo.
 
 ## Tiendas físicas: dónde ir
-![Tiendas físicas: dónde ir](src/content/articles/images/donde-comprar-ropa-core-barata-ropa-tiendas.png)
-
-
 **Primark.** El sitio por defecto para básicos y tendencias del mes: camisetas, sudaderas, vaqueros y accesorios de temporada a precios de impulso. En España solo funciona con tienda física, así que la estrategia es ir con lista y probarte todo. La calidad es justa, pero para prendas de rotación rápida funciona.
 
 **Lefties.** La marca de precio bajo del grupo Inditex, hermana de Zara. Misma estética fast fashion con precios claramente más bajos, y en rebajas puede encontrarse ropa desde 3,89 €. Si te gusta el estilo Zara pero no su ticket, es el sitio más lógico.
@@ -42,9 +36,6 @@ Eso significa que la base se compra barata y el ahorro se queda en las piezas de
 **H&M y Mango.** Para cuando la prenda concreta viral no está en las anteriores. Merece la pena mirar su sección de rebajas permanentes antes de pedir online: muchas veces la misma prenda cuesta la mitad en la tienda que en la portada web.
 
 ## Online: descuentos, dupes y apps
-![Online: descuentos, dupes y apps](src/content/articles/images/donde-comprar-ropa-core-barata-ropa-online.png)
-
-
 **Secciones de precio especial.** Zara tiene una sección de "Precios Especiales" con descuentos permanentes de hasta el 44% que no aparece en portada. Es la misma marca, otro pasillo.
 
 **Shein, AliExpress y Amazon.** Aquí es donde vive el dupe viral: la versión barata de la prenda que estás viendo en todos los vídeos. Funciona si aplicas tres filtros: **envío desde España o Europa** (llega en días, no en un mes), **reseñas con fotos reales** (no las de estudio) y vendedores con historial. La prenda de 8 € que enseña una creadora suele ser de aquí.

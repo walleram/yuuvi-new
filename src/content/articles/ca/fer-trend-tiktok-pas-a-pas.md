@@ -20,9 +20,6 @@ published: true
 És el format que mana a l'octubre. El trend ja hi va ser el Halloween passat i ha tornat amb força: els comentaris dels vídeos són plens de «ja és hora». I aquest any el 31 d'octubre cau en dissabte, així que Halloween té cap de setmana complet per a esclatar. T'expliquem què és, quin so necessites i com gravar-ho sense embolicar-t'ho.
 
 ## Què és exactament el Ramalama
-![Què és exactament el Ramalama](src/content/articles/images/hacer-trend-tiktok-paso-a-paso-trend-que-es.png)
-
-
 El nom ve de l'àudio que el mou: *Ramalama (Bang Bang)*, de la cantant irlandesa Róisín Murphy. El tema sona a pel·lícula de por a punt de sortir malament, i aquesta tensió és la base de tot.
 
 L'estructura és sempre la mateixa. Primer la càmera baixa, a nivell del terra, veient només les teves cames i les teves sabates mentre camines cap a l'objectiu de forma lenta i pesada, gairebé com si l'espiares. Després, sense tall ni explicació, retrocedeixes o allunyes la càmera i apareix el disfraz complet: cara, maquillatge, tot.
@@ -30,9 +27,6 @@ L'estructura és sempre la mateixa. Primer la càmera baixa, a nivell del terra,
 Funciona perquè és pur ganxo. Els primers segons no ensenyen res, i això obliga la gent a quedar-se a veure què passa. L'algoritme premia aquesta resistència, i el reveal és la recompensa. No cal guió, ni locució, ni *edits*: cal allargar-ho.
 
 ## El so i el moment perfecte
-![El so i el moment perfecte](src/content/articles/images/hacer-trend-tiktok-paso-a-paso-trend-sonido.png)
-
-
 El trend és l'àudio. Sense ell, el teu vídeo és algú caminant estrany per un passadís.
 
 Per a fer-lo servir, no gravis el vídeo amb música des de la teva galeria. Entra a TikTok, cerca el so *Ramalama (Bang Bang)* a la barra de cerca, obre qualsevol vídeo que l'usi i toca el disc que gira a baix per a **Usar aquest so**. Així el teu vídeo queda enganxat al trend i apareix junt amb la resta.
@@ -40,9 +34,6 @@ Per a fer-lo servir, no gravis el vídeo amb música des de la teva galeria. Ent
 Quant al moment: les tendències d'àudio solen picar entre 7 i 10 dies, i els formats aguanten entre tres i quatre setmanes. Halloween cau en dissabte aquest any, cosa que dona divendres, dissabte i diumenge per al pic de disfresses. Si el so ja l'estan fent servir milers de persones, ets a temps; si porta un mes mort, millor espera el següent format.
 
 ## Com gravar-ho pas a pas
-![Com gravar-ho pas a pas](src/content/articles/images/hacer-trend-tiktok-paso-a-paso-trend-pasos.png)
-
-
 1. **Munta l'enquadrament.** Recolza el mòbil al terra o a una pila de llibres, amb la càmera a l'alçada dels turmells. A l'enquadrament només hi ha d'entrar sabates, cames i terra. Res de cara encara.
 2. **Camina lent i pesat.** Avança cap al mòbil arrossegant els peus o deixant caure un bat d'escuma darrere teu. Sense text a la pantalla, sense parlar, sense somriure. La cara seriosa és la meitat de la broma.
 3. **Fes el reveal.** Quan arribis a prop de la càmera, dona un pas enrere o retrocedeix el mòbil amb la mà perquè es vegi el disfraz complet. Allà és on entra el pla sencer: maquillatge, perruca, capa, el que portis.

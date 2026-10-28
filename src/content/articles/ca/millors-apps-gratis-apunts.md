@@ -18,8 +18,6 @@ published: true
 > Resposta curta: Notion per ordenar-ho tot, OneNote per escriure a mà a la tauleta i Google Drive per guardar PDF i muntar treballs en grup.
 
 ## La comparativa que buscaves
-![La comparativa que buscaves](src/content/articles/images/mejores-apps-gratis-apuntes-apuntes-comparativa.png)
-
 | App | Gratis | Millor per | Nota |
 |---|---|---|---|
 | **Notion** | ✅ | Ordenar-ho tot per assignatures | La més potent |
@@ -35,8 +33,6 @@ published: true
 Les de groc són la trampa: es descarreguen gratis, però demanen subscripció per al que volies fer servir.
 
 ## Quina app fer servir segons el cas
-![Quina app fer servir segons el cas](src/content/articles/images/mejores-apps-gratis-apuntes-apuntes-por-caso.png)
-
 **1. Classe en directe.** Dicta, no copiïs.
 - Grava amb l'app de veu del mòbil en segon pla: no et distreu i no perds ni un matic.
 - Anota a mà només l'important: el que el professor subratlla, les dates, les fórmules i el que diu «això entra».
@@ -69,8 +65,6 @@ Les de groc són la trampa: es descarreguen gratis, però demanen subscripció p
 - Amb les llistes, el teclat del mòbil et posa superíndexs i símbols estranys molt més ràpid que a mà.
 
 ## Trucs que ningú no et conta
-![Trucs que ningú no et conta](src/content/articles/images/mejores-apps-gratis-apuntes-apuntes-trucos.png)
-
 1. **Nomena els fitxers amb la data al davant**: `2026-09-29-biologia-tema3`. Ordenats alfabèticament queden en ordre cronològic.
 2. **Ten una nota de captura ràpida**: una nota anomenada només «entrada». Hi buides allò que sigui a classe i els divendres ho reparteixes a cada assignatura. Deu minuts per setmana.
 3. **El color mana**: un color per assignatura, i fes-lo servir també al calendari i al títol de la nota. Localitzes el tema en dos segons.

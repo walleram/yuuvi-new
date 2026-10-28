@@ -20,9 +20,6 @@ published: true
 La palabra nació para describir una cosa y acabó describiendo otra: primero el veneno, luego el síntoma, luego una estética entera. Oxford la eligió Palabra del Año en 2024 y en 2026 sigue viva, mientras el vocabulario que la rodea se renueva cada temporada. Te contamos de dónde viene, cómo se usa bien y qué viene con ella.
 
 ## De dónde viene
-![De dónde viene](src/content/articles/images/que-significa-brainrot-tiktok-brainrot-origen.png)
-
-
 La frase no es de internet. Ya aparece en el siglo XIX: Henry David Thoreau usó *brain rot* en *Walden* (1854) para quejarse de la gente que prefiere el pensamiento fácil al pensamiento complejo. Tres siglos después, la idea encaja tanto que la recuperamos sin cambiarle una coma.
 
 En internet aparece en los foros y en Tumblr de los años diez como autodiagnóstico gracioso: "llevo todo el día online, me está dando brain rot". El uso era modesto hasta que ocurren dos cosas en 2023. Por un lado, *Skibidi Toilet* se convierte en la serie web más vista de la historia y arrastra a toda una generación a un humor sin cabeza. Por otro, el círculo de streamers de Kai Cenat suelta un puñado de palabras que se esparcen por todas partes: *rizz*, *gyatt*, *fanum tax*, *sigma*.
@@ -30,9 +27,6 @@ En internet aparece en los foros y en Tumblr de los años diez como autodiagnós
 En menos de un año, todas esas palabras se funden en un mismo registro, y jóvenes y adultos tienen un nombre para el fenómeno: **brainrot**. Entre 2023 y 2024 el uso de la palabra creció un 230% según Oxford, y el2 de diciembre de 2024 se anunció Palabra del Año, por delante de *demure*, *slop* o *romantasy*.
 
 ## Los tres usos de la palabra
-![Los tres usos de la palabra](src/content/articles/images/que-significa-brainrot-tiktok-brainrot-usos.png)
-
-
 La confusión viene de que brainrot significa tres cosas dependiendo del contexto, y las tres se usan el mismo día:
 
 1. **El estado.** "Tengo brainrot" es la niebla mental tras una hora de scroll: ya no puedes leer un texto largo ni escuchar una conversación entera. Es el síntoma, no la enfermedad.
@@ -42,9 +36,6 @@ La confusión viene de que brainrot significa tres cosas dependiendo del context
 El truco está en que nadie lo dice en serio. Llamar brainrot a lo que miras es una forma de criticar la costumbre sin renunciar a ella. La estudiosa Mimi Ito lo llama "género de participación": hay quien estudia en TikTok, quien espía gente y quien baja el cerebro a cero a propósito. Brainrot es la tercera puerta.
 
 ## Cómo se usa bien
-![Cómo se usa bien](src/content/articles/images/que-significa-brainrot-tiktok-brainrot-usar.png)
-
-
 Funciona cuando **reconoces que estás mirando basura y lo disfrutas igual**. Esa es la condición. La palabra es una confesión graciosa, no un consejo sanitario.
 
 **FORMAS QUE SUENAN NATURALES:**

@@ -20,8 +20,6 @@ published: true
 L'*boom* no és un caprici passatger: és nostàlgia convertida en rutina diària.
 
 ## Per què aquestes sabatilles
-![Per què aquestes sabatilles](src/content/articles/images/zapatillas-combinan-con-todo-y2k-y2k-por-que.png)
-
 L'estil Y2K torna amb força i les sabatilles en són el rei. Són la peça més ràpida d'adaptar: als 2000 el *look* demanava un flaix enorme i plataformes impossibles; avui aquesta estètica viu a les xarxes i s'entén en una foto d'un segon.
 
 - **Platejades o metàl·liques** → vibra a robot dels 2000, brillen a la foto i donen llum al costat d'un jersei gris. El cromat no és un color, així que no passa de moda.
@@ -31,8 +29,6 @@ L'estil Y2K torna amb força i les sabatilles en són el rei. Són la peça més
 I el retorn té dos motors. Un és la nostàlgia: qui es va criar amb el pop dels 2000 ja es pot comprar el que va tocar de la seva infantesa. L'altre és que l'estètica funciona: silueta ampla i brillantor s'adapten millor a la roba d'avui.
 
 ## El Top 10 definitiu
-![El Top 10 definitiu](src/content/articles/images/zapatillas-combinan-con-todo-y2k-y2k-top10.png)
-
 1. **Ballerines de plataforma** → el MVP de l'any: van amb faldilles i pantalons. Busca'n de punta *Mary Jane*, amb tira creuada i sola gruixuda. Funcionen amb texans *crop*. Evita la versió fina: aquí es perd l'efecte.
 2. **Sabatilles metàl·liques platejades** → triomfen a TikTok des del 2025. Sense complicar-te: unes Converse Chuck 70 platejades o unes ASICS Gel amb la part superior metàl·lica. Van amb negre, gris o *denim*. No amb *tops* de pedreria.
 3. **Chunky blanques** → les clàssiques, asseuen bé sempre. Pensa en les New Balance 550, les Nike Air Force 1 o unes Adidas Yeezy 350. Són el comodí: valen amb *cargo* o amb vestit. No les portis brutes.
@@ -45,8 +41,6 @@ I el retorn té dos motors. Un és la nostàlgia: qui es va criar amb el pop del
 10. **Les de tota la vida reinventades** → la més intel·ligent de la llista. Si ja tens Chucks, 550, Veja Campo, On Running o Salomon XT6, no cal comprar. Canvia'ls els mitjons i posa un altre cinturó.
 
 ## Com combinar-les (sense trencar-te el cap)
-![Com combinar-les (sense trencar-te el cap)](src/content/articles/images/zapatillas-combinan-con-todo-y2k-y2k-combinar.png)
-
 - **Pantaló ample + sabatilla *chunky*** → ampla dalt i baix només funciona amb sola alta.
 - **Mitjons curts visibles** → el truc favorit de TikTok. Blancs amb *pitillo*, negres amb *cargo*, asomant.
 - **Tot neutre + sabatilla metàl·lica** → gris, negre i blanc amb plata, el més fàcil de copiar.

@@ -20,9 +20,6 @@ published: true
 Sovint és un set d'unes dues hores, amb convidats i sense pausa llarga. Qui va pensant que veurà els temes en ordre de disc es porta la sorpresa a casa.
 
 ## L'estructura d'un bon setlist
-
-![L'estructura típica](src/content/articles/images/setlist-concierto-espana-setlist-estructura.png)
-
 Un setlist que funciona té quatre blocs, i l'ordre importa gairebé tant com la llista.
 
 **1. Arrencada ràpida.** Els primers minuts no són per escalfar. La banda entra amb el tema que més gent coreja, sense presentacions llargues, i al minut u ja estàs cantant.
@@ -36,9 +33,6 @@ Un setlist que funciona té quatre blocs, i l'ordre importa gairebé tant com la
 La lògica és pur control d'energia: puja, sosté, baixa i torna a pujar. Un concert al màxim durant hora i mitja s'acaba pla. La vall li dona sentit al pic.
 
 ## Com predir el que sonarà
-
-![Com es predir un setlist](src/content/articles/images/setlist-concierto-espana-setlist-predecir.png)
-
 Quatre fonts, i en aquest ordre.
 
 **setlist.fm.** És la base. Entres a la pàgina de l'artista, obres els concerts dels últims mesos i busques ciutats semblants a la teva. No copiïs la llista: mira la freqüència. Si un tema apareix en vuit de cada deu espectacles, entra. Si surt una vegada l'any, és un extra, no una certesa. L'últim concert és el més semblant al teu.
@@ -52,9 +46,6 @@ Quatre fonts, i en aquest ordre.
 No cal encertar la llista sencera: amb clavar l'arrencada i el tancament, en tens prou.
 
 ## Cinc errors que arruïnen un concert
-
-![L'error que comet tothom](src/content/articles/images/setlist-concierto-espana-setlist-error.png)
-
 1. **Comptar amb durades exactes.** Ningú canta igual un divendres que un dijous. Un tema que dura tres minuts al vídeo pot durar cinc en directe. Comparar els temps al segon arruïna la nit.
 2. **Donar per fet que el hit nou sonarà.** Si el tema porta poc fora, pot quedar-se als camerinos. Les cançons acabades d'estrenar es proven, i fins que no sonen en directe ningú sap com funcionen.
 3. **Tirar-li la culpa a la banda quan alguna cosa no quadra.** Si un tema sona estrany, la culpa no és seva: és la gira, l'horari o una prova de so. Enfadar-te per dins i el mal humor t'acompanya tota la nit.

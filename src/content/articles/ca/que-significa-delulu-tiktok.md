@@ -21,9 +21,6 @@ published: true
 És d'aquelles paraules que apareix en un vídeo, en un audio de deu segons i en dues setmanes te la trobes fent-la servir tu sense adonar-te'n. No hi ha cap misteri: és una forma curta i divertida de dir «això que vull és una bogeria». T'expliquem d'on ve, com es diu i, el més important, quan ja no queda bé.
 
 ## D'on ve
-
-![D'on ve](src/content/articles/images/que-significa-delulu-tiktok-delulu-origen.png)
-
 L'arrel és *delusional*, que en anglès vol dir «delirant» o «que delira». La forma *delulu* és una retallada fonètica: es queda amb la síl·laba que sona bé repetida i tira la resta. Aquest tipus de retalls són habituals en l'slang espanyol (friki, cosy, chachi) i en l'anglès, i funcionen perquè la paraula es pot dir ràpid, escriure ràpid i memear ràpid.
 
 Es va combinar amb un audio viral que circulava per TikTok a finals del 2022, amb frases tipus «som tots delulu». A partir d'allà la paraula es va desfer de l'audio i va començar a fer-se servir per a qualsevol situació: un crush improbable, un final de sèrie, una pràctica d'empresa, un examen de mates. I com que s'entén en dos segons, va acabar entenent-se fora de TikTok: apareix a comentaris de YouTube, a fils de Twitter, a xats de grup i a converses normals entre gent jove.
@@ -43,9 +40,6 @@ La pronunciació s'aproxima a «de-LOO-lu», amb l'accent a la síl·laba del mi
 I aquí va la frase que més has vist: **«Delulu is the solulu»** (*la il·lusió és la solució*). Sona tonto perquè és un joc de paraules amb *solution*, però funciona: la idea és que robar-se una mica de fantasia no fa mal, i a vegades fins i tot ajuda.
 
 ## Com fer-lo servir bé
-
-![Com fer-lo servir bé](src/content/articles/images/que-significa-delulu-tiktok-delulu-como-usarlo.png)
-
 La paraula funciona quan **tu reconeixes que és irracional**. Aquesta és la condició. Si no la comparteixes, sona condescendent; si la comparteixes, sona a complicetat.
 
 **FORMES QUE SONEN NATURALES:**
@@ -84,9 +78,6 @@ La paraula s'ha desinflat molt. Aquests són els tres casos en què sona forçad
 3. **Amb gent que no la coneix.** Fora d'internet la paraula encara no és universal. A una entrevista de feina, no.
 
 ## Significats semblants que has de conèixer
-
-![Significats semblants que has de conèixer](src/content/articles/images/que-significa-delulu-tiktok-delulu-slangs.png)
-
 Si aquest slang t'ha sonat estrany, apunta també aquests:
 
 1. **Rizz** → capacitat de lligar / carisma

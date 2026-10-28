@@ -7,6 +7,7 @@ pubDate: 2026-09-02
 category: "tecnologia"
 tags: ["apps", "estudios", "notion", "productividad", "ia"]
 author: "Sofía Vargas"
+translationKey: study-apps-notes
 coverImage: "src/assets/covers/cover-tech-apps.webp"
 coverAlt: "Portada en azul marino oscuro con degradados"
 published: true
@@ -17,8 +18,6 @@ published: true
 > Respuesta corta: Notion para organizar todo, OneNote para escribir a mano en la tablet, y Google Drive para guardar PDF y montar trabajos en grupo.
 
 ## La comparativa que buscabas
-![La comparativa que buscabas](src/content/articles/images/mejores-apps-gratis-apuntes-apuntes-comparativa.png)
-
 | App | Gratis | Mejor para | Nota |
 |---|---|---|---|
 | **Notion** | ✅ | Ordenar todo por asignaturas | La más potente |
@@ -34,8 +33,6 @@ published: true
 Las de amarillo son la trampa: se descargan gratis, pero piden suscripción para lo que querías usar.
 
 ## Qué app usar según el caso
-![Qué app usar según el caso](src/content/articles/images/mejores-apps-gratis-apuntes-apuntes-por-caso.png)
-
 **1. Clase en directo.** Dicta, no copies.
 - Graba con la app de voz del móvil en segundo plano: no te distrae y no pierdes ni un matiz.
 - Apunta a mano solo lo importante: lo que el profesor subraya, las fechas, las fórmulas y lo que dice "esto entra".
@@ -68,8 +65,6 @@ Las de amarillo son la trampa: se descargan gratis, pero piden suscripción para
 - Con listas, el tipógrafo del móvil te pone superíndices y símbolos raros mucho más rápido que a mano.
 
 ## Trucos que nadie te cuenta
-![Trucos que nadie te cuenta](src/content/articles/images/mejores-apps-gratis-apuntes-apuntes-trucos.png)
-
 1. **Nombra los archivos con la fecha delante**: `2026-09-29-biologia-tema3`. Ordenados alfabéticamente quedan en orden cronológico.
 2. **Ten una nota de captura rápida**: una nota llamada solo "entrada". Le vacías ahí lo que sea en clase y los viernes lo repartes en su asignatura. Diez minutos por semana.
 3. **El color manda**: un color por asignatura, y úsalo también en el calendario y en el título de la nota. Localizas el tema en dos segundos.

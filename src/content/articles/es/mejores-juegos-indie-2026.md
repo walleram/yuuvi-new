@@ -20,9 +20,6 @@ published: true
 El indie de 2026 se mueve en dos velocidades: juegos de estudio pequeño que compiten en ventas con lo grande, y proyectos de una persona que regalan obras enteras. Esta lista va por categorías, con precio y plataformas para que elijas según lo que te sobra: tiempo o dinero.
 
 ## Los imprescindibles de 2026
-![Los imprescindibles de 2026](src/content/articles/images/mejores-juegos-indie-2026-indie-imprescindibles.png)
-
-
 **Slay the Spire 2.** La secuela del mítico deckbuilder roguelike llegó a acceso anticipado en marzo de 2026 y vendió más de tres millones de copias en la primera semana. Nuevos personajes, más de 575 cartas y, la novedad grande, cooperativo para cuatro. La 1.0 está prevista para 2027, pero lo que hay ya da para decenas de horas. Si te gastaste cientos de horas en el primero, este es tu juego del año.
 
 **Mewgenics.** El proyecto de trece años de Edmund McMillen, el creador de The Binding of Isaac. Es un roguelike táctico con gatos, humor negro y generación procedural que le ha costado el presupuesto recuperado en tres horas y más de un millón de copias en la semana. La crítica lo tiene como el mejor valorado del año hasta ahora. Requiere paciencia: no es un juego que se explique en el primer combate.
@@ -32,9 +29,6 @@ El indie de 2026 se mueve en dos velocidades: juegos de estudio pequeño que com
 **Blue Prince.** Aventura de exploración y puzles para quien disfruta tomando notas. Premia la paciencia y la atención, y es de esos juegos que se recomiendan sin explicar demasiado para no arruinar la sorpresa.
 
 ## Gratis de verdad (sin truco)
-![Gratis de verdad (sin truco)](src/content/articles/images/mejores-juegos-indie-2026-indie-gratis.png)
-
-
 **Between Stops.** RPG de una sola persona, gratuito desde mayo de 2026, con un 95% de reseñas positivas. Combina combate por turnos con esquiva tipo bullet hell, decisiones que cambian la historia y una estética que rinde homenaje a Undertale y Deltarune. Dura lo que dura un fin de semana por la tarde y no pide ni un micro-pago.
 
 **Control, I'm Not Coming Back.** Ciencia ficción low-poly con estética *hopecore*, también gratis y con un 98% de reseñas. Es corto, de alrededor de una hora, y está pensado como un viaje reflexivo por el espacio. El precio es cero, así que la duración no es un argumento en contra.
@@ -46,9 +40,6 @@ El indie de 2026 se mueve en dos velocidades: juegos de estudio pequeño que com
 Y si quieres el clásico que sigue funcionando: **Doki Doki Literature Club**, gratuito, aparenta ser una novela visual de instituto hasta que deja de hacerlo.
 
 ## Los que están por llegar
-![Los que están por llegar](src/content/articles/images/mejores-juegos-indie-2026-indie-por-llegar.png)
-
-
 - **Witchbrook.** El simulador de vida mágica que publica el sello de Stardew Valley: academia de brujas, amistades y agricultura con hechizos. Larga espera, expectativa enorme.
 - **Big Walk.** De los creadores de Untitled Goose Game: una isla enorme para explorar con amigos usando chat de proximidad y puzles cooperativos.
 - **Coromon: Rogue Planet.** Spin-off roguelite del monster-tamer Coromon, con más de 15 biomas generados y 130 criaturas.

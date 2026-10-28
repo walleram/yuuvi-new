@@ -20,9 +20,6 @@ published: true
 El truc no és trobar la botiga màgica: és saber què cercar a cada lloc. Un texà de tendència no es compra on les sabatilles de cada dia, i la peça que sembla cara a vegades és d'outlet amb etiqueta nova. Aquí va el mapa complet.
 
 ## Què és l'estil core (i per què tot acaba en «-core»)
-![Què és l'estil core (i per què tot acaba en «-core»)](src/content/articles/images/donde-comprar-ropa-core-barata-ropa-estilo.png)
-
-
 A TikTok, els estils es bategen amb el sufix **-core**: *clean girl*, *old money*, *balletcore*, *cottagecore*, *Y2K core*, *mob wife*. El sufix marca una estètica completa: colors, teixits, talls i fins i tot el tipus de sabata. Per això una peça sola pot no semblar res fins que la combines amb la resta del codi.
 
 El que interessa per a la butxaca és que **gairebé tots els estils -core es munten amb bàsics**. El *clean girl* és una samarreta blanca ben tallada i uns pantalons negres. El *old money* és un jersei de punt fi i uns mocasins. L'estètica cara, en realitat, la posa la combinació i la cura de la peça, no l'etiqueta.
@@ -30,9 +27,6 @@ El que interessa per a la butxaca és que **gairebé tots els estils -core es mu
 Això vol dir que la base es compra barata i l'estalvi es queda a les peces d'impacte, que són les que més es veuen al vídeo.
 
 ## Botigues físiques: on anar
-![Botigues físiques: on anar](src/content/articles/images/donde-comprar-ropa-core-barata-ropa-tiendas.png)
-
-
 **Primark.** El lloc per defecte per a bàsics i tendències del mes: samarretes, dessuadores, texans i accessoris de temporada a preus d'impuls. A Espanya només funciona amb botiga física, així que l'estratègia és anar amb llista i provar-t'ho tot. La qualitat és justa, però per a peces de rotació ràpida funciona.
 
 **Lefties.** La marca de preu baix del grup Inditex, germana de Zara. Mateixa estètica *fast fashion* amb preus clarament més baixos, i a les rebaixes s'hi pot trobar roba des de 3,89 €. Si t'agrada l'estil Zara però no el seu tiquet, és el lloc més lògic.
@@ -42,9 +36,6 @@ Això vol dir que la base es compra barata i l'estalvi es queda a les peces d'im
 **H&M i Mango.** Per a quan la peça concreta viral no és a les anteriors. Val la pena mirar la secció de rebaixes permanents abans de demanar en línia: moltes vegades la mateixa peça costa la meitat a la botiga que a la portada web.
 
 ## En línia: descomptes, dupes i apps
-![En línia: descomptes, dupes i apps](src/content/articles/images/donde-comprar-ropa-core-barata-ropa-online.png)
-
-
 **Seccions de preu especial.** Zara té una secció de «Preus especials» amb descomptes permanents de fins al 44% que no apareix a la portada. És la mateixa marca, un altre passadís.
 
 **Shein, AliExpress i Amazon.** Aquí és on viu el dupe viral: la versió barata de la peça que estàs veient a tots els vídeos. Funciona si apliques tres filtres: **enviament des d'Espanya o Europa** (arriba en dies, no en un mes), **resenyes amb fotos reals** (no les d'estudi) i venedors amb historial. La peça de 8 € que ensenya una creadora sol ser d'aquí.

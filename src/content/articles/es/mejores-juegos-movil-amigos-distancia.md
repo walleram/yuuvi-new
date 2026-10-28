@@ -7,6 +7,7 @@ pubDate: 2026-09-03
 category: "gaming"
 tags: ["gaming", "juegos movil", "multijugador", "cooperativo"]
 author: "Diego Morales"
+translationKey: mobile-games-friends-distance
 coverImage: "src/assets/covers/cover-gaming-alt.webp"
 coverAlt: "Portada del artículo sobre juegos de móvil para jugar con amigos a distancia: fondo azul con detalles rojos"
 published: true
@@ -17,9 +18,6 @@ published: true
 > Respuesta corta: para reír, *Among Us* o *Fall Guys*. Para pasar frío, *Dead by Daylight Mobile*. Para planear, *Clash Royale* o *Brawl Stars*. Y para no discutir, nada de shooters a muerte desde el minuto uno.
 
 ## Los cozy de verdad
-
-![Juegos para jugar TUMBADO en el sofá](src/content/articles/images/mejores-juegos-movil-amigos-distancia-gaming-cozy.png)
-
 - **Stardew Valley** → de pago único y con multijugador. Tú plantas, tu amigo riega y otro se pasa la partida reformando la casa. Nadie va ganando, y por eso se aguanta una llamada de tres horas
 - **Minecraft** → construir juntos, con mundos propios para cada grupo y salas siempre abiertas. El plan por defecto cuando cuatro personas no saben qué hacer un martes
 - **Sky: Children of the Light** → online, bonito y sin escondites. Ideal para ir comentando cada movimiento, porque el mapa es enorme
@@ -29,9 +27,6 @@ published: true
 Lo bueno de los cozy es que no hay reloj: entráis, hacéis cuatro cosas y ya habéis pasado una hora. Nadie grita y la llamada sigue viva.
 
 ## Los juegos de risas y fiesta
-
-![Juegos para REÍRSE a lo tonto](src/content/articles/images/mejores-juegos-movil-amigos-distancia-gaming-risas.png)
-
 - **Among Us** → el clásico. Creas sala privada con código, cuentas quién miente y aguantas la traición
 - **Fall Guys** → free-to-play, con gente de otras plataformas y caos certificado. Nadie mira la técnica, todos empujan en el último tramo
 - **Stumble Guys** → la versión corta de lo mismo. Partidas rápidas que caben entre una story y otra
@@ -40,9 +35,6 @@ Lo bueno de los cozy es que no hay reloj: entráis, hacéis cuatro cosas y ya ha
 Aquí no hay estrategia real: hay que saber quién ha desaparecido, cuándo y por dónde pasó. Esa información solo la tenéis si vais hablando, así que el micro abierto no es opcional. Suele haber dos impostores en partidas de diez, así que repartid la sospecha.
 
 ## Los juegos serio y de estrategia
-
-![Juegos para JUGAR EN SERIO (competitivos)](src/content/articles/images/mejores-juegos-movil-amigos-distancia-gaming-serio.png)
-
 - **Clash Royale** → la que más se juega. Carreras cortas, muy poca espera y revancha al instante. En la guerra de clanes se decide quién pone el mazo
 - **Brawl Stars** → tres contra tres, se aprende en diez minutos y la respuesta llega rápido. Tiene sistema de amistades, así que montas partida solo con quien quieres
 - **Marvel Snap** → cartas, el SNAP y la decisión en tres segundos. Ahí no hay excusa: si no commiteas el SNAP antes de ver la última carta, lo pierdes
@@ -51,9 +43,6 @@ Aquí no hay estrategia real: hay que saber quién ha desaparecido, cuándo y po
 Aquí gana el que comunica. En *Clash Royale* se ve el mazo del rival antes de la partida, así que el trabajo real es mental y se hace hablando: "guárdame la contrarrapa". En *Brawl Stars* al revés, la partida dura dos minutos y la revancha entra al momento.
 
 ## Los juegos de terror
-
-![Juegos para MORDERSE las uñas (terror)](src/content/articles/images/mejores-juegos-movil-amigos-distancia-gaming-terror.png)
-
 - **Dead by Daylight Mobile** → un superviviente contra cuatro asesinos. Es el que más voz pide y el que más susto da
 - **Roblox, de nuevo** → dentro hay experiencias de terror que funcionan muy bien en llamada, con luces apagadas
 - **Genshin Impact** → no es de terror, pero sus cuevas y mazmorras obligan a ir juntos, y de noche en un grupo de voz sí que da miedo

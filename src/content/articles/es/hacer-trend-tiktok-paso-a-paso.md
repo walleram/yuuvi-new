@@ -20,9 +20,6 @@ published: true
 Es el formato que manda en octubre. El trend ya estuvo el Halloween pasado y ha vuelto con fuerza: los comentarios de los vídeos están llenos de "ya es hora". Y este año el 31 de octubre cae en sábado, así que Halloween tiene finde completo para picar. Te contamos qué es, qué sonido necesitas y cómo grabarlo sin liarla.
 
 ## Qué es exactamente el Ramalama
-![Qué es exactamente el Ramalama](src/content/articles/images/hacer-trend-tiktok-paso-a-paso-trend-que-es.png)
-
-
 El nombre viene del audio que lo mueve: *Ramalama (Bang Bang)*, de la cantante irlandesa Róisín Murphy. El tema suena a película de miedo a punto de salir mal, y esa tensión es la base de todo.
 
 La estructura es siempre la misma. Primero la cámara baja, al nivel del suelo, viendo solo tus piernas y tus zapatos mientras caminas hacia el objetivo de forma lenta y pesada, casi como si acecharas. Después, sin corte ni explicación, retrocedes o alejas la cámara y aparece el disfraz completo: cara, maquillaje, todo.
@@ -30,9 +27,6 @@ La estructura es siempre la misma. Primero la cámara baja, al nivel del suelo, 
 Funciona porque es puro gancho. Los primeros segundos no enseñan nada, y eso obliga a la gente a quedarse a ver qué pasa. El algoritmo premia ese aguante, y el reveal es la recompensa. No hace falta guion, ni locución, ni edits: hace falta demorar.
 
 ## El sonido y el momento perfecto
-![El sonido y el momento perfecto](src/content/articles/images/hacer-trend-tiktok-paso-a-paso-trend-sonido.png)
-
-
 El trend es el audio. Sin él, tu vídeo es alguien caminando raro por un pasillo.
 
 Para usarlo, no grabes el vídeo con música desde tu galería. Entra en TikTok, busca el sonido *Ramalama (Bang Bang)* en la barra de búsqueda, abre cualquier vídeo que lo use y toca el disco que gira abajo para **Usar este sonido**. Así tu vídeo queda enganchado al trend y aparece junto al resto.
@@ -40,9 +34,6 @@ Para usarlo, no grabes el vídeo con música desde tu galería. Entra en TikTok,
 En cuanto al momento: las tendencias de audio suelen picar entre 7 y 10 días, y los formatos aguantan entre tres y cuatro semanas. Halloween cae en sábado este año, lo que da viernes, sábado y domingo para el pico de disfraces. Si el sonido ya lo están usando miles de gente, estás a tiempo; si lleva un mes muerto, mejor espera al siguiente formato.
 
 ## Cómo grabarlo paso a paso
-![Cómo grabarlo paso a paso](src/content/articles/images/hacer-trend-tiktok-paso-a-paso-trend-pasos.png)
-
-
 1. **Monta el encuadre.** Apoya el móvil en el suelo o en una pila de libros, con la cámara a la altura de los tobillos. En el encuadre solo deben entrar zapatos, piernas y suelo. Nada de cara todavía.
 2. **Camina lento y pesado.** Avanza hacia el móvil arrastrando los pies o dejando caer un bate de espuma detrás de ti. Sin texto en pantalla, sin hablar, sin sonreír. La cara seria es la mitad del chiste.
 3. **Haz el reveal.** Cuando llegues cerca de la cámara, da un paso atrás o retrocede el móvil con la mano para que se vea el disfraz completo. Ahí es donde entra el plano entero: maquillaje, peluca, capa, lo que lleves.
