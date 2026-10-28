@@ -1,7 +1,8 @@
 ---
 import { getImage } from 'astro:assets';
 import type { CollectionEntry } from 'astro:content';
-import { CATEGORIES, type Lang } from '../lib/site';
+import { CATEGORIES, UI_TEXT, type Lang } from '../lib/site';
+import { articleHref } from '../lib/articles';
 import { timeAgo } from '../lib/format';
 
 interface Props {
@@ -13,8 +14,9 @@ interface Props {
 const { article, lang, size = 'md' } = Astro.props;
 const { data } = article;
 
-const slug = article.id.replace(/^\/?(es|en)\//, '');
-const href = `/${lang === 'es' ? '' : 'en/'}${slug}/`;
+const slug = article.id.replace(/^\/?(es|en|ca)\//, '');
+const href = articleHref(slug, lang);
+const t = UI_TEXT[lang];
 
 const catMeta = CATEGORIES[data.category];
 const isSvg = data.coverImage.src.endsWith('.svg');
@@ -81,7 +83,7 @@ const sizes: Record<string, string> = {
         <p class="mt-2 line-clamp-2 text-sm text-neutral-400">{data.description}</p>
       )}
       <span class="mt-3 inline-block text-sm font-medium text-brand-pink">
-        {size === 'lg' ? (lang === 'es' ? 'Leer artículo →' : 'Read article →') : ''}
+        {size === 'lg' ? `${t.home.heroReadMore} →` : ''}
       </span>
     </div>
   </a>

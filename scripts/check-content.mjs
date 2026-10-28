@@ -22,6 +22,11 @@ const ALLOWED = {
     punct: /[—–·“”‘’…]/,
     other: new Set(['\n', '\t']),
   },
+  ca: {
+    latin: /[a-zA-ZàèéíïòóúüçÀÈÉÍÏÒÓÚÜÇ·]/,
+    punct: /[—–·“”‘’…]/,
+    other: new Set(['\n', '\t']),
+  },
 };
 
 // Rangos que nunca deberían aparecer en un artículo de Yuuvi
@@ -68,8 +73,8 @@ for (const file of files) {
     }
   }
 
-  // Emoji y flechas están permitidos; el resto de no-latino en ES solo si es emoji
-  if (lang === 'es') {
+  // Emoji y flechas están permitidos; el resto de no-latino en ES/CA solo si es emoji
+  if (lang === 'es' || lang === 'ca') {
     const odd = [...body].filter(
       (c) => c.codePointAt(0) > 0x2100 && !/\p{Extended_Pictographic}/u.test(c) && !/[→←↑↓•●★♥]/u.test(c)
     );

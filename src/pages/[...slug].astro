@@ -11,8 +11,10 @@ import {
   authorHref,
   buildTranslationIndex,
   categoryHref,
-  findTranslation,
+  findTranslations,
   homeHref,
+  LANGS,
+  LANG_PREFIX,
   readingTime,
   tagHref,
 } from '../lib/articles';
@@ -29,8 +31,9 @@ export async function getStaticPaths() {
     const lang = article.data.lang;
     // Cada artículo solo se sirve en el idioma en el que existe.
     // Generar la ruta del otro idioma produciría un 404 y una alternates rota.
+    const prefix = LANG_PREFIX[lang];
     return {
-      params: { slug: lang === 'en' ? `en/${cleanSlug}` : cleanSlug },
+      params: { slug: `${prefix}/${cleanSlug}`.replace(/^\//, '') },
       props: { lang, slug: cleanSlug },
     };
   });
@@ -56,18 +59,21 @@ const canonicalURL = articleUrl(slug, lang, Astro.site!);
 // Hreflang: solo si la traducción existe de verdad.
 // La URL de cada idioma sale del artículo de ese idioma, no del actual.
 const publishedAll = await getCollection('articles', ({ data }) => data.published);
-const translation = findTranslation(buildTranslationIndex(publishedAll), article);
+const translations = findTranslations(buildTranslationIndex(publishedAll), article);
+const articlesByLang: Partial<Record<Lang, typeof article>> = { [lang]: article, ...translations };
 
 let alternates: { hreflang: string; href: string }[];
-if (translation) {
-  const esArticle = lang === 'es' ? article : translation;
-  const enArticle = lang === 'en' ? article : translation;
-  const esHref = articleUrl(articleSlug(esArticle), 'es', Astro.site!);
-  alternates = [
-    { hreflang: 'es', href: esHref },
-    { hreflang: 'en', href: articleUrl(articleSlug(enArticle), 'en', Astro.site!) },
-    { hreflang: 'x-default', href: esHref },
-  ];
+if (Object.keys(translations).length > 0) {
+  const esArticle = articlesByLang.es;
+  alternates = [];
+  for (const l of LANGS) {
+    const a = articlesByLang[l];
+    if (a) alternates.push({ hreflang: l, href: articleUrl(articleSlug(a), l, Astro.site!) });
+  }
+  const xDefault = esArticle
+    ? articleUrl(articleSlug(esArticle), 'es', Astro.site!)
+    : canonicalURL;
+  alternates.push({ hreflang: 'x-default', href: xDefault });
 } else {
   alternates = [{ hreflang: 'x-default', href: canonicalURL }];
 }
@@ -121,7 +127,7 @@ const jsonLd = [
       {
         '@type': 'ListItem',
         position: 1,
-        name: lang === 'es' ? 'Inicio' : 'Home',
+        name: t.nav.home,
         item: new URL(homeHref(lang), Astro.site!).toString(),
       },
       {
@@ -163,12 +169,12 @@ const related = allArticles
   jsonLd={jsonLd}
   article={articleMeta}
   alternates={alternates}
-  rssHref={lang === 'es' ? '/rss.xml' : '/en/rss.xml'}
+  rssHref={`${LANG_PREFIX[lang]}/rss.xml`}
 >
   <article class="mx-auto max-w-3xl px-4 py-8 sm:px-6">
     {/* Migas de pan */}
     <nav aria-label="Breadcrumb" class="mb-6 flex items-center gap-2 text-sm text-neutral-400">
-      <a href={lang === 'es' ? '/' : '/en/'} class="transition-colors hover:text-white">
+      <a href={homeHref(lang)} class="transition-colors hover:text-white">
         {t.nav.home}
       </a>
       <span aria-hidden="true">/</span>
@@ -191,7 +197,7 @@ const related = allArticles
         </span>
         <span aria-hidden="true" class="text-xs text-neutral-400">·</span>
         <span class="text-xs text-neutral-400">
-          {minutes} {lang === 'es' ? 'min de lectura' : 'min read'}
+          {minutes} {t.home.readTime}
         </span>
       </div>
 
@@ -263,7 +269,7 @@ const related = allArticles
     <section class="mx-auto max-w-7xl px-4 py-10 sm:px-6">
       <h2 class="mb-5 flex items-center gap-2 text-xl font-black tracking-tight text-white sm:text-2xl">
         <span class="inline-block h-5 w-1 rounded-full bg-gradient-to-b from-brand-pink to-brand-purple"></span>
-        {lang === 'es' ? 'Relacionados' : 'Related'}
+        {t.related}
       </h2>
       <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {related.map((a) => (

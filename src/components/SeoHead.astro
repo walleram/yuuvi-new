@@ -1,4 +1,6 @@
 ---
+import type { Lang } from '../lib/site';
+
 interface ArticleMeta {
   publishedTime: string;
   modifiedTime?: string;
@@ -15,7 +17,7 @@ interface Hreflang {
 interface Props {
   title: string;
   description: string;
-  lang: 'es' | 'en';
+  lang: Lang;
   canonicalURL?: string;
   ogImage?: string;
   type?: string;
@@ -46,6 +48,7 @@ const siteName = 'Yuuvi';
 const defaultOgImage = '/og-default.png';
 const finalOgImage = ogImage ?? defaultOgImage;
 const ogUrl = new URL(finalOgImage, Astro.site).toString();
+const OG_LOCALE: Record<Lang, string> = { es: 'es_ES', en: 'en_US', ca: 'ca_ES' };
 const localeAlt = lang === 'es' ? 'en_US' : 'es_ES';
 
 // Solo se emiten los hreflang que la página confirma que existen.
@@ -83,7 +86,7 @@ const otherLangs = hreflangLinks.filter((a) => a.hreflang !== 'x-default');
 <meta property="og:image:height" content="630" />
 <meta property="og:image:alt" content={title} />
 <meta property="og:site_name" content={siteName} />
-<meta property="og:locale" content={lang === 'es' ? 'es_ES' : 'en_US'} />
+<meta property="og:locale" content={OG_LOCALE[lang]} />
 <meta property="og:locale:alternate" content={localeAlt} />
 
 {/* Meta específicas de artículo */}

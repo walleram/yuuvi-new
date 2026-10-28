@@ -1,5 +1,6 @@
 ---
 import { CATEGORIES, type Lang } from '../lib/site';
+import { homeHref, categoryHref } from '../lib/articles';
 import Icon from './Icon.astro';
 
 interface Props {
@@ -10,7 +11,7 @@ interface Props {
 const { lang, currentPath } = Astro.props;
 
 const items = [
-  { slug: '', label: lang === 'es' ? 'Inicio' : 'Home', icon: 'home' },
+  { slug: '', label: lang === 'es' ? 'Inicio' : lang === 'ca' ? 'Inici' : 'Home', icon: 'home' },
   ...Object.entries(CATEGORIES).map(([slug, meta]) => ({
     slug,
     label: meta.label[lang],
@@ -25,15 +26,10 @@ const items = [
 >
   <div class="flex items-center justify-around px-2 pb-[env(safe-area-inset-bottom)]">
     {items.map((item) => {
-      const href =
-        item.slug === ''
-          ? lang === 'es'
-            ? '/'
-            : '/en/'
-          : `/${lang === 'es' ? '' : 'en/'}categoria/${item.slug}/`;
+      const href = item.slug === '' ? homeHref(lang) : categoryHref(item.slug, lang);
       const active =
         item.slug === ''
-          ? currentPath === '/' || (lang === 'en' && currentPath === '/en/')
+          ? currentPath === homeHref(lang)
           : currentPath.includes(`/categoria/${item.slug}`);
       return (
         <a

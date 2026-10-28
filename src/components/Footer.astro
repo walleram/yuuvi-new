@@ -1,5 +1,6 @@
 ---
 import { SITE, UI_TEXT, CATEGORIES, LEGAL_ROUTES, type Lang } from '../lib/site';
+import { homeHref, categoryHref } from '../lib/articles';
 
 interface Props {
   lang: Lang;
@@ -8,6 +9,12 @@ interface Props {
 const { lang } = Astro.props;
 const t = UI_TEXT[lang];
 const year = new Date().getFullYear();
+
+const taglines: Record<Lang, string> = {
+  es: SITE.tagline + ' para la generación que define el futuro.',
+  en: 'Your trends magazine for the generation defining tomorrow.',
+  ca: 'La teva revista de tendències per a la generació que defineix el futur.',
+};
 ---
 
 <footer class="border-t border-neutral-800/60 bg-ink pb-24 md:pb-0">
@@ -15,7 +22,7 @@ const year = new Date().getFullYear();
     <div class="grid grid-cols-1 gap-10 sm:grid-cols-3">
       {/* Marca */}
       <div>
-        <a href={lang === 'es' ? '/' : '/en/'} class="flex items-center gap-2">
+        <a href={homeHref(lang)} class="flex items-center gap-2">
           <span class="flex h-8 w-8 items-center justify-center rounded-xl bg-gradient-to-br from-brand-pink to-brand-purple text-base font-black text-white">
             Y
           </span>
@@ -24,9 +31,7 @@ const year = new Date().getFullYear();
           </span>
         </a>
         <p class="mt-4 max-w-xs text-sm text-neutral-400">
-          {lang === 'es'
-            ? SITE.tagline + ' para la generación que define el futuro.'
-            : "Your trends magazine for the generation defining tomorrow."}
+          {taglines[lang]}
         </p>
       </div>
 
@@ -39,7 +44,7 @@ const year = new Date().getFullYear();
           {Object.entries(CATEGORIES).map(([slug, meta]) => (
             <li>
               <a
-                href={`/${lang === 'es' ? '' : 'en/'}categoria/${slug}/`}
+                href={categoryHref(slug, lang)}
                 class="text-neutral-400 transition-colors hover:text-brand-pink"
               >
                 {meta.label[lang]}

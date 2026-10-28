@@ -7,7 +7,7 @@ const articles = defineCollection({
     z.object({
       title: z.string(),
       description: z.string(),
-      lang: z.enum(['es', 'en']),
+      lang: z.enum(['es', 'en', 'ca']),
       pubDate: z.coerce.date(),
       updatedDate: z.coerce.date().optional(),
       category: z.enum(['cultura', 'estetica', 'gaming', 'tecnologia', 'musica']),

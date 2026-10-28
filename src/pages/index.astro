@@ -2,9 +2,9 @@
 import Layout from '@layouts/Layout.astro';
 import ArticleCard from '@components/ArticleCard.astro';
 import { getCollection } from 'astro:content';
-import { SITE, UI_TEXT, CATEGORIES } from '../lib/site';
+import { SITE, UI_TEXT, type Lang } from '../lib/site';
 
-const lang = 'es';
+const lang: Lang = 'es';
 const t = UI_TEXT[lang];
 
 const allArticles = (await getCollection('articles', ({ data }) => data.published && data.lang === lang))
@@ -79,7 +79,7 @@ const jsonLd = [
         {t.home.sectionLatest}
       </h2>
       <span class="text-sm font-medium text-neutral-400">
-        {allArticles.length} {lang === 'es' ? 'artículos' : 'articles'}
+        {allArticles.length} {t.articles}
       </span>
     </div>
     <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
