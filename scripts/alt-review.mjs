@@ -17,6 +17,7 @@ const ARTICLES = 'src/content/articles';
 
 const articles = [];
 for (const lang of readdirSync(ARTICLES)) {
+  if (lang.startsWith('.')) continue;
   for (const file of readdirSync(join(ARTICLES, lang))) {
     if (!file.endsWith('.md') || file.startsWith('.')) continue;
     const raw = readFileSync(join(ARTICLES, lang, file), 'utf8');
