@@ -49,7 +49,7 @@ La palabra funciona cuando **tú reconoces que es irracional**. Esa es la condic
 - "Delulu is the solulu"
 
 **LO QUE LA ARRUINA:**
-- Usarla sin contexto de*bromas*. Por una persona con la que no tienes confianza, la palabra deja de sonar naive y empieza a sonar condescendiente.
+- Usarla sin contexto de broma. Por una persona con la que no tienes confianza, la palabra deja de sonar naive y empieza a sonar condescendiente.
 - Contar un chiste sobre delulu en un grupo donde nadie la conoce. Te toca explicar y el momento se cae.
 - Meterla en un texto serio: emails del trabajo, mensajes a un profesor, conversaciones con adultos. Suena como broma, y en muchos sitios es solo raro.
 
@@ -65,9 +65,9 @@ La palabra funciona cuando **tú reconoces que es irracional**. Esa es la condic
 
 Se parecen, pero no son lo mismo. **Tener ilusiones** es algo serio y normal: quieres algo, sabes que cuesta, te organizas para conseguirlo. **Estar delulu** es querer algo que probablemente no va a pasar, y reconocerlo con humor. La diferencia está en el pie: la ilusión tiene los pies en el suelo, el delulu tiene los pies en el aire.
 
-Por eso **no se usa para logros reales**. Si te han salido todas las prácticas, no eres delulu: eres alguien que haworked. Y si alguien te dice "no seas delulu" sobre algo que de verdad quieres, suele estar hablando de delulu en el mal sentido: confundir fantasear con planear.
+Por eso **no se usa para logros reales**. Si te han salido todas las prácticas, no eres delulu: eres alguien que ha trabajado. Y si alguien te dice "no seas delulu" sobre algo que de verdad quieres, suele estar hablando de delulu en el mal sentido: confundir fantasear con planear.
 
-Una forma fácil de Distinguirlo: el delulu se puede contar en una frase y hace reír. La ilusión real necesita meses.
+Una forma fácil de distinguirlo: el delulu se puede contar en una frase y hace reír. La ilusión real necesita meses.
 
 ## Cuándo NO usarla
 
@@ -80,7 +80,7 @@ La palabra se ha desinflado mucho. Estos son los tres casos en los que suena for
 ## Significados similares que debes conocer
 Si este slang te ha sonado raro, apunta también estos:
 
-1. **Rizz** → capacidad de ligar / carismo
+1. **Rizz** → capacidad de ligar / carisma
 2. **Sigma** → alguien que va a su bola, sin seguir al grupo
 3. **The ick** → esa sensación de repulsión de repente con alguien
 4. **Main character energy** → vivir como si fueras el/la protagonista
@@ -93,13 +93,13 @@ Y un quinto que se confunde mucho: **"dreamy"**. "Dreamy" es la fantasía bonita
 Solo si lo usas para describir a una persona concreta. Decir "estoy delulu con este examen" es un chiste compartido. Decirle a tu compañero "eres delulu" ya no lo es. Es la misma diferencia que entre "qué heavy eres" y "qué mierda te pasa", aunque las dos frases suenen parecidas cuando las dices con cariño.
 
 **¿Cómo se escribe y cómo se pronuncia?**
-En minúsculas y sin tilde: *delulu*, con la D y la L. Se pronuncia como "de-LOO-lu", el acento en la segunda sílaba. Y en español la gente suele escribirla sin acentuación, pero si necesitasONEY un acentoSpanish, la forma aceptada es *delúlu* en contextos donde el slang ya está integrado en la conversación.
+En minúsculas y sin tilde: *delulu*, con la D y la L. Se pronuncia como "de-LOO-lu", el acento en la segunda sílaba. Y en español la gente suele escribirla sin acentuación, pero si necesitas un acento, la forma aceptada es *delúlu* en contextos donde el slang ya está integrado en la conversación.
 
 **¿De dónde viene exactamente?**
-De *delusional*, la palabra inglesa para "delirante" o "que delira". La forma corta *delulu* es un recorte de esas sílabas. No hay un evento exacto que se pueda señalar como "el día que nació la palabra", sino un proceso: una palabra larga y difícil se recorta, se vuelve facile, y así empieza a circular.
+De *delusional*, la palabra inglesa para "delirante" o "que delira". La forma corta *delulu* es un recorte de esas sílabas. No hay un evento exacto que se pueda señalar como "el día que nació la palabra", sino un proceso: una palabra larga y difícil se recorta, se vuelve fácil, y así empieza a circular.
 
 **¿Es solo de TikTok?**
-No. TikTok la popularizó, pero ahora se usa en Twitter, Twitch, Discord y en conversaciones normales entre gente joven. También aparece en comentarios de YouTube y en hilos largos, donde la gente la usa para—from—comentarios que no quieren que parezcan demasiado sinceros. En Estados Unidos y Reino Unido es más común que en España, así que si lees contenido en inglés la vas a ver bastante.
+No. TikTok la popularizó, pero ahora se usa en Twitter, Twitch, Discord y en conversaciones normales entre gente joven. También aparece en comentarios de YouTube y en hilos largos, donde la gente la usa para comentarios que no quieren que parezcan demasiado sinceros. En Estados Unidos y Reino Unido es más común que en España, así que si lees contenido en inglés la vas a ver bastante.
 
 **¿Cuándo se popularizó?**
 A finales de 2022, de la mano de un audio viral de TikTok con frases tipo "somos todos delulu". Desde entonces su uso no ha parado de crecer, y ya aparece en artículos de estilo, en mensajes de marcas y hasta en la publicidad de algunas campañas juveniles. Eso último es una señal de que la palabra ha dejado de ser un invento de internet y se ha convertido en vocabulario normal.
