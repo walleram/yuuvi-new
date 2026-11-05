@@ -3,7 +3,7 @@ import Layout from '@layouts/Layout.astro';
 import ArticleCard from '@components/ArticleCard.astro';
 import { getCollection } from 'astro:content';
 import { CATEGORIES, UI_TEXT, type Lang } from '../../../lib/site';
-import { LANG_PREFIX, LANGS } from '../../../lib/articles';
+import { articleHref, articleSlug, categoryHref, LANG_PREFIX, LANGS } from '../../../lib/articles';
 
 export function getStaticPaths() {
   const categorySlugs = Object.keys(CATEGORIES);
@@ -44,12 +44,64 @@ const iconBySlug: Record<string, string> = {
   tecnologia: '🤖',
   musica: '🎧',
 };
+
+const title = `${categoryMeta.label[lang]} | Yuuvi`;
+const description = categoryMeta.seoDescription[lang];
+const canonicalURL = new URL(categoryHref(slug, lang), Astro.site!).toString();
+const alternates = [
+  ...LANGS.map((l) => ({ hreflang: l, href: new URL(categoryHref(slug, l), Astro.site!).toString() })),
+  { hreflang: 'x-default', href: new URL(categoryHref(slug, 'es'), Astro.site!).toString() },
+];
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    '@id': `${canonicalURL}#collection`,
+    url: canonicalURL,
+    name: title,
+    description,
+    inLanguage: lang,
+    isPartOf: {
+      '@type': 'WebSite',
+      name: 'Yuuvi',
+      url: new URL(LANG_PREFIX[lang] || '/', Astro.site!).toString(),
+    },
+    mainEntity: {
+      '@type': 'ItemList',
+      numberOfItems: articles.length,
+      itemListElement: articles.map((article, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        name: article.data.title,
+        url: new URL(articleHref(articleSlug(article), lang), Astro.site!).toString(),
+      })),
+    },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: t.nav.home,
+        item: new URL(LANG_PREFIX[lang] || '/', Astro.site!).toString(),
+      },
+      { '@type': 'ListItem', position: 2, name: title, item: canonicalURL },
+    ],
+  },
+];
 ---
 
 <Layout
-  title={`${categoryMeta.label[lang]} | Yuuvi`}
-  description={`${categoryMeta.label[lang]} a Yuuvi: les últimes tendències i notícies per a joves.`}
+  title={title}
+  description={description}
   lang={lang}
+  canonicalURL={canonicalURL}
+  alternates={alternates}
+  jsonLd={jsonLd}
+  rssHref={`${LANG_PREFIX[lang]}/rss.xml`}
 >
   <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6">
     <div class="mb-6 flex items-center gap-4">
@@ -71,12 +123,7 @@ const iconBySlug: Record<string, string> = {
 
     <section class="mb-8 max-w-3xl">
       <p class="leading-relaxed text-neutral-300">
-        {lang === 'es' &&
-          `En Yuuvi recopilamos los mejores artículos de ${categoryMeta.label[lang].toLowerCase()} para mantenerte al día con las últimas tendencias, curiosidades y novedades.`}
-        {lang === 'en' &&
-          `On Yuuvi we collect the latest articles about ${categoryMeta.label[lang].toLowerCase()} to keep you up to date with trends, insights and what's new.`}
-        {lang === 'ca' &&
-          `A Yuuvi recopilem els últims articles de ${categoryMeta.label[lang].toLowerCase()} per mantenir-te al dia amb les tendències, curiositats i novetats.`}
+        {categoryMeta.intro[lang]}
       </p>
     </section>
 

@@ -164,13 +164,86 @@ export function legalAlternates(key: LegalKey): { hreflang: string; href: string
   ];
 }
 
-// Mapeo de categorías con metadatos visuales
-export const CATEGORIES: Record<string, { label: Record<Lang, string>; color: string }> = {
-  cultura: { label: { es: 'Cultura', en: 'Culture', ca: 'Cultura' }, color: 'brand-cyan' },
-  estetica: { label: { es: 'Estética', en: 'Aesthetics', ca: 'Estètica' }, color: 'brand-pink' },
-  gaming: { label: { es: 'Gaming', en: 'Gaming', ca: 'Gaming' }, color: 'brand-purple' },
-  tecnologia: { label: { es: 'Tecnología', en: 'Tech', ca: 'Tecnologia' }, color: 'brand-lime' },
-  musica: { label: { es: 'Música', en: 'Music', ca: 'Música' }, color: 'brand-yellow' },
+// Mapeo de categorías con metadatos visuales y textos propios para SEO
+export const CATEGORIES: Record<
+  string,
+  {
+    label: Record<Lang, string>;
+    color: string;
+    seoDescription: Record<Lang, string>;
+    intro: Record<Lang, string>;
+  }
+> = {
+  cultura: {
+    label: { es: 'Cultura', en: 'Culture', ca: 'Cultura' },
+    color: 'brand-cyan',
+    seoDescription: {
+      es: 'Cultura en Yuuvi: memes, slang, internet y las tendencias que marcan a la generación joven.',
+      en: 'Culture at Yuuvi: memes, slang, internet and the trends shaping the younger generation.',
+      ca: 'Cultura a Yuuvi: mems, slang, internet i les tendències que marquen la generació jove.',
+    },
+    intro: {
+      es: 'Del meme que dura dos días al slang que acaba en el diccionario: aquí reunimos lo que se habla en internet antes de que llegue a los medios. Sin prisa y sin postureo.',
+      en: 'From the meme that lasts two days to the slang that ends up in the dictionary: here we collect what people talk about online before it reaches the mainstream. No rush, no posturing.',
+      ca: 'Del mem que dura dos dies al slang que acaba al diccionari: aquí recollim el que es diu a internet abans que arribi als mitjans. Sense presses i sense postureig.',
+    },
+  },
+  estetica: {
+    label: { es: 'Estética', en: 'Aesthetics', ca: 'Estètica' },
+    color: 'brand-pink',
+    seoDescription: {
+      es: 'Estética en Yuuvi: moda, cores, armario y estilo explicados sin snobismo.',
+      en: 'Aesthetics at Yuuvi: fashion, cores, wardrobes and style explained without snobbery.',
+      ca: 'Estètica a Yuuvi: moda, cores, armari i estil explicats sense snobisme.',
+    },
+    intro: {
+      es: 'Qué se lleva, por qué se lleva y cómo llevarlo sin parecer un disfraz. Moda, calzado y estéticas de internet con criterio, no solo con tendencias.',
+      en: "What's trending, why it's trending and how to wear it without looking like a costume. Fashion, footwear and internet aesthetics with reasoning, not just trends.",
+      ca: "Què es porta, per què es porta i com portar-ho sense semblar una disfressa. Moda, calçat i estètiques d'internet amb criteri, no només amb tendències.",
+    },
+  },
+  gaming: {
+    label: { es: 'Gaming', en: 'Gaming', ca: 'Gaming' },
+    color: 'brand-purple',
+    seoDescription: {
+      es: 'Gaming en Yuuvi: juegos indie, guías, cultura de streamers y lo que vale la pena jugar.',
+      en: "Gaming at Yuuvi: indie games, guides, streamer culture and what's actually worth playing.",
+      ca: 'Gaming a Yuuvi: jocs indie, guies, cultura de streamers i el que val la pena jugar.',
+    },
+    intro: {
+      es: 'Juegos que merecen tu tiempo, guías para no perderte y la cultura de streamers que los rodea. Sin hype vacío: lo que se juega y por qué.',
+      en: "Games worth your time, guides so you don't get lost and the streamer culture around them. No empty hype: what people are playing and why.",
+      ca: "Jocs que mereixen el teu temps, guies per no perdre't i la cultura de streamers que els envolta. Sense hype buit: què es juga i per què.",
+    },
+  },
+  tecnologia: {
+    label: { es: 'Tecnología', en: 'Tech', ca: 'Tecnologia' },
+    color: 'brand-lime',
+    seoDescription: {
+      es: 'Tecnología en Yuuvi: apps, IA, gadgets y consejos para usar la tecnología sin que te use.',
+      en: 'Tech at Yuuvi: apps, AI, gadgets and tips to use technology without letting it use you.',
+      ca: 'Tecnologia a Yuuvi: apps, IA, gadgets i consells per fer servir la tecnologia sense que et faci servir.',
+    },
+    intro: {
+      es: 'Apps, IA, gadgets y trucos para usar la tecnología sin que te use. Probamos, comparamos y te contamos lo que de verdad importa.',
+      en: 'Apps, AI, gadgets and tricks to use technology without letting it use you. We test, compare and tell you what actually matters.',
+      ca: "Apps, IA, gadgets i trucs per fer servir la tecnologia sense que et faci servir. Provem, comparem i t'expliquem el que de debò importa.",
+    },
+  },
+  musica: {
+    label: { es: 'Música', en: 'Music', ca: 'Música' },
+    color: 'brand-yellow',
+    seoDescription: {
+      es: 'Música en Yuuvi: artistas, festivales, algoritmos y la cultura pop que suena.',
+      en: "Music at Yuuvi: artists, festivals, algorithms and the pop culture that's playing.",
+      ca: 'Música a Yuuvi: artistes, festivals, algoritmes i la cultura pop que sona.',
+    },
+    intro: {
+      es: 'Artistas, discos, festivales y la cultura pop que suena. Del algoritmo que te repite canciones a los conciertos que merecen el viaje.',
+      en: "Artists, albums, festivals and the pop culture that's playing. From the algorithm that repeats songs to the shows worth the trip.",
+      ca: "Artistes, discs, festivals i la cultura pop que sona. De l'algoritme que et repeteix cançons als concerts que mereixen el viatge.",
+    },
+  },
 };
 
 export interface Author {

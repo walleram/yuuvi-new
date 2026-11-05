@@ -48,7 +48,7 @@ const desctext: Record<Lang, string> = {
 };
 const description = desctext[lang];
 const countLabel = `${entry.articles.length} ${entry.articles.length === 1 ? t.article : t.articles}`;
-const shouldNoindex = entry.articles.length < 3;
+const shouldNoindex = entry.articles.length < 4;
 
 const jsonLd = [
   {
@@ -116,7 +116,7 @@ const jsonLd = [
       </p>
     </header>
 
-    {entry.articles.length >= 3 && (
+    {entry.articles.length >= 4 && (
       <section class="mb-8 max-w-3xl">
         <p class="leading-relaxed text-neutral-300">
           {lang === 'es' &&
