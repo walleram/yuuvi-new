@@ -3,7 +3,7 @@ title: "Tu primer RPG: cómo empezar sin perderte en 200 horas"
 description: "Qué es un RPG, cómo elegir el primero según tu tiempo y tu plataforma, y cinco juegos que no te van a aplastar con menús."
 seoTitle: "Tu primer RPG: guía para empezar en 2026"
 lang: "es"
-pubDate: 2026-11-11
+pubDate: 2026-11-05
 category: "gaming"
 tags: ["gaming", "rpg", "juegos", "guia", "principiantes"]
 author: "Diego Morales"

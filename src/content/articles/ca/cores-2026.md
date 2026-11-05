@@ -3,7 +3,7 @@ title: "Els 'cores' de 2026: troba la teva estètica sense copiar tothom"
 description: "Cottagecore, clean girl, gorpcore i més: què significa cada estètica, com saber quina encaixa amb tu i com evitar la disfressa."
 seoTitle: "Cores 2026: quina estètica va amb tu"
 lang: "ca"
-pubDate: 2026-11-10
+pubDate: 2026-11-05
 category: "estetica"
 tags: ["estetica", "cores", "moda", "tendencies", "estil"]
 author: "Lucía Fernández"

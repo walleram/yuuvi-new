@@ -3,7 +3,7 @@ title: "Armari càpsula: com tenir menys roba i vestir millor"
 description: "Com muntar un armari càpsula real: quantes prendes necessites, com triar la paleta i com no avorrir-te a la segona setmana."
 seoTitle: "Armari càpsula: guia real per començar"
 lang: "ca"
-pubDate: 2026-11-09
+pubDate: 2026-11-05
 category: "estetica"
 tags: ["moda", "armari", "estetica", "consells", "sostenibilitat"]
 author: "Lucía Fernández"

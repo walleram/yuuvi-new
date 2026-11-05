@@ -3,7 +3,7 @@ title: "Per què els blogs i les revistes independents estan tornant"
 description: "Butlletins, webs personals i revistes de nínxol: per què una part de la generació Z fuig del feed i torna a llegir a poc a poc."
 seoTitle: "Tornen els blogs: llegir a poc a poc el 2026"
 lang: "ca"
-pubDate: 2026-11-08
+pubDate: 2026-11-05
 category: "cultura"
 tags: ["blogs", "butlletins", "internet", "cultura", "lectura"]
 author: "Valentina Ruiz"

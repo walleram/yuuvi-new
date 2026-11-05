@@ -3,7 +3,7 @@ title: "Short Horror Games You Can Finish in One Night"
 description: "Ten horror games that last an hour or two: perfect for a night with friends, without committing to a 40-hour saga."
 seoTitle: "Short Horror Games for One Night (2026)"
 lang: "en"
-pubDate: 2026-11-12
+pubDate: 2026-11-05
 category: "gaming"
 tags: ["gaming", "horror", "games", "indie", "night"]
 author: "Diego Morales"

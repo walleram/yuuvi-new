@@ -3,7 +3,7 @@ title: "How to Survive Your First Festival (Without Going Broke)"
 description: "A practical guide to your first festival: what to pack, how to protect your hearing, how to eat and drink, and how to get home in one piece."
 seoTitle: "Surviving Your First Festival: A Real Guide"
 lang: "en"
-pubDate: 2026-11-14
+pubDate: 2026-11-05
 category: "musica"
 tags: ["music", "festival", "tips", "live", "planning"]
 author: "Diego Morales"

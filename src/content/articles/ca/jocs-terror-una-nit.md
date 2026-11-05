@@ -3,7 +3,7 @@ title: "Jocs de terror curts per jugar en una nit"
 description: "Deu jocs de terror que duren una o dues hores: ideals per a una nit amb amics, sense comprometre't amb una saga de 40 hores."
 seoTitle: "Terror curt: jocs per a una nit (2026)"
 lang: "ca"
-pubDate: 2026-11-12
+pubDate: 2026-11-05
 category: "gaming"
 tags: ["gaming", "terror", "jocs", "indie", "nit"]
 author: "Diego Morales"

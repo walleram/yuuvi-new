@@ -3,7 +3,7 @@ title: "Com sobreviure al teu primer festival (sense arruïnar-te)"
 description: "Guia pràctica per al teu primer festival: què portar, com cuidar l'oïda, com menjar i beure, i com tornar sencer."
 seoTitle: "Sobrevivre al teu primer festival: guia real"
 lang: "ca"
-pubDate: 2026-11-14
+pubDate: 2026-11-05
 category: "musica"
 tags: ["musica", "festival", "consells", "directe", "planificacio"]
 author: "Diego Morales"

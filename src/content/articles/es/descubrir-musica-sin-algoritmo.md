@@ -3,7 +3,7 @@ title: "Descubre música sin depender del algoritmo"
 description: "Cómo salir de la burbuja de recomendaciones: radios, blogs, sellos, tiendas de discos y métodos para encontrar música nueva de verdad."
 seoTitle: "Descubrir música sin algoritmo: guía 2026"
 lang: "es"
-pubDate: 2026-11-13
+pubDate: 2026-11-05
 category: "musica"
 tags: ["musica", "algoritmo", "descubrimiento", "playlists", "indie"]
 author: "Diego Morales"

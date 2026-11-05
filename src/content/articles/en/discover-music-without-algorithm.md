@@ -3,7 +3,7 @@ title: "Discover Music Without Relying on the Algorithm"
 description: "How to escape the recommendation bubble: radio, blogs, labels, record stores and methods for finding genuinely new music."
 seoTitle: "Discover Music Without the Algorithm (2026)"
 lang: "en"
-pubDate: 2026-11-13
+pubDate: 2026-11-05
 category: "musica"
 tags: ["music", "algorithm", "discovery", "playlists", "indie"]
 author: "Diego Morales"

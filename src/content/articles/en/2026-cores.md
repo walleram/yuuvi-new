@@ -3,7 +3,7 @@ title: "2026 Cores: Find Your Aesthetic Without Copying Everyone"
 description: "Cottagecore, clean girl, gorpcore and more: what each aesthetic means, how to know which one fits you and how to avoid the costume."
 seoTitle: "2026 Cores: Which Aesthetic Fits You"
 lang: "en"
-pubDate: 2026-11-10
+pubDate: 2026-11-05
 category: "estetica"
 tags: ["style", "cores", "fashion", "trends", "aesthetic"]
 author: "Lucía Fernández"

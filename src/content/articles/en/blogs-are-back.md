@@ -3,7 +3,7 @@ title: "Why Blogs and Indie Magazines Are Coming Back"
 description: "Newsletters, personal websites and niche magazines: why part of Gen Z is leaving the feed and going back to reading slowly."
 seoTitle: "Blogs Are Back: Reading Slowly in 2026"
 lang: "en"
-pubDate: 2026-11-08
+pubDate: 2026-11-05
 category: "cultura"
 tags: ["blogs", "newsletters", "internet", "culture", "reading"]
 author: "Valentina Ruiz"

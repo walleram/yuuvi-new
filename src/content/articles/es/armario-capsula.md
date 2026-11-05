@@ -3,7 +3,7 @@ title: "Armario cápsula: cómo tener menos ropa y vestir mejor"
 description: "Cómo montar un armario cápsula real: cuántas prendas necesitas, cómo elegir la paleta y cómo no aburrirte a la segunda semana."
 seoTitle: "Armario cápsula: guía real para empezar"
 lang: "es"
-pubDate: 2026-11-09
+pubDate: 2026-11-05
 category: "estetica"
 tags: ["moda", "armario", "estetica", "consejos", "sostenibilidad"]
 author: "Lucía Fernández"

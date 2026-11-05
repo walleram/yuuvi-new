@@ -3,7 +3,7 @@ title: "Com saber si una app és segura abans d'instal·lar-la"
 description: "Checklist ràpida per detectar apps falses, permisos abusius i estafes abans de donar-los accés al mòbil o a les teves dades."
 seoTitle: "És segura aquesta app? Checklist 2026"
 lang: "ca"
-pubDate: 2026-11-06
+pubDate: 2026-11-05
 category: "tecnologia"
 tags: ["apps", "seguretat", "privacitat", "mobil", "estafes"]
 author: "Sofía Vargas"

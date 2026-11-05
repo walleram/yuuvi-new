@@ -3,7 +3,7 @@ title: "Por qué los memes ya no se entienden sin contexto"
 description: "Del meme de imagen al vídeo con audio: por qué cada vez cuesta más pillar un chiste y cómo se ha vuelto un idioma propio."
 seoTitle: "Memes sin contexto: el nuevo idioma de internet"
 lang: "es"
-pubDate: 2026-11-07
+pubDate: 2026-11-05
 category: "cultura"
 tags: ["memes", "internet", "tiktok", "slang", "cultura"]
 author: "Valentina Ruiz"

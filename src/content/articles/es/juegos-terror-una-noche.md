@@ -3,7 +3,7 @@ title: "Juegos de terror cortos para jugar en una noche"
 description: "Diez juegos de terror que duran una o dos horas: ideales para una noche con amigos, sin comprometerte con una saga de 40 horas."
 seoTitle: "Terror corto: juegos para una noche (2026)"
 lang: "es"
-pubDate: 2026-11-12
+pubDate: 2026-11-05
 category: "gaming"
 tags: ["gaming", "terror", "juegos", "indie", "noche"]
 author: "Diego Morales"

@@ -3,7 +3,7 @@ title: "Por qué los blogs y las revistas independientes están volviendo"
 description: "Newsletters, webs personales y revistas de nicho: por qué una parte de la generación Z está huyendo del feed y volviendo a leer despacio."
 seoTitle: "Vuelven los blogs: leer despacio en 2026"
 lang: "es"
-pubDate: 2026-11-08
+pubDate: 2026-11-05
 category: "cultura"
 tags: ["blogs", "newsletters", "internet", "cultura", "lectura"]
 author: "Valentina Ruiz"

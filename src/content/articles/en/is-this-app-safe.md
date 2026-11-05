@@ -3,7 +3,7 @@ title: "How to Tell If an App Is Safe Before You Install It"
 description: "A quick checklist to spot fake apps, shady permissions and scams before you give them access to your phone or your data."
 seoTitle: "Is This App Safe? A 2026 Checklist"
 lang: "en"
-pubDate: 2026-11-06
+pubDate: 2026-11-05
 category: "tecnologia"
 tags: ["apps", "security", "privacy", "phone", "scams"]
 author: "Sofía Vargas"

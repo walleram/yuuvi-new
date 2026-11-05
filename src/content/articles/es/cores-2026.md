@@ -3,7 +3,7 @@ title: "Los 'cores' de 2026: encuentra tu estética sin copiar a todos"
 description: "Cottagecore, clean girl, gorpcore y más: qué significa cada estética, cómo saber cuál encaja contigo y cómo evitar el disfraz."
 seoTitle: "Cores 2026: qué estética va contigo"
 lang: "es"
-pubDate: 2026-11-10
+pubDate: 2026-11-05
 category: "estetica"
 tags: ["estetica", "cores", "moda", "tendencias", "estilo"]
 author: "Lucía Fernández"

@@ -3,7 +3,7 @@ title: "Your First RPG: How to Start Without Drowning in 200 Hours"
 description: "What an RPG is, how to pick your first one based on time and platform, and five games that won't crush you with menus."
 seoTitle: "Your First RPG: A Beginner's Guide for 2026"
 lang: "en"
-pubDate: 2026-11-11
+pubDate: 2026-11-05
 category: "gaming"
 tags: ["gaming", "rpg", "games", "guide", "beginners"]
 author: "Diego Morales"

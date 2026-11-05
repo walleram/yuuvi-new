@@ -3,7 +3,7 @@ title: "Capsule Wardrobe: How to Own Less and Dress Better"
 description: "How to build a real capsule wardrobe: how many pieces you need, how to pick a palette and how not to get bored in week two."
 seoTitle: "Capsule Wardrobe: A Real Guide to Start"
 lang: "en"
-pubDate: 2026-11-09
+pubDate: 2026-11-05
 category: "estetica"
 tags: ["fashion", "wardrobe", "style", "tips", "sustainability"]
 author: "Lucía Fernández"

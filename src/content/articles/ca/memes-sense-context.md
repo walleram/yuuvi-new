@@ -3,7 +3,7 @@ title: "Per què els memes ja no s'entenen sense context"
 description: "Del meme d'imatge al vídeo amb àudio: per què cada cop costa més pillar un acudit i com s'ha tornat un idioma propi."
 seoTitle: "Memes sense context: el nou idioma d'internet"
 lang: "ca"
-pubDate: 2026-11-07
+pubDate: 2026-11-05
 category: "cultura"
 tags: ["memes", "internet", "tiktok", "slang", "cultura"]
 author: "Valentina Ruiz"

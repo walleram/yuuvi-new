@@ -3,7 +3,7 @@ title: "Descobreix música sense dependre de l'algoritme"
 description: "Com sortir de la bombolla de recomanacions: ràdios, blogs, segells, botigues de discos i mètodes per trobar música nova de debò."
 seoTitle: "Descobrir música sense algoritme: guia 2026"
 lang: "ca"
-pubDate: 2026-11-13
+pubDate: 2026-11-05
 category: "musica"
 tags: ["musica", "algoritme", "descobriment", "llistes", "indie"]
 author: "Diego Morales"

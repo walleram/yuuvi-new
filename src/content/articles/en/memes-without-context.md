@@ -3,7 +3,7 @@ title: "Why Memes Don't Make Sense Without Context Anymore"
 description: "From image macros to audio clips: why it's getting harder to get the joke and how memes became a language of their own."
 seoTitle: "Memes Without Context: The New Internet Language"
 lang: "en"
-pubDate: 2026-11-07
+pubDate: 2026-11-05
 category: "cultura"
 tags: ["memes", "internet", "tiktok", "slang", "culture"]
 author: "Valentina Ruiz"

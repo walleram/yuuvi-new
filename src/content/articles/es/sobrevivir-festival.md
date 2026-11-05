@@ -3,7 +3,7 @@ title: "Cómo sobrevivir a tu primer festival (sin arruinarte)"
 description: "Guía práctica para tu primer festival: qué llevar, cómo cuidar el oído, cómo comer y beber, y cómo volver entero."
 seoTitle: "Sobrevivir a tu primer festival: guía real"
 lang: "es"
-pubDate: 2026-11-14
+pubDate: 2026-11-05
 category: "musica"
 tags: ["musica", "festival", "consejos", "directo", "planificacion"]
 author: "Diego Morales"
