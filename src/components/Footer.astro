@@ -1,5 +1,5 @@
 ---
-import { SITE, UI_TEXT, CATEGORIES, LEGAL_ROUTES, type Lang } from '../lib/site';
+import { SITE, UI_TEXT, CATEGORIES, LEGAL_ROUTES, INFO_ROUTES, type Lang } from '../lib/site';
 import { homeHref, categoryHref } from '../lib/articles';
 
 interface Props {
@@ -60,6 +60,16 @@ const taglines: Record<Lang, string> = {
           {t.footer.legal}
         </h3>
         <ul class="space-y-2">
+          <li>
+            <a href={INFO_ROUTES.about[lang]} class="text-neutral-400 transition-colors hover:text-brand-pink">
+              {t.footer.about}
+            </a>
+          </li>
+          <li>
+            <a href={INFO_ROUTES.contact[lang]} class="text-neutral-400 transition-colors hover:text-brand-pink">
+              {t.footer.contact}
+            </a>
+          </li>
           <li>
             <a href={LEGAL_ROUTES.privacy[lang]} class="text-neutral-400 transition-colors hover:text-brand-pink">
               {t.footer.privacy}

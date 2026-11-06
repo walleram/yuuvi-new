@@ -1,0 +1,89 @@
+---
+import Layout from '@layouts/Layout.astro';
+import { SITE, INFO_ROUTES, CATEGORIES, infoAlternates } from '@lib/site';
+import { categoryHref } from '@lib/articles';
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'AboutPage',
+  name: 'About Yuuvi',
+  url: new URL(INFO_ROUTES.about.en, Astro.site).toString(),
+  inLanguage: 'en-US',
+  isPartOf: {
+    '@type': 'WebSite',
+    name: SITE.name,
+    url: new URL('/en/', Astro.site).toString(),
+  },
+};
+---
+
+<Layout
+  title="About Yuuvi | Who we are"
+  description="Yuuvi is an independent digital magazine about internet culture, trends, gaming, tech, style and music for the younger generation."
+  lang="en"
+  alternates={infoAlternates('about')}
+  jsonLd={jsonLd}
+>
+  <article class="prose prose-invert prose-lg mx-auto max-w-3xl px-4 py-10 sm:px-6 prose-headings:font-black prose-headings:text-white prose-a:text-brand-pink [&_p]:text-neutral-300">
+    <h1>About Yuuvi</h1>
+
+    <p>
+      <strong>Yuuvi is an independent digital magazine about internet culture and the trends shaping the
+      younger generation.</strong> We explain what people share, argue about and turn into a trend online,
+      with enough context to understand it even if you never watched the video everyone is talking about.
+    </p>
+
+    <h2>What Yuuvi is</h2>
+    <p>
+      We are not a general news site. We focus on one territory: the memes and slang born on TikTok, the
+      aesthetics that come around every season, the games worth your time, the apps and gadgets people
+      actually use, and the music that plays before it reaches the headlines.
+    </p>
+    <p>
+      The idea is simple: if people are talking about it online, we want to explain where it comes from,
+      how it is used and what is behind it. No posturing, no filler, no assuming the reader already knows.
+    </p>
+
+    <h2>What we cover</h2>
+    <ul>
+      {Object.entries(CATEGORIES).map(([slug, meta]) => (
+        <li>
+          <a href={categoryHref(slug, 'en')}><strong>{meta.label.en}</strong></a>: {meta.intro.en}
+        </li>
+      ))}
+    </ul>
+
+    <h2>How we work</h2>
+    <p>
+      We choose topics for genuine interest, not search volume. When we publish a date, a name or a
+      figure, we try to check it against a primary source and link to it whenever one is available. If we
+      have tested an app, a game or a gadget, we say so; if we have not, we say that too.
+    </p>
+    <p>
+      Every article shows its publication date and the person who wrote it. When a trend changes or a fact
+      goes out of date, we revise the piece instead of letting it gather dust. And when we get something
+      wrong, we correct it: you can always let us know from the contact page.
+    </p>
+
+    <h2>Independence and advertising</h2>
+    <p>
+      Yuuvi is funded by display advertising through Google AdSense. Ads do not influence which topics we
+      cover or the opinions in our articles. If we ever publish sponsored content, it will be clearly
+      labelled. We do not sell mentions, reviews or places in our rankings.
+    </p>
+
+    <h2>Who writes</h2>
+    <p>
+      Articles are signed by the <strong>Yuuvi Editorial</strong>, led by
+      <strong>Pablo García Valentín</strong>. Every byline has its own page with that person&rsquo;s
+      speciality and background. You can reach those pages from any article or from the author listings.
+    </p>
+
+    <h2>Contact</h2>
+    <p>
+      For suggestions, corrections, press or collaborations, email us at
+      <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>. You will find the details on the
+      <a href={INFO_ROUTES.contact.en}>contact page</a>.
+    </p>
+  </article>
+</Layout>

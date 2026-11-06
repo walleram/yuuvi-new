@@ -1,0 +1,66 @@
+---
+import Layout from '@layouts/Layout.astro';
+import { SITE, INFO_ROUTES, LEGAL_ROUTES, infoAlternates } from '@lib/site';
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ContactPage',
+  name: 'Contacto',
+  url: new URL(INFO_ROUTES.contact.es, Astro.site).toString(),
+  inLanguage: 'es-ES',
+  mainEntity: {
+    '@type': 'Organization',
+    name: SITE.name,
+    url: new URL('/', Astro.site).toString(),
+    email: SITE.contactEmail,
+  },
+};
+---
+
+<Layout
+  title="Contacto | Yuuvi"
+  description="Escríbenos a redaccion@yuuvi.cat para sugerencias, correcciones, prensa o colaboraciones. Respondemos en un plazo de 2 a 3 días laborables."
+  lang="es"
+  alternates={infoAlternates('contact')}
+  jsonLd={jsonLd}
+>
+  <article class="prose prose-invert prose-lg mx-auto max-w-3xl px-4 py-10 sm:px-6 prose-headings:font-black prose-headings:text-white prose-a:text-brand-pink [&_p]:text-neutral-300">
+    <h1>Contacto</h1>
+
+    <p>
+      <strong>La forma más rápida de hablar con Yuuvi es el correo electrónico:</strong>
+      <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>. Leemos todos los mensajes y
+      procuramos responder en un plazo de 2 a 3 días laborables.
+    </p>
+
+    <p>
+      <a
+        href={`mailto:${SITE.contactEmail}?subject=Contacto%20desde%20yuuvi.cat`}
+        class="not-prose inline-flex items-center rounded-full bg-brand-pink px-6 py-3 text-sm font-bold text-white no-underline transition-colors hover:bg-brand-purple"
+      >
+        Escribir a {SITE.contactEmail}
+      </a>
+    </p>
+
+    <h2>Para qué puedes escribirnos</h2>
+    <ul>
+      <li><strong>Sugerencias y temas:</strong> una tendencia, un juego o una app que crees que deberíamos cubrir.</li>
+      <li><strong>Correcciones:</strong> si un dato, una fecha o un nombre no cuadra, avísanos e indica el artículo.</li>
+      <li><strong>Prensa y colaboraciones:</strong> propuestas editoriales, entrevistas o materiales de marcas.</li>
+      <li><strong>Privacidad y datos:</strong> para ejercer tus derechos recogidos en la <a href={LEGAL_ROUTES.privacy.es}>política de privacidad</a>.</li>
+    </ul>
+
+    <h2>Antes de escribir</h2>
+    <p>
+      No usamos formularios: así no recogemos ni almacenamos datos personales en el sitio. Al escribirnos
+      por correo, tu mensaje se gestiona únicamente para responderte. No compartimos direcciones con
+      terceros ni enviamos boletines sin que los pidas.
+    </p>
+
+    <h2>Publicidad</h2>
+    <p>
+      Yuuvi no vende menciones ni valoraciones. Si quieres anunciarte, la publicidad se gestiona a través
+      de Google AdSense, no mediante acuerdos individuales con la redacción.
+    </p>
+  </article>
+</Layout>

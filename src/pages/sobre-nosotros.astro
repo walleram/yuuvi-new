@@ -1,0 +1,91 @@
+---
+import Layout from '@layouts/Layout.astro';
+import { SITE, INFO_ROUTES, CATEGORIES, infoAlternates } from '@lib/site';
+import { categoryHref } from '@lib/articles';
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'AboutPage',
+  name: 'Sobre Yuuvi',
+  url: new URL(INFO_ROUTES.about.es, Astro.site).toString(),
+  inLanguage: 'es-ES',
+  isPartOf: {
+    '@type': 'WebSite',
+    name: SITE.name,
+    url: new URL('/', Astro.site).toString(),
+  },
+};
+---
+
+<Layout
+  title="Sobre Yuuvi | Quiénes somos"
+  description="Yuuvi es una revista digital independiente sobre cultura de internet, tendencias, gaming, tecnología, estética y música para la generación joven."
+  lang="es"
+  alternates={infoAlternates('about')}
+  jsonLd={jsonLd}
+>
+  <article class="prose prose-invert prose-lg mx-auto max-w-3xl px-4 py-10 sm:px-6 prose-headings:font-black prose-headings:text-white prose-a:text-brand-pink [&_p]:text-neutral-300">
+    <h1>Sobre Yuuvi</h1>
+
+    <p>
+      <strong>Yuuvi es una revista digital independiente sobre la cultura de internet y las tendencias
+      que marcan a la generación joven.</strong> Explicamos lo que se comparte, se discute y se pone de
+      moda en redes, con contexto suficiente para entenderlo aunque no hayas visto el vídeo del que todo
+      el mundo habla.
+    </p>
+
+    <h2>Qué es Yuuvi</h2>
+    <p>
+      No somos una web de actualidad general. Nos interesa un territorio concreto: los memes y el slang
+      que nacen en TikTok, la estética que se lleva cada temporada, los juegos que merecen el tiempo, las
+      apps y gadgets que de verdad se usan y la música que suena antes de llegar a los titulares.
+    </p>
+    <p>
+      La idea es sencilla: si algo se está hablando en internet, queremos contar de dónde viene, cómo se
+      usa y qué hay detrás. Sin postureo, sin relleno y sin dar por hecho lo que el lector ya sabe.
+    </p>
+
+    <h2>Qué cubrimos</h2>
+    <ul>
+      {Object.entries(CATEGORIES).map(([slug, meta]) => (
+        <li>
+          <a href={categoryHref(slug, 'es')}><strong>{meta.label.es}</strong></a>: {meta.intro.es}
+        </li>
+      ))}
+    </ul>
+
+    <h2>Cómo trabajamos</h2>
+    <p>
+      Elegimos los temas por interés real, no por volumen de búsquedas. Cuando publicamos una fecha, un
+      nombre o una cifra, procuramos contrastarlo con una fuente primaria y enlazarla cuando está
+      disponible. Si probamos una app, un juego o un gadget, lo decimos; si no lo hemos probado, también.
+    </p>
+    <p>
+      Cada artículo muestra su fecha de publicación y la persona que lo firma. Cuando una tendencia cambia
+      o un dato queda desactualizado, revisamos el texto en lugar de dejarlo acumular polvo. Y si nos
+      equivocamos, corregimos: puedes avisarnos en cualquier momento desde la página de contacto.
+    </p>
+
+    <h2>Independencia y publicidad</h2>
+    <p>
+      Yuuvi se financia con publicidad display a través de Google AdSense. Los anuncios no condicionan la
+      selección de temas ni las opiniones de los artículos. Si algún día publicamos contenido patrocinado,
+      estará identificado como tal de forma visible. No vendemos menciones, valoraciones ni puestos en
+      nuestros rankings.
+    </p>
+
+    <h2>Quiénes firman</h2>
+    <p>
+      Los artículos van firmados por la <strong>Redacción de Yuuvi</strong>, dirigida por
+      <strong>Pablo García Valentín</strong>. Cada firma tiene su propia página con su especialidad y su
+      trayectoria. Puedes consultarlas desde cualquier artículo o desde los listados de autor.
+    </p>
+
+    <h2>Contacto</h2>
+    <p>
+      Para sugerencias, correcciones, prensa o colaboraciones, escríbenos a
+      <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>. Tienes todos los detalles en la
+      <a href={INFO_ROUTES.contact.es}>página de contacto</a>.
+    </p>
+  </article>
+</Layout>

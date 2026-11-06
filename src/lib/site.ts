@@ -2,6 +2,7 @@ export const SITE = {
   name: 'Yuuvi',
   url: 'https://www.yuuvi.cat',
   tagline: 'Tu revista de tendencias',
+  contactEmail: 'redaccion@yuuvi.cat',
   localeTags: {
     es: 'es-ES',
     en: 'en-US',
@@ -148,6 +149,30 @@ export const LEGAL_ROUTES = {
 export type LegalKey = 'privacy' | 'terms' | 'legalNotice';
 
 /**
+ * Páginas de información del proyecto. Como las legales, cada idioma usa un
+ * slug distinto, así que no se pueden derivar con el prefijo /en/ o /ca/.
+ */
+export const INFO_ROUTES = {
+  about: { es: '/sobre-nosotros/', en: '/en/about/', ca: '/ca/sobre-nosaltres/' },
+  contact: { es: '/contacto/', en: '/en/contact/', ca: '/ca/contacte/' },
+} as const satisfies Record<string, Record<Lang, string>>;
+
+export type InfoKey = 'about' | 'contact';
+
+/** Alternates hreflang de una página informativa. Las tres versiones existen siempre. */
+export function infoAlternates(key: InfoKey): { hreflang: string; href: string }[] {
+  const es = new URL(INFO_ROUTES[key].es, SITE.url).toString();
+  const en = new URL(INFO_ROUTES[key].en, SITE.url).toString();
+  const ca = new URL(INFO_ROUTES[key].ca, SITE.url).toString();
+  return [
+    { hreflang: 'es', href: es },
+    { hreflang: 'en', href: en },
+    { hreflang: 'ca', href: ca },
+    { hreflang: 'x-default', href: es },
+  ];
+}
+
+/**
  * Alternates hreflang de una página legal. Todas las traducciones existen siempre,
  * así que se declaran sin comprobar nada. El ancla #cookies no es una página
  * propia: se canonicaliza contra la de privacidad.
@@ -193,7 +218,7 @@ export const CATEGORIES: Record<
     color: 'brand-pink',
     seoDescription: {
       es: 'Estética en Yuuvi: moda, cores, armario y estilo explicados sin snobismo.',
-      en: 'Aesthetics at Yuuvi: fashion, cores, wardrobes and style explained without snobbery.',
+      en: 'Aesthetics at Yuuvi: fashion, colours, wardrobes and style explained without snobbery.',
       ca: 'Estètica a Yuuvi: moda, cores, armari i estil explicats sense snobisme.',
     },
     intro: {
@@ -255,7 +280,7 @@ export interface Author {
 }
 
 // Registro de autores. Es la fuente de verdad para las páginas /autor/[slug]
-// y para el schema Person (señal E-E-A-T que Google usa enYaml revisados de AdSense).
+// y para el schema Person (señal E-E-A-T que Google valora en las revisiones de AdSense).
 export const AUTHORS: Author[] = [
   {
     name: 'Valentina Ruiz',
@@ -280,7 +305,7 @@ export const AUTHORS: Author[] = [
       ca: 'Editor de Música',
     },
     bio: {
-      es: 'Crítico musical. Escribo sobre artistas, consolidateduras y los giros estilísticos que nadie se esperaba.',
+      es: 'Crítico musical. Escribo sobre artistas, giras y los giros estilísticos que nadie se esperaba.',
       en: 'Music critic. I write about artists, tours and the stylistic turns nobody saw coming.',
       ca: 'Crític musical. Escric sobre artistes, gires i els girs estilístics que ningú no s\'esperava.',
     },
@@ -295,7 +320,7 @@ export const AUTHORS: Author[] = [
       ca: 'Redactora d\'Estètica',
     },
     bio: {
-      es: 'Moda, calzado y estética. Analizo qué se lleva ahora mismo y por qué, con datos en lugar deBRES.',
+      es: 'Moda, calzado y estética. Analizo qué se lleva ahora mismo y por qué, con datos en lugar de impresiones.',
       en: 'Fashion, footwear and aesthetics. I analyze what is trending right now and why, with data instead of vibes.',
       ca: 'Moda, calçat i estètica. Analitzo què es porta ara mateix i per què, amb dades en lloc d\'impressions.',
     },

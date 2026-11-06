@@ -1,0 +1,66 @@
+---
+import Layout from '@layouts/Layout.astro';
+import { SITE, INFO_ROUTES, LEGAL_ROUTES, infoAlternates } from '@lib/site';
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ContactPage',
+  name: 'Contact',
+  url: new URL(INFO_ROUTES.contact.en, Astro.site).toString(),
+  inLanguage: 'en-US',
+  mainEntity: {
+    '@type': 'Organization',
+    name: SITE.name,
+    url: new URL('/en/', Astro.site).toString(),
+    email: SITE.contactEmail,
+  },
+};
+---
+
+<Layout
+  title="Contact | Yuuvi"
+  description="Email redaccion@yuuvi.cat with suggestions, corrections, press enquiries or collaborations. We usually reply within 2 to 3 working days."
+  lang="en"
+  alternates={infoAlternates('contact')}
+  jsonLd={jsonLd}
+>
+  <article class="prose prose-invert prose-lg mx-auto max-w-3xl px-4 py-10 sm:px-6 prose-headings:font-black prose-headings:text-white prose-a:text-brand-pink [&_p]:text-neutral-300">
+    <h1>Contact</h1>
+
+    <p>
+      <strong>The fastest way to reach Yuuvi is email:</strong>
+      <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>. We read every message and aim to
+      reply within 2 to 3 working days.
+    </p>
+
+    <p>
+      <a
+        href={`mailto:${SITE.contactEmail}?subject=Hello%20from%20yuuvi.cat`}
+        class="not-prose inline-flex items-center rounded-full bg-brand-pink px-6 py-3 text-sm font-bold text-white no-underline transition-colors hover:bg-brand-purple"
+      >
+        Email {SITE.contactEmail}
+      </a>
+    </p>
+
+    <h2>What to write to us about</h2>
+    <ul>
+      <li><strong>Suggestions and topics:</strong> a trend, game or app you think we should cover.</li>
+      <li><strong>Corrections:</strong> if a fact, date or name looks wrong, tell us and include the article.</li>
+      <li><strong>Press and collaborations:</strong> editorial pitches, interviews or brand materials.</li>
+      <li><strong>Privacy and data:</strong> to exercise your rights under our <a href={LEGAL_ROUTES.privacy.en}>privacy policy</a>.</li>
+    </ul>
+
+    <h2>Before you write</h2>
+    <p>
+      We do not use forms, so the site does not collect or store personal data. When you email us, your
+      message is used only to reply to you. We do not share addresses with third parties or send
+      newsletters unless you ask for them.
+    </p>
+
+    <h2>Advertising</h2>
+    <p>
+      Yuuvi does not sell mentions or reviews. Advertising is handled through Google AdSense, not through
+      individual deals with the editorial team.
+    </p>
+  </article>
+</Layout>

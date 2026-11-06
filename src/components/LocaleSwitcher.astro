@@ -1,6 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
-import { LEGAL_ROUTES, type Lang, type LegalKey } from '../lib/site';
+import { LEGAL_ROUTES, INFO_ROUTES, type Lang, type LegalKey, type InfoKey } from '../lib/site';
 import {
   articleSlug,
   authorSlug,
@@ -51,6 +51,9 @@ for (const l of LANGS) {
   for (const name of collectAuthors(published.filter((a) => a.data.lang === l)).keys()) {
     pathsByLang[l].add(`${LANG_PREFIX[l]}/autor/${authorSlug(name)}/`);
   }
+  for (const route of Object.values(INFO_ROUTES)) {
+    pathsByLang[l].add(route[l]);
+  }
 }
 
 // Legales: cada idioma tiene su propia ruta, así que no se derivan por prefijo.
@@ -59,6 +62,13 @@ const LEGAL_KEYS: LegalKey[] = ['privacy', 'terms', 'legalNotice'];
 const legalByRoute = new Map<string, LegalKey>();
 for (const key of LEGAL_KEYS) {
   for (const l of LANGS) legalByRoute.set(LEGAL_ROUTES[key][l], key);
+}
+
+// Páginas informativas: mismo caso que las legales, la ruta cambia por idioma.
+const INFO_KEYS: InfoKey[] = ['about', 'contact'];
+const infoByRoute = new Map<string, InfoKey>();
+for (const key of INFO_KEYS) {
+  for (const l of LANGS) infoByRoute.set(INFO_ROUTES[key][l], key);
 }
 
 // Detecta el idioma de una ruta por su prefijo.
@@ -80,6 +90,13 @@ function buildHref(target: Lang): string | null {
   const legalKey = legalByRoute.get(path);
   if (legalKey) {
     const href = LEGAL_ROUTES[legalKey][target];
+    if (known.has(href)) return href;
+  }
+
+  // Informativas: mismo criterio (/ca/sobre-nosaltres/ vs /sobre-nosotros/).
+  const infoKey = infoByRoute.get(path);
+  if (infoKey) {
+    const href = INFO_ROUTES[infoKey][target];
     if (known.has(href)) return href;
   }
 

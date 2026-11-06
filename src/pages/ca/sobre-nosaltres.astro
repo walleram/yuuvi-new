@@ -1,0 +1,89 @@
+---
+import Layout from '@layouts/Layout.astro';
+import { SITE, INFO_ROUTES, CATEGORIES, infoAlternates } from '@lib/site';
+import { categoryHref } from '@lib/articles';
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'AboutPage',
+  name: 'Sobre Yuuvi',
+  url: new URL(INFO_ROUTES.about.ca, Astro.site).toString(),
+  inLanguage: 'ca-ES',
+  isPartOf: {
+    '@type': 'WebSite',
+    name: SITE.name,
+    url: new URL('/ca/', Astro.site).toString(),
+  },
+};
+---
+
+<Layout
+  title="Sobre Yuuvi | Qui som"
+  description="Yuuvi és una revista digital independent sobre cultura d'internet, tendències, gaming, tecnologia, estètica i música per a la generació jove."
+  lang="ca"
+  alternates={infoAlternates('about')}
+  jsonLd={jsonLd}
+>
+  <article class="prose prose-invert prose-lg mx-auto max-w-3xl px-4 py-10 sm:px-6 prose-headings:font-black prose-headings:text-white prose-a:text-brand-pink [&_p]:text-neutral-300">
+    <h1>Sobre Yuuvi</h1>
+
+    <p>
+      <strong>Yuuvi és una revista digital independent sobre la cultura d'internet i les tendències que
+      marquen la generació jove.</strong> Expliquem què es comparteix, es discuteix i es posa de moda a les
+      xarxes, amb prou context per entendre-ho encara que no hagis vist el vídeo del qual tothom parla.
+    </p>
+
+    <h2>Què és Yuuvi</h2>
+    <p>
+      No som un web d'actualitat general. Ens interessa un territori concret: els mems i el slang que neixen
+      a TikTok, l'estètica que es porta cada temporada, els jocs que mereixen el temps, les apps i els
+      ginys que de debò es fan servir i la música que sona abans d'arribar als titulars.
+    </p>
+    <p>
+      La idea és senzilla: si algú en parla a internet, volem explicar d'on ve, com es fa servir i què hi ha
+      al darrere. Sense postureig, sense farciment i sense donar per fet el que el lector ja sap.
+    </p>
+
+    <h2>Què cobrim</h2>
+    <ul>
+      {Object.entries(CATEGORIES).map(([slug, meta]) => (
+        <li>
+          <a href={categoryHref(slug, 'ca')}><strong>{meta.label.ca}</strong></a>: {meta.intro.ca}
+        </li>
+      ))}
+    </ul>
+
+    <h2>Com treballem</h2>
+    <p>
+      Triem els temes per interès real, no pel volum de cerques. Quan publiquem una data, un nom o una
+      xifra, procurem contrastar-ho amb una font primària i enllaçar-la quan està disponible. Si provem una
+      app, un joc o un giny, ho diem; si no l'hem provat, també.
+    </p>
+    <p>
+      Cada article mostra la data de publicació i la persona que el signa. Quan una tendència canvia o una
+      dada queda desactualitzada, revisem el text en lloc de deixar-lo acumular pols. I si ens equivoquem,
+      corregim: ens ho pots fer saber des de la pàgina de contacte.
+    </p>
+
+    <h2>Independència i publicitat</h2>
+    <p>
+      Yuuvi es finança amb publicitat display a través de Google AdSense. Els anuncis no condicionen la
+      selecció de temes ni les opinions dels articles. Si algun dia publiquem contingut patrocinat, estarà
+      identificat com a tal de manera visible. No venem mencions, valoracions ni llocs als nostres rànquings.
+    </p>
+
+    <h2>Qui signa</h2>
+    <p>
+      Els articles van signats per la <strong>Redacció de Yuuvi</strong>, dirigida per
+      <strong>Pablo García Valentín</strong>. Cada signatura té la seva pròpia pàgina amb l'especialitat i
+      la trajectòria. Les pots consultar des de qualsevol article o des dels llistats d'autor.
+    </p>
+
+    <h2>Contacte</h2>
+    <p>
+      Per a suggeriments, correccions, premsa o col·laboracions, escriu-nos a
+      <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>. Tens tots els detalls a la
+      <a href={INFO_ROUTES.contact.ca}>pàgina de contacte</a>.
+    </p>
+  </article>
+</Layout>
