@@ -6,7 +6,7 @@ lang: "ca"
 pubDate: 2026-11-05
 category: "gaming"
 tags: ["gaming", "rpg", "jocs", "guia", "principiants"]
-author: "Diego Morales"
+author: "Redacció de Yuuvi"
 translationKey: first-rpg-guide
 coverImage: "src/assets/covers/cover-first-rpg-guide-CA.webp"
 coverAlt: "Portada sobre el teu primer RPG: fons fosc amb accents cian i violeta"

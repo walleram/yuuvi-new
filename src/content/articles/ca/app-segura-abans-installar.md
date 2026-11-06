@@ -6,7 +6,7 @@ lang: "ca"
 pubDate: 2026-11-05
 category: "tecnologia"
 tags: ["apps", "seguretat", "privacitat", "mobil", "estafes"]
-author: "Sofía Vargas"
+author: "Redacció de Yuuvi"
 translationKey: app-safety-check
 coverImage: "src/assets/covers/cover-app-safety-check-CA.webp"
 coverAlt: "Portada sobre seguretat d'apps: fons fosc amb accents violeta i groc"

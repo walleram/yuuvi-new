@@ -7,7 +7,7 @@ pubDate: 2026-08-05
 translationKey: productivity-routine
 category: "estetica"
 tags: ["estil-vida", "productivitat", "habits", "autocura"]
-author: "Sofía Vargas"
+author: "Redacció de Yuuvi"
 coverImage: "src/assets/covers/cover-procrastinar-alt-CA.webp"
 coverAlt: "Portada de l'article sobre com organitzar la rutina i evitar la procrastinació, en tons crema i terracota"
 published: true

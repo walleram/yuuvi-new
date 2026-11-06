@@ -6,7 +6,7 @@ lang: "ca"
 pubDate: 2026-11-04
 category: "cultura"
 tags: ["politica", "tiktok", "eleccions", "midterms", "xarxes"]
-author: "Valentina Ruiz"
+author: "Redacció de Yuuvi"
 translationKey: politics-tiktok
 coverImage: "src/assets/covers/cover-politica-tiktok-CA.webp"
 coverAlt: "Portada sobre política a TikTok: fons fosc amb accents rosa, violeta i cian"

@@ -6,7 +6,7 @@ lang: "en"
 pubDate: 2026-11-04
 category: "cultura"
 tags: ["politics", "tiktok", "elections", "midterms", "social media"]
-author: "Valentina Ruiz"
+author: "Yuuvi Editorial"
 translationKey: politics-tiktok
 coverImage: "src/assets/covers/cover-politica-tiktok-EN.webp"
 coverAlt: "Politics on TikTok cover: dark background with pink, violet and cyan accents"

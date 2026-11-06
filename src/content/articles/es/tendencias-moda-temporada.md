@@ -7,7 +7,7 @@ pubDate: 2026-09-01
 translationKey: fashion-trends-season
 category: "estetica"
 tags: ["moda", "tendencias", "y2k", "streetwear"]
-author: "Valentina Ruiz"
+author: "Redacción de Yuuvi"
 coverImage: "src/assets/covers/cover-lifestyle-alt.webp"
 coverAlt: "Portada de las tendencias de moda de la temporada: fondo claro con detalles magenta y rojos"
 featured: false

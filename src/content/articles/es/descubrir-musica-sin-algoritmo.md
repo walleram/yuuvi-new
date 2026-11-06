@@ -6,7 +6,7 @@ lang: "es"
 pubDate: 2026-11-05
 category: "musica"
 tags: ["musica", "algoritmo", "descubrimiento", "playlists", "indie"]
-author: "Diego Morales"
+author: "Redacción de Yuuvi"
 translationKey: discover-music-algorithm
 coverImage: "src/assets/covers/cover-discover-music-algorithm.webp"
 coverAlt: "Portada sobre descubrir música sin algoritmo: fondo oscuro con acentos amarillo y violeta"

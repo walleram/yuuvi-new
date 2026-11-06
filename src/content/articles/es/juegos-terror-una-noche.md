@@ -6,7 +6,7 @@ lang: "es"
 pubDate: 2026-11-05
 category: "gaming"
 tags: ["gaming", "terror", "juegos", "indie", "noche"]
-author: "Diego Morales"
+author: "Redacción de Yuuvi"
 translationKey: short-horror-games
 coverImage: "src/assets/covers/cover-short-horror-games.webp"
 coverAlt: "Portada sobre juegos de terror cortos: fondo oscuro con acentos rosa y cian"

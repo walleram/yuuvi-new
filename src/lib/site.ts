@@ -279,68 +279,48 @@ export interface Author {
   color: string;
 }
 
+// Nombres localizados del equipo editorial. Se usan como firma en los artículos.
+export const TEAM_AUTHOR: Record<Lang, string> = {
+  es: 'Redacción de Yuuvi',
+  ca: 'Redacció de Yuuvi',
+  en: 'Yuuvi Editorial',
+};
+
+const TEAM_ROLE: Record<Lang, string> = {
+  es: 'Equipo editorial',
+  ca: 'Equip editorial',
+  en: 'Editorial team',
+};
+
+const TEAM_BIO: Record<Lang, string> = {
+  es: 'Contenido firmado por el equipo editorial de Yuuvi, dirigido por Pablo García Valentín. Cubrimos cultura de internet, tendencias, gaming, tecnología, estética y música con contexto y sin relleno.',
+  ca: "Contingut signat per l'equip editorial de Yuuvi, dirigit per Pablo García Valentín. Cobrim cultura d'internet, tendències, gaming, tecnologia, estètica i música amb context i sense farciment.",
+  en: 'Content written by the Yuuvi editorial team, led by Pablo García Valentín. We cover internet culture, trends, gaming, tech, style and music with context and no filler.',
+};
+
 // Registro de autores. Es la fuente de verdad para las páginas /autor/[slug]
-// y para el schema Person (señal E-E-A-T que Google valora en las revisiones de AdSense).
+// y para el schema Organization (señal E-E-A-T que Google valora en las revisiones de AdSense).
 export const AUTHORS: Author[] = [
   {
-    name: 'Valentina Ruiz',
-    role: {
-      es: 'Redactora jefe de Cultura y Slang',
-      en: 'Culture & Slang Editor-in-Chief',
-      ca: 'Redactora en cap de Cultura i Slang',
-    },
-    bio: {
-      es: 'Llevo casi diez años cubriendo lo que se habla en internet antes de que llegue a los medios. Escribo sobre slang, memes y la cultura pop que nace en TikTok.',
-      en: 'For nearly a decade I have covered what people say online before it reaches the mainstream. I write about slang, memes and the pop culture born on TikTok.',
-      ca: 'Fa gairebé deu anys que cobreixo allò que es diu a internet abans que arribi als mitjans. Escric sobre slang, mems i la cultura pop que neix a TikTok.',
-    },
-    initials: 'VR',
+    name: TEAM_AUTHOR.es,
+    role: TEAM_ROLE,
+    bio: TEAM_BIO,
+    initials: 'RY',
     color: 'brand-pink',
   },
   {
-    name: 'Diego Morales',
-    role: {
-      es: 'Editor de Música',
-      en: 'Music Editor',
-      ca: 'Editor de Música',
-    },
-    bio: {
-      es: 'Crítico musical. Escribo sobre artistas, giras y los giros estilísticos que nadie se esperaba.',
-      en: 'Music critic. I write about artists, tours and the stylistic turns nobody saw coming.',
-      ca: 'Crític musical. Escric sobre artistes, gires i els girs estilístics que ningú no s\'esperava.',
-    },
-    initials: 'DM',
-    color: 'brand-yellow',
-  },
-  {
-    name: 'Lucía Fernández',
-    role: {
-      es: 'Redactora de Estética',
-      en: 'Aesthetics Editor',
-      ca: 'Redactora d\'Estètica',
-    },
-    bio: {
-      es: 'Moda, calzado y estética. Analizo qué se lleva ahora mismo y por qué, con datos en lugar de impresiones.',
-      en: 'Fashion, footwear and aesthetics. I analyze what is trending right now and why, with data instead of vibes.',
-      ca: 'Moda, calçat i estètica. Analitzo què es porta ara mateix i per què, amb dades en lloc d\'impressions.',
-    },
-    initials: 'LF',
+    name: TEAM_AUTHOR.ca,
+    role: TEAM_ROLE,
+    bio: TEAM_BIO,
+    initials: 'RY',
     color: 'brand-pink',
   },
   {
-    name: 'Sofía Vargas',
-    role: {
-      es: 'Editora de Tecnología y Gaming',
-      en: 'Tech & Gaming Editor',
-      ca: 'Editora de Tecnologia i Gaming',
-    },
-    bio: {
-      es: 'Apps, gadgets y juegos. Pruebo todo para que tú no tengas que perder una tarde probándolo.',
-      en: 'Apps, gadgets and games. I test everything so you do not lose an afternoon doing it.',
-      ca: 'Apps, gadgets i jocs. Ho provo tot perquè tu no hagis de perdre una tarda provant-ho.',
-    },
-    initials: 'SV',
-    color: 'brand-purple',
+    name: TEAM_AUTHOR.en,
+    role: TEAM_ROLE,
+    bio: TEAM_BIO,
+    initials: 'YE',
+    color: 'brand-pink',
   },
 ];
 

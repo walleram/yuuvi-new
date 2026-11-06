@@ -6,7 +6,7 @@ lang: "ca"
 pubDate: 2026-11-05
 category: "cultura"
 tags: ["memes", "internet", "tiktok", "slang", "cultura"]
-author: "Valentina Ruiz"
+author: "Redacció de Yuuvi"
 translationKey: meme-context
 coverImage: "src/assets/covers/cover-meme-context-CA.webp"
 coverAlt: "Portada sobre memes sense context: fons fosc amb accents cian i rosa"

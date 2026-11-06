@@ -109,7 +109,7 @@ const jsonLd = [
     wordCount: (article.body ?? '').split(/\s+/).filter(Boolean).length,
     timeRequired: `PT${minutes}M`,
     author: {
-      '@type': 'Person',
+      '@type': 'Organization',
       name: data.author,
       ...(author ? { url: new URL(authorHref(data.author, lang), Astro.site!).toString() } : {}),
     },

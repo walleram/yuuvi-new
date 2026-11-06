@@ -6,7 +6,7 @@ lang: "en"
 pubDate: 2026-09-01
 category: "musica"
 tags: ["music", "concerts", "setlist", "urban", "fandoms"]
-author: "Diego Morales"
+author: "Yuuvi Editorial"
 translationKey: concert-setlist-spain
 coverImage: "src/assets/covers/cover-musica-setlist.webp"
 coverAlt: "Cover about the concert setlist: cream background with magenta and violet details"

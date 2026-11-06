@@ -7,7 +7,7 @@ pubDate: 2026-09-01
 translationKey: fashion-trends-season
 category: "estetica"
 tags: ["fashion", "trends", "y2k", "streetwear"]
-author: "Valentina Ruiz"
+author: "Yuuvi Editorial"
 coverImage: "src/assets/covers/cover-lifestyle-trends-EN.webp"
 coverAlt: "Fashion trends cover: a grid of photo tiles in pink, magenta and terracotta"
 featured: true

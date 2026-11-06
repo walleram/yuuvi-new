@@ -7,7 +7,7 @@ pubDate: 2026-10-05
 translationKey: concert-tickets-spain
 category: "musica"
 tags: ["music", "concerts", "tickets", "scams"]
-author: "Diego Morales"
+author: "Yuuvi Editorial"
 coverImage: "src/assets/covers/cover-entradas-conciertos-EN.webp"
 coverAlt: "Concert cover: a grid of photo tiles with magenta and terracotta tones"
 published: true

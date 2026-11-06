@@ -7,7 +7,7 @@ pubDate: 2026-08-10
 translationKey: gadgets-teens
 category: "tecnologia"
 tags: ["tecnologia", "gadgets", "apps", "smartphones"]
-author: "Lucía Fernández"
+author: "Redacció de Yuuvi"
 coverImage: "src/assets/covers/cover-tech-gadgets-CA.webp"
 coverAlt: "Portada de l'article sobre gadgets: fons blau amb detalls violeta i cian"
 published: true

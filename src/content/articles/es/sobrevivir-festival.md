@@ -6,7 +6,7 @@ lang: "es"
 pubDate: 2026-11-05
 category: "musica"
 tags: ["musica", "festival", "consejos", "directo", "planificacion"]
-author: "Diego Morales"
+author: "Redacción de Yuuvi"
 translationKey: festival-survival-guide
 coverImage: "src/assets/covers/cover-festival-survival-guide.webp"
 coverAlt: "Portada sobre sobrevivir a un festival: fondo oscuro con acentos naranja y cian"

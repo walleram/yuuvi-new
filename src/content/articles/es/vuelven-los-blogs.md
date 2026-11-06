@@ -6,7 +6,7 @@ lang: "es"
 pubDate: 2026-11-05
 category: "cultura"
 tags: ["blogs", "newsletters", "internet", "cultura", "lectura"]
-author: "Valentina Ruiz"
+author: "Redacción de Yuuvi"
 translationKey: indie-blogs-return
 coverImage: "src/assets/covers/cover-indie-blogs-return.webp"
 coverAlt: "Portada sobre la vuelta de los blogs: fondo oscuro con acentos amarillo y violeta"

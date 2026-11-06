@@ -7,7 +7,7 @@ pubDate: 2026-10-03
 translationKey: best-indie-games-2026
 category: "gaming"
 tags: ["gaming", "indie", "steam", "juegos"]
-author: "Diego Morales"
+author: "Redacción de Yuuvi"
 coverImage: "src/assets/covers/cover-juegos-indie.webp"
 coverAlt: "Portada del artículo sobre gaming: fondo azul con detalles rojos"
 published: true

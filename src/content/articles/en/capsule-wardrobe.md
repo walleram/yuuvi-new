@@ -6,7 +6,7 @@ lang: "en"
 pubDate: 2026-11-05
 category: "estetica"
 tags: ["fashion", "wardrobe", "style", "tips", "sustainability"]
-author: "Lucía Fernández"
+author: "Yuuvi Editorial"
 translationKey: capsule-wardrobe
 coverImage: "src/assets/covers/cover-capsule-wardrobe-EN.webp"
 coverAlt: "Capsule wardrobe cover: dark background with pink and yellow accents"

@@ -7,7 +7,7 @@ pubDate: 2026-09-03
 translationKey: mobile-games-friends-distance
 category: "gaming"
 tags: ["gaming", "mobile games", "multiplayer", "co-op"]
-author: "Diego Morales"
+author: "Yuuvi Editorial"
 coverImage: "src/assets/covers/cover-gaming-EN.webp"
 coverAlt: "Cover for best mobile games to play with friends from afar: blue background with red details"
 published: true

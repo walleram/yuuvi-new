@@ -6,7 +6,7 @@ lang: "es"
 pubDate: 2026-11-05
 category: "tecnologia"
 tags: ["ia", "estudios", "chatgpt", "productividad", "apuntes"]
-author: "Sofía Vargas"
+author: "Redacción de Yuuvi"
 translationKey: ai-study-tools
 coverImage: "src/assets/covers/cover-ai-study-tools.webp"
 coverAlt: "Portada sobre IA para estudiar: fondo oscuro con acentos rosa y cian"

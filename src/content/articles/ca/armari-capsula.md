@@ -6,7 +6,7 @@ lang: "ca"
 pubDate: 2026-11-05
 category: "estetica"
 tags: ["moda", "armari", "estetica", "consells", "sostenibilitat"]
-author: "Lucía Fernández"
+author: "Redacció de Yuuvi"
 translationKey: capsule-wardrobe
 coverImage: "src/assets/covers/cover-capsule-wardrobe-CA.webp"
 coverAlt: "Portada sobre armari càpsula: fons fosc amb accents rosa i groc"

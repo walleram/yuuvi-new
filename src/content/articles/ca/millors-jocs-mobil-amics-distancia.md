@@ -6,7 +6,7 @@ lang: "ca"
 pubDate: 2026-09-03
 category: "gaming"
 tags: ["gaming", "jocs-mobil", "multijugador", "cooperatiu"]
-author: "Diego Morales"
+author: "Redacció de Yuuvi"
 translationKey: mobile-games-friends-distance
 coverImage: "src/assets/covers/cover-gaming-alt-CA.webp"
 coverAlt: "Portada de l'article sobre jocs de mòbil per jugar amb amics a distància: fons blau amb detalls vermells"

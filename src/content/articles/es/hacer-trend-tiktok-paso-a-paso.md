@@ -7,7 +7,7 @@ pubDate: 2026-10-06
 translationKey: tiktok-trend-step-by-step
 category: "cultura"
 tags: ["tiktok", "trends", "tutorial", "halloween"]
-author: "Valentina Ruiz"
+author: "Redacción de Yuuvi"
 coverImage: "src/assets/covers/cover-trend-tiktok.webp"
 coverAlt: "Portada en tonos rosa y melocotón con detalles de la sección cultura"
 published: true

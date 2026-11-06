@@ -7,7 +7,7 @@ pubDate: 2026-10-02
 translationKey: core-fashion-cheap-spain
 category: "estetica"
 tags: ["moda", "core", "roba-barata", "dupes"]
-author: "Lucía Fernández"
+author: "Redacció de Yuuvi"
 coverImage: "src/assets/covers/cover-ropa-core-CA.webp"
 coverAlt: "Portada de l'article de moda: fons gris clar amb detalls rosa i ocres"
 published: true

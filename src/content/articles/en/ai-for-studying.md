@@ -6,7 +6,7 @@ lang: "en"
 pubDate: 2026-11-05
 category: "tecnologia"
 tags: ["ai", "studying", "chatgpt", "productivity", "notes"]
-author: "Sofía Vargas"
+author: "Yuuvi Editorial"
 translationKey: ai-study-tools
 coverImage: "src/assets/covers/cover-ai-study-tools-EN.webp"
 coverAlt: "AI for studying cover: dark background with pink and cyan accents"

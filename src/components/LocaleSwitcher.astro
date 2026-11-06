@@ -1,6 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
-import { LEGAL_ROUTES, INFO_ROUTES, type Lang, type LegalKey, type InfoKey } from '../lib/site';
+import { LEGAL_ROUTES, INFO_ROUTES, TEAM_AUTHOR, type Lang, type LegalKey, type InfoKey } from '../lib/site';
 import {
   articleSlug,
   authorSlug,
@@ -71,6 +71,9 @@ for (const key of INFO_KEYS) {
   for (const l of LANGS) infoByRoute.set(INFO_ROUTES[key][l], key);
 }
 
+// El equipo editorial firma con un nombre distinto en cada idioma.
+const TEAM_AUTHOR_SLUGS = new Set(Object.values(TEAM_AUTHOR).map(authorSlug));
+
 // Detecta el idioma de una ruta por su prefijo.
 function routeLang(path: string): Lang {
   if (path.startsWith('/en/') || path === '/en') return 'en';
@@ -97,6 +100,13 @@ function buildHref(target: Lang): string | null {
   const infoKey = infoByRoute.get(path);
   if (infoKey) {
     const href = INFO_ROUTES[infoKey][target];
+    if (known.has(href)) return href;
+  }
+
+  // Autor del equipo editorial: el nombre cambia según el idioma.
+  const authorMatch = path.match(/^\/(?:(?:en|ca)\/)?autor\/([^/]+)\/$/);
+  if (authorMatch && TEAM_AUTHOR_SLUGS.has(authorMatch[1]!)) {
+    const href = `${LANG_PREFIX[target]}/autor/${authorSlug(TEAM_AUTHOR[target])}/`;
     if (known.has(href)) return href;
   }
 

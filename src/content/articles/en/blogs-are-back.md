@@ -6,7 +6,7 @@ lang: "en"
 pubDate: 2026-11-05
 category: "cultura"
 tags: ["blogs", "newsletters", "internet", "culture", "reading"]
-author: "Valentina Ruiz"
+author: "Yuuvi Editorial"
 translationKey: indie-blogs-return
 coverImage: "src/assets/covers/cover-indie-blogs-return-EN.webp"
 coverAlt: "Blogs are back cover: dark background with yellow and violet accents"

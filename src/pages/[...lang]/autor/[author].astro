@@ -54,13 +54,16 @@ const jsonLd = [
     description,
     inLanguage: lang,
     mainEntity: {
-      '@type': 'Person',
-      '@id': `${canonicalURL}#person`,
+      '@type': 'Organization',
+      '@id': `${canonicalURL}#organization`,
       name: authorName,
       description: meta?.bio[lang],
-      jobTitle: meta?.role[lang],
       url: canonicalURL,
-      worksFor: { '@type': 'Organization', name: 'Yuuvi', url: new URL(homeHref(lang), Astro.site!).toString() },
+      parentOrganization: {
+        '@type': 'Organization',
+        name: 'Yuuvi',
+        url: new URL(homeHref(lang), Astro.site!).toString(),
+      },
     },
   },
   {
@@ -79,10 +82,9 @@ const jsonLd = [
 ];
 
 const colorByAuthor: Record<string, string> = {
-  'valentina-ruiz': 'from-brand-pink to-brand-purple',
-  'diego-morales': 'from-brand-yellow to-amber-500',
-  'lucia-fernandez': 'from-brand-pink to-red-500',
-  'sofia-vargas': 'from-brand-purple to-indigo-500',
+  'redaccion-de-yuuvi': 'from-brand-pink to-brand-purple',
+  'redaccio-de-yuuvi': 'from-brand-pink to-brand-purple',
+  'yuuvi-editorial': 'from-brand-pink to-brand-purple',
 };
 const gradient = colorByAuthor[authorSlug(authorName)] ?? 'from-brand-pink to-brand-purple';
 ---

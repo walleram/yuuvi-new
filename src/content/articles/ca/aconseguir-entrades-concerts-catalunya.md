@@ -7,7 +7,7 @@ pubDate: 2026-10-05
 translationKey: concert-tickets-spain
 category: "musica"
 tags: ["musica", "concerts", "entrades", "estafes"]
-author: "Diego Morales"
+author: "Redacció de Yuuvi"
 coverImage: "src/assets/covers/cover-entradas-conciertos-CA.webp"
 coverAlt: "Portada sobre concerts: fons crema amb detalls magenta i violeta"
 published: true

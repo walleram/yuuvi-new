@@ -7,7 +7,7 @@ pubDate: 2026-10-01
 translationKey: brainrot-meaning
 category: "cultura"
 tags: ["slang", "tiktok", "brainrot", "meanings"]
-author: "Valentina Ruiz"
+author: "Yuuvi Editorial"
 coverImage: "src/assets/covers/cover-brainrot-EN.webp"
 coverAlt: "Cover with a light background and warm terracotta and magenta details"
 published: true

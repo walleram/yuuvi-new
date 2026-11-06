@@ -7,7 +7,7 @@ pubDate: 2026-10-06
 translationKey: tiktok-trend-step-by-step
 category: "cultura"
 tags: ["tiktok", "trends", "tutorial", "halloween"]
-author: "Valentina Ruiz"
+author: "Yuuvi Editorial"
 coverImage: "src/assets/covers/cover-trend-tiktok-EN.webp"
 coverAlt: "Trend cover: a grid of photo tiles in pink, magenta and terracotta"
 published: true

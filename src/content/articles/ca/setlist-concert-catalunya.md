@@ -7,7 +7,7 @@ pubDate: 2026-09-01
 translationKey: concert-setlist-spain
 category: "musica"
 tags: ["musica", "concerts", "setlist", "urba", "fandoms"]
-author: "Diego Morales"
+author: "Redacció de Yuuvi"
 coverImage: "src/assets/covers/cover-musica-setlist-CA.webp"
 coverAlt: "Portada sobre el possible setlist del concert del moment: fons crema amb detalls magenta i violeta"
 published: true

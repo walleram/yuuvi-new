@@ -6,7 +6,7 @@ lang: "es"
 pubDate: 2026-09-02
 category: "tecnologia"
 tags: ["apps", "estudios", "notion", "productividad", "ia"]
-author: "Sofía Vargas"
+author: "Redacción de Yuuvi"
 translationKey: study-apps-notes
 coverImage: "src/assets/covers/cover-tech-apps.webp"
 coverAlt: "Portada en azul marino oscuro con degradados"

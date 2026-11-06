@@ -6,7 +6,7 @@ lang: "en"
 pubDate: 2026-11-05
 category: "cultura"
 tags: ["memes", "internet", "tiktok", "slang", "culture"]
-author: "Valentina Ruiz"
+author: "Yuuvi Editorial"
 translationKey: meme-context
 coverImage: "src/assets/covers/cover-meme-context-EN.webp"
 coverAlt: "Memes without context cover: dark background with cyan and pink accents"

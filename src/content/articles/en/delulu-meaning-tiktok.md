@@ -6,7 +6,7 @@ lang: "en"
 pubDate: 2026-09-05
 category: "cultura"
 tags: ["slang", "tiktok", "delulu", "meanings"]
-author: "Valentina Ruiz"
+author: "Yuuvi Editorial"
 translationKey: delulu-meaning
 coverImage: "src/assets/covers/cover-cultura-alt.webp"
 coverAlt: "Culture section cover about the slang word delulu, in pink and peach tones"

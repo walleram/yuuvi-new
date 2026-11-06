@@ -6,7 +6,7 @@ lang: "en"
 pubDate: 2026-11-05
 category: "estetica"
 tags: ["style", "cores", "fashion", "trends", "aesthetic"]
-author: "Lucía Fernández"
+author: "Yuuvi Editorial"
 translationKey: 2026-cores
 coverImage: "src/assets/covers/cover-2026-cores-EN.webp"
 coverAlt: "2026 cores cover: dark background with violet and cyan accents"

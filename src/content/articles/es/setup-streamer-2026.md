@@ -7,7 +7,7 @@ pubDate: 2026-10-04
 translationKey: streamer-setup-2026
 category: "gaming"
 tags: ["gaming", "streaming", "setup", "twitch"]
-author: "Diego Morales"
+author: "Redacción de Yuuvi"
 coverImage: "src/assets/covers/cover-setup-streamer.webp"
 coverAlt: "Portada del artículo sobre gaming: fondo azul con detalles rojos"
 published: true

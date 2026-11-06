@@ -7,7 +7,7 @@ pubDate: 2026-09-04
 translationKey: y2k-sneakers-that-go-with-everything
 category: "estetica"
 tags: ["moda", "y2k", "zapatillas", "streetwear", "cores"]
-author: "Lucía Fernández"
+author: "Redacción de Yuuvi"
 coverImage: "src/assets/covers/cover-moda-alt.webp"
 coverAlt: "Portada del artículo de zapatillas Y2K: fondo gris claro con detalles rosa y ocres"
 published: true

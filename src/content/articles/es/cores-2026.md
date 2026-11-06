@@ -6,7 +6,7 @@ lang: "es"
 pubDate: 2026-11-05
 category: "estetica"
 tags: ["estetica", "cores", "moda", "tendencias", "estilo"]
-author: "Lucía Fernández"
+author: "Redacción de Yuuvi"
 translationKey: 2026-cores
 coverImage: "src/assets/covers/cover-2026-cores.webp"
 coverAlt: "Portada sobre los cores de 2026: fondo oscuro con acentos violeta y cian"

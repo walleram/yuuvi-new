@@ -7,7 +7,7 @@ pubDate: 2026-08-20
 translationKey: artists-redefining-pop
 category: "musica"
 tags: ["musica", "pop", "artistes", "tendencies"]
-author: "Diego Morales"
+author: "Redacció de Yuuvi"
 coverImage: "src/assets/covers/cover-musica-artistas-CA.webp"
 coverAlt: "Portada de l'article sobre els artistes que redefinixen el pop en castellà: tons magenta i vermells"
 published: true
