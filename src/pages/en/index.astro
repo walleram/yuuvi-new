@@ -1,6 +1,7 @@
 ---
 import Layout from '@layouts/Layout.astro';
 import ArticleCard from '@components/ArticleCard.astro';
+import VideoSection from '@components/VideoSection.astro';
 import { getCollection } from 'astro:content';
 import { SITE, UI_TEXT, type Lang } from '../../lib/site';
 
@@ -68,6 +69,8 @@ const jsonLd = [
       ))}
     </div>
   </section>
+
+  <VideoSection lang={lang} />
 
   <section class="mx-auto max-w-7xl px-4 py-10 sm:px-6" aria-label={t.home.sectionLatest}>
     <div class="mb-5 flex items-center justify-between">

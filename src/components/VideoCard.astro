@@ -1,0 +1,104 @@
+---
+import { CATEGORIES, UI_TEXT, type Lang } from '../lib/site';
+import type { VideoItem } from '../data/videos';
+
+interface Props {
+  video: VideoItem;
+  lang: Lang;
+}
+
+const { video, lang } = Astro.props;
+const t = UI_TEXT[lang];
+const category = CATEGORIES[video.category];
+const thumbnail = `https://i.ytimg.com/vi/${video.id}/maxresdefault.jpg`;
+const fallback = `https://i.ytimg.com/vi/${video.id}/hqdefault.jpg`;
+const watchUrl = `https://www.youtube.com/watch?v=${video.id}`;
+---
+
+<article class="group flex flex-col overflow-hidden rounded-3xl bg-neutral-900 ring-1 ring-neutral-800 transition-all hover:ring-brand-pink/50">
+  <div class="relative aspect-video overflow-hidden" data-video-facade data-video-id={video.id} data-video-title={video.title}>
+    <button
+      type="button"
+      data-video-play
+      class="absolute inset-0 h-full w-full cursor-pointer text-left"
+      aria-label={`${t.home.playVideo}: ${video.title}`}
+    >
+      <img
+        src={thumbnail}
+        onerror={`this.onerror=null;this.src='${fallback}'`}
+        alt=""
+        width="1280"
+        height="720"
+        loading="lazy"
+        decoding="async"
+        class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+      />
+      <span class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></span>
+
+      <span class="absolute left-3 top-3 rounded-full bg-ink/70 px-3 py-1 text-xs font-bold text-white backdrop-blur-md">
+        {category.label[lang]}
+      </span>
+
+      <span class="absolute right-3 top-3 rounded-full bg-ink/70 px-2.5 py-1 text-[11px] font-medium text-neutral-200 backdrop-blur-md">
+        {video.duration}
+      </span>
+
+      <span class="absolute inset-0 flex items-center justify-center">
+        <span class="flex h-14 w-14 items-center justify-center rounded-full bg-brand-pink text-white shadow-lg shadow-brand-pink/30 transition-transform duration-300 group-hover:scale-110">
+          <svg viewBox="0 0 24 24" fill="currentColor" class="ml-0.5 h-6 w-6" aria-hidden="true">
+            <path d="M8 5v14l11-7z" />
+          </svg>
+        </span>
+      </span>
+
+      <span class="absolute inset-x-3 bottom-3 flex items-center justify-between gap-2 text-[11px] font-medium text-neutral-200">
+        <span class="truncate">{video.channel}</span>
+        <span class="shrink-0">{video.views} {t.home.videoViews}</span>
+      </span>
+    </button>
+  </div>
+
+  <div class="flex flex-1 flex-col p-4">
+    <h3 class="text-base font-bold leading-snug text-white transition-colors group-hover:text-brand-pink">
+      {video.title}
+    </h3>
+    <p class="mt-2 line-clamp-2 text-sm text-neutral-400">{video.description[lang]}</p>
+    <a
+      href={watchUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="mt-auto inline-flex items-center gap-1 pt-3 text-sm font-medium text-brand-pink hover:underline"
+    >
+      {t.home.watchOnYouTube} →
+    </a>
+  </div>
+</article>
+
+<script>
+  const w = window as Window & { __yuuviVideoFacade?: boolean };
+
+  if (!w.__yuuviVideoFacade) {
+    w.__yuuviVideoFacade = true;
+
+    document.addEventListener('click', (event) => {
+      const target = event.target as HTMLElement | null;
+      const button = target?.closest<HTMLButtonElement>('[data-video-play]');
+      if (!button) return;
+
+      const facade = button.closest<HTMLElement>('[data-video-facade]');
+      const id = facade?.dataset.videoId;
+      if (!facade || !id) return;
+
+      const iframe = document.createElement('iframe');
+      iframe.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0&modestbranding=1`;
+      iframe.title = facade.dataset.videoTitle ?? 'YouTube';
+      iframe.allow =
+        'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+      iframe.allowFullscreen = true;
+      iframe.loading = 'eager';
+      iframe.className = 'absolute inset-0 h-full w-full';
+
+      facade.replaceChildren(iframe);
+    });
+  }
+</script>
