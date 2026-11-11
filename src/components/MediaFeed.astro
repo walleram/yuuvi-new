@@ -1,0 +1,49 @@
+---
+import ArticleCard from './ArticleCard.astro';
+import VideoCard from './VideoCard.astro';
+import { VIDEOS } from '../data/videos';
+import type { VideoItem } from '../data/videos';
+import { UI_TEXT, type Lang } from '../lib/site';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  lang: Lang;
+  articles: CollectionEntry<'articles'>[];
+}
+
+const { lang, articles } = Astro.props;
+const t = UI_TEXT[lang];
+
+type FeedItem =
+  | { kind: 'video'; video: VideoItem }
+  | { kind: 'article'; article: CollectionEntry<'articles'> };
+
+const total = Math.max(VIDEOS.length, articles.length);
+const feed: FeedItem[] = [];
+
+for (let i = 0; i < total; i++) {
+  const video = VIDEOS[i];
+  if (video) feed.push({ kind: 'video', video });
+  const article = articles[i];
+  if (article) feed.push({ kind: 'article', article });
+}
+---
+
+<section class="mx-auto max-w-7xl px-4 pt-10 sm:px-6" aria-label={t.home.sectionMedia}>
+  <div class="mb-5">
+    <h2 class="flex items-center gap-2 text-xl font-black tracking-tight text-white sm:text-2xl">
+      <span class="inline-block h-5 w-1 rounded-full bg-gradient-to-b from-brand-pink to-brand-yellow"></span>
+      {t.home.sectionMedia}
+    </h2>
+    <p class="mt-2 max-w-2xl text-sm text-neutral-400">{t.home.sectionMediaIntro}</p>
+  </div>
+  <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+    {feed.map((item) =>
+      item.kind === 'video' ? (
+        <VideoCard video={item.video} lang={lang} />
+      ) : (
+        <ArticleCard article={item.article} lang={lang} />
+      )
+    )}
+  </div>
+</section>

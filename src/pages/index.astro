@@ -1,7 +1,7 @@
 ---
 import Layout from '@layouts/Layout.astro';
 import ArticleCard from '@components/ArticleCard.astro';
-import VideoSection from '@components/VideoSection.astro';
+import MediaFeed from '@components/MediaFeed.astro';
 import { getCollection } from 'astro:content';
 import { SITE, UI_TEXT, type Lang } from '../lib/site';
 
@@ -55,6 +55,8 @@ const jsonLd = [
     )}
   </section>
 
+  <MediaFeed lang={lang} articles={latest.slice(0, 4)} />
+
   <!-- TRENDING -->
   <section class="mx-auto max-w-7xl px-4 pt-10 sm:px-6" aria-label={t.home.sectionTrending}>
     <div class="mb-5 flex items-center justify-between">
@@ -71,8 +73,6 @@ const jsonLd = [
       ))}
     </div>
   </section>
-
-  <VideoSection lang={lang} />
 
   <!-- ÚLTIMAS NOTICIAS -->
   <section class="mx-auto max-w-7xl px-4 py-10 sm:px-6" aria-label={t.home.sectionLatest}>

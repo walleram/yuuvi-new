@@ -24,9 +24,9 @@ export const UI_TEXT = {
       heroBadge: 'Tendencia viral',
       heroReadMore: 'Leer',
       sectionTrending: 'Lo más popular',
-      sectionVideos: 'Vídeos virales',
-      sectionVideosIntro:
-        'Lo que está petando en YouTube sobre moda, gaming, tecnología y cultura. Dale al play sin salir de Yuuvi.',
+      sectionMedia: 'Vídeos y lecturas',
+      sectionMediaIntro:
+        'Alternamos los vídeos que están petando en YouTube con artículos de nuestra redacción. Elige cómo enterarte.',
       sectionLatest: 'Últimas noticias',
       viewAll: 'Ver todo',
       readTime: 'min de lectura',
@@ -70,9 +70,9 @@ export const UI_TEXT = {
       heroBadge: 'Viral trend',
       heroReadMore: 'Read',
       sectionTrending: 'Trending now',
-      sectionVideos: 'Viral videos',
-      sectionVideosIntro:
-        "What's blowing up on YouTube about fashion, gaming, tech and culture. Hit play without leaving Yuuvi.",
+      sectionMedia: 'Videos & reads',
+      sectionMediaIntro:
+        'We alternate the videos blowing up on YouTube with articles from our newsroom. Pick how you catch up.',
       sectionLatest: 'Latest news',
       viewAll: 'View all',
       readTime: 'min read',
@@ -116,9 +116,9 @@ export const UI_TEXT = {
       heroBadge: 'Tendència viral',
       heroReadMore: 'Llegeix',
       sectionTrending: 'El més popular',
-      sectionVideos: 'Vídeos virals',
-      sectionVideosIntro:
-        'El que està petant a YouTube sobre moda, gaming, tecnologia i cultura. Dona-li al play sense sortir de Yuuvi.',
+      sectionMedia: 'Vídeos i lectures',
+      sectionMediaIntro:
+        'Alternem els vídeos que estan petant a YouTube amb articles de la nostra redacció. Tria com assabentar-te’n.',
       sectionLatest: 'Últimes notícies',
       viewAll: 'Veure-ho tot',
       readTime: 'min de lectura',
