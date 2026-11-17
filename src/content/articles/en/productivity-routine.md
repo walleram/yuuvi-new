@@ -6,7 +6,7 @@ lang: "en"
 pubDate: 2026-08-05
 translationKey: productivity-routine
 category: "estetica"
-tags: ["lifestyle", "productivity", "habits", "selfcare"]
+tags: ["lifestyle", "productivity", "habits", "selfcare", "tips"]
 author: "Yuuvi Editorial"
 coverImage: "src/assets/covers/cover-procrastinar-alt-EN.webp"
 coverAlt: "Cover of the article on building a routine and stopping procrastinating: light background with warm terracotta and magenta details"

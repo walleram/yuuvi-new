@@ -5,7 +5,7 @@ seoTitle: "Capsule Wardrobe: A Real Guide to Start"
 lang: "en"
 pubDate: 2026-11-05
 category: "estetica"
-tags: ["fashion", "wardrobe", "style", "tips", "sustainability"]
+tags: ["fashion", "wardrobe", "style", "tips", "sustainability", "aesthetic"]
 author: "Yuuvi Editorial"
 translationKey: capsule-wardrobe
 coverImage: "src/assets/covers/cover-capsule-wardrobe-EN.webp"

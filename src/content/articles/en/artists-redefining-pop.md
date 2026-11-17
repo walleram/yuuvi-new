@@ -6,7 +6,7 @@ lang: "en"
 pubDate: 2026-08-20
 translationKey: artists-redefining-pop
 category: "musica"
-tags: ["music", "pop", "artists", "trends"]
+tags: ["music", "pop", "artists", "trends", "indie", "concerts"]
 author: "Yuuvi Editorial"
 coverImage: "src/assets/covers/cover-musica-artistas-EN.webp"
 coverAlt: "Spanish pop artists cover: a grid of photo tiles with magenta and terracotta tones"

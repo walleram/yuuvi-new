@@ -5,7 +5,7 @@ seoTitle: "IA para estudiar: guía práctica 2026"
 lang: "es"
 pubDate: 2026-11-05
 category: "tecnologia"
-tags: ["ia", "estudios", "chatgpt", "productividad", "apuntes"]
+tags: ["ia", "estudios", "chatgpt", "productividad", "apuntes", "apps"]
 author: "Redacción de Yuuvi"
 translationKey: ai-study-tools
 coverImage: "src/assets/covers/cover-ai-study-tools.webp"

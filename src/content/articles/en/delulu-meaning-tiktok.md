@@ -5,7 +5,7 @@ seoTitle: "Delulu: What It Means and How to Use It (2026)"
 lang: "en"
 pubDate: 2026-09-05
 category: "cultura"
-tags: ["slang", "tiktok", "delulu", "meanings"]
+tags: ["slang", "tiktok", "delulu", "meanings", "internet"]
 author: "Yuuvi Editorial"
 translationKey: delulu-meaning
 coverImage: "src/assets/covers/cover-cultura-alt.webp"

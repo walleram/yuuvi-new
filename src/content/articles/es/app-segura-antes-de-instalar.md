@@ -5,7 +5,7 @@ seoTitle: "¿Es segura esta app? Checklist 2026"
 lang: "es"
 pubDate: 2026-11-05
 category: "tecnologia"
-tags: ["apps", "seguridad", "privacidad", "movil", "estafas"]
+tags: ["apps", "seguridad", "privacidad", "movil", "estafas", "consejos"]
 author: "Redacción de Yuuvi"
 translationKey: app-safety-check
 coverImage: "src/assets/covers/cover-app-safety-check.webp"

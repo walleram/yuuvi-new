@@ -5,7 +5,7 @@ seoTitle: "Cores 2026: quina estètica va amb tu"
 lang: "ca"
 pubDate: 2026-11-05
 category: "estetica"
-tags: ["estetica", "cores", "moda", "tendencies", "estil"]
+tags: ["estetica", "cores", "moda", "tendencies", "estil", "y2k", "streetwear"]
 author: "Redacció de Yuuvi"
 translationKey: 2026-cores
 coverImage: "src/assets/covers/cover-2026-cores-CA.webp"

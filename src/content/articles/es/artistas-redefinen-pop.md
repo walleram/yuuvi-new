@@ -6,7 +6,7 @@ lang: "es"
 pubDate: 2026-08-20
 translationKey: artists-redefining-pop
 category: "musica"
-tags: ["musica", "pop", "artistas", "tendencias"]
+tags: ["musica", "pop", "artistas", "tendencias", "indie", "conciertos"]
 author: "Redacción de Yuuvi"
 coverImage: "src/assets/covers/cover-musica-artistas.webp"
 coverAlt: "Portada del artículo sobre los artistas que redefinen el pop en español: tonos magenta y rojos"

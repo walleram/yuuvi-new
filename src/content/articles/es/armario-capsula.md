@@ -5,7 +5,7 @@ seoTitle: "Armario cápsula: guía real para empezar"
 lang: "es"
 pubDate: 2026-11-05
 category: "estetica"
-tags: ["moda", "armario", "estetica", "consejos", "sostenibilidad"]
+tags: ["moda", "armario", "estetica", "consejos", "sostenibilidad", "estilo"]
 author: "Redacción de Yuuvi"
 translationKey: capsule-wardrobe
 coverImage: "src/assets/covers/cover-capsule-wardrobe.webp"

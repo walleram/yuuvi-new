@@ -5,7 +5,7 @@ seoTitle: "Jocs mòbils per jugar amb amics a distància"
 lang: "ca"
 pubDate: 2026-09-03
 category: "gaming"
-tags: ["gaming", "jocs-mobil", "multijugador", "cooperatiu"]
+tags: ["gaming", "jocs-mobil", "multijugador", "cooperatiu", "jocs", "indie", "videojocs"]
 author: "Redacció de Yuuvi"
 translationKey: mobile-games-friends-distance
 coverImage: "src/assets/covers/cover-gaming-alt-CA.webp"

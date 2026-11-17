@@ -5,7 +5,7 @@ seoTitle: "Terror curt: jocs per a una nit (2026)"
 lang: "ca"
 pubDate: 2026-11-05
 category: "gaming"
-tags: ["gaming", "terror", "jocs", "indie", "nit"]
+tags: ["gaming", "terror", "jocs", "indie", "nit", "videojocs"]
 author: "Redacció de Yuuvi"
 translationKey: short-horror-games
 coverImage: "src/assets/covers/cover-short-horror-games-CA.webp"

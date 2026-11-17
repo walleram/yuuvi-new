@@ -5,7 +5,7 @@ seoTitle: "És segura aquesta app? Checklist 2026"
 lang: "ca"
 pubDate: 2026-11-05
 category: "tecnologia"
-tags: ["apps", "seguretat", "privacitat", "mobil", "estafes"]
+tags: ["apps", "seguretat", "privacitat", "mobil", "estafes", "consells"]
 author: "Redacció de Yuuvi"
 translationKey: app-safety-check
 coverImage: "src/assets/covers/cover-app-safety-check-CA.webp"

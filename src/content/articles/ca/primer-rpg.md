@@ -5,7 +5,7 @@ seoTitle: "El teu primer RPG: guia per començar el 2026"
 lang: "ca"
 pubDate: 2026-11-05
 category: "gaming"
-tags: ["gaming", "rpg", "jocs", "guia", "principiants"]
+tags: ["gaming", "rpg", "jocs", "guia", "principiants", "videojocs"]
 author: "Redacció de Yuuvi"
 translationKey: first-rpg-guide
 coverImage: "src/assets/covers/cover-first-rpg-guide-CA.webp"

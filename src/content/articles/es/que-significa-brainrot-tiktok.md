@@ -6,7 +6,7 @@ lang: "es"
 pubDate: 2026-10-01
 translationKey: brainrot-meaning
 category: "cultura"
-tags: ["slang", "tiktok", "brainrot", "significados"]
+tags: ["slang", "tiktok", "brainrot", "significados", "internet"]
 author: "Redacción de Yuuvi"
 coverImage: "src/assets/covers/cover-brainrot.webp"
 coverAlt: "Portada de tendencias con fondo claro y detalles magenta y rojos"

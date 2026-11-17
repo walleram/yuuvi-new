@@ -5,7 +5,7 @@ seoTitle: "Sobrevivir a tu primer festival: guía real"
 lang: "es"
 pubDate: 2026-11-05
 category: "musica"
-tags: ["musica", "festival", "consejos", "directo", "planificacion"]
+tags: ["musica", "festival", "consejos", "directo", "planificacion", "conciertos"]
 author: "Redacción de Yuuvi"
 translationKey: festival-survival-guide
 coverImage: "src/assets/covers/cover-festival-survival-guide.webp"

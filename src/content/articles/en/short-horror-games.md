@@ -5,7 +5,7 @@ seoTitle: "Short Horror Games for One Night (2026)"
 lang: "en"
 pubDate: 2026-11-05
 category: "gaming"
-tags: ["gaming", "horror", "games", "indie", "night"]
+tags: ["gaming", "horror", "games", "indie", "night", "video games"]
 author: "Yuuvi Editorial"
 translationKey: short-horror-games
 coverImage: "src/assets/covers/cover-short-horror-games-EN.webp"

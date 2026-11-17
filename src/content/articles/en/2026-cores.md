@@ -5,7 +5,7 @@ seoTitle: "2026 Cores: Which Aesthetic Fits You"
 lang: "en"
 pubDate: 2026-11-05
 category: "estetica"
-tags: ["style", "cores", "fashion", "trends", "aesthetic"]
+tags: ["style", "cores", "fashion", "trends", "aesthetic", "y2k", "streetwear"]
 author: "Yuuvi Editorial"
 translationKey: 2026-cores
 coverImage: "src/assets/covers/cover-2026-cores-EN.webp"

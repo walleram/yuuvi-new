@@ -6,7 +6,7 @@ lang: "ca"
 pubDate: 2026-10-03
 translationKey: best-indie-games-2026
 category: "gaming"
-tags: ["gaming", "indie", "steam", "jocs"]
+tags: ["gaming", "indie", "steam", "jocs", "videojocs"]
 author: "Redacció de Yuuvi"
 coverImage: "src/assets/covers/cover-juegos-indie-CA.webp"
 coverAlt: "Portada de l'article sobre gaming: fons blau amb detalls vermells"

@@ -5,7 +5,7 @@ seoTitle: "Delulu: què significa i com es fa servir (2026)"
 lang: "ca"
 pubDate: 2026-09-05
 category: "cultura"
-tags: ["slang", "tiktok", "delulu", "significats"]
+tags: ["slang", "tiktok", "delulu", "significats", "internet"]
 author: "Redacció de Yuuvi"
 translationKey: delulu-meaning
 coverImage: "src/assets/covers/cover-cultura-alt-CA.webp"

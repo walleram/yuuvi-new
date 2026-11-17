@@ -5,7 +5,7 @@ seoTitle: "AI for Studying: A Practical Guide for 2026"
 lang: "en"
 pubDate: 2026-11-05
 category: "tecnologia"
-tags: ["ai", "studying", "chatgpt", "productivity", "notes"]
+tags: ["ai", "studying", "chatgpt", "productivity", "notes", "apps"]
 author: "Yuuvi Editorial"
 translationKey: ai-study-tools
 coverImage: "src/assets/covers/cover-ai-study-tools-EN.webp"

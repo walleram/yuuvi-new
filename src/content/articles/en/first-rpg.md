@@ -5,7 +5,7 @@ seoTitle: "Your First RPG: A Beginner's Guide for 2026"
 lang: "en"
 pubDate: 2026-11-05
 category: "gaming"
-tags: ["gaming", "rpg", "games", "guide", "beginners"]
+tags: ["gaming", "rpg", "games", "guide", "beginners", "video games"]
 author: "Yuuvi Editorial"
 translationKey: first-rpg-guide
 coverImage: "src/assets/covers/cover-first-rpg-guide-EN.webp"

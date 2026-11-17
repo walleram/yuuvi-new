@@ -5,7 +5,7 @@ seoTitle: "Juegos móviles para jugar con amigos a distancia"
 lang: "es"
 pubDate: 2026-09-03
 category: "gaming"
-tags: ["gaming", "juegos movil", "multijugador", "cooperativo"]
+tags: ["gaming", "juegos movil", "multijugador", "cooperativo", "juegos", "indie", "videojuegos"]
 author: "Redacción de Yuuvi"
 translationKey: mobile-games-friends-distance
 coverImage: "src/assets/covers/cover-gaming-alt.webp"

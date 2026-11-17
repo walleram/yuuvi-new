@@ -6,7 +6,7 @@ lang: "en"
 pubDate: 2026-10-03
 translationKey: best-indie-games-2026
 category: "gaming"
-tags: ["gaming", "indie", "steam", "games"]
+tags: ["gaming", "indie", "steam", "games", "video games"]
 author: "Yuuvi Editorial"
 coverImage: "src/assets/covers/cover-juegos-indie-EN.webp"
 coverAlt: "Gaming cover: blue background with red details"

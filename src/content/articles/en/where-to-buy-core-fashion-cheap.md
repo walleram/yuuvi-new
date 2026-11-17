@@ -6,7 +6,7 @@ lang: "en"
 pubDate: 2026-10-02
 translationKey: core-fashion-cheap-spain
 category: "estetica"
-tags: ["fashion", "cores", "cheap clothes", "dupes"]
+tags: ["fashion", "cores", "cheap clothes", "dupes", "aesthetic", "y2k"]
 author: "Yuuvi Editorial"
 coverImage: "src/assets/covers/cover-ropa-core-EN.webp"
 coverAlt: "Fashion cover: light grey background with pink and ochre details"

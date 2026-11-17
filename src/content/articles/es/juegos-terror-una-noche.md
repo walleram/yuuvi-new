@@ -5,7 +5,7 @@ seoTitle: "Terror corto: juegos para una noche (2026)"
 lang: "es"
 pubDate: 2026-11-05
 category: "gaming"
-tags: ["gaming", "terror", "juegos", "indie", "noche"]
+tags: ["gaming", "terror", "juegos", "indie", "noche", "videojuegos"]
 author: "Redacción de Yuuvi"
 translationKey: short-horror-games
 coverImage: "src/assets/covers/cover-short-horror-games.webp"

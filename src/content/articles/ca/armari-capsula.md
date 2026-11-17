@@ -5,7 +5,7 @@ seoTitle: "Armari càpsula: guia real per començar"
 lang: "ca"
 pubDate: 2026-11-05
 category: "estetica"
-tags: ["moda", "armari", "estetica", "consells", "sostenibilitat"]
+tags: ["moda", "armari", "estetica", "consells", "sostenibilitat", "estil"]
 author: "Redacció de Yuuvi"
 translationKey: capsule-wardrobe
 coverImage: "src/assets/covers/cover-capsule-wardrobe-CA.webp"

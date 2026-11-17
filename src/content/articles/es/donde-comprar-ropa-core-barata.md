@@ -6,7 +6,7 @@ lang: "es"
 pubDate: 2026-10-02
 translationKey: core-fashion-cheap-spain
 category: "estetica"
-tags: ["moda", "core", "ropa barata", "dupes"]
+tags: ["moda", "core", "ropa barata", "dupes", "y2k", "estilo"]
 author: "Redacción de Yuuvi"
 coverImage: "src/assets/covers/cover-ropa-core.webp"
 coverAlt: "Portada del artículo de moda: fondo gris claro con detalles rosa y ocres"
