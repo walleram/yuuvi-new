@@ -24,7 +24,7 @@ export const UI_TEXT = {
       heroBadge: 'Tendencia viral',
       heroReadMore: 'Leer',
       sectionTrending: 'Lo más popular',
-      sectionMedia: 'Vídeos y lecturas',
+      sectionMedia: 'Tendencia viral',
       sectionMediaIntro:
         'Alternamos los vídeos que están petando en YouTube con artículos de nuestra redacción. Elige cómo enterarte.',
       sectionLatest: 'Últimas noticias',
@@ -70,7 +70,7 @@ export const UI_TEXT = {
       heroBadge: 'Viral trend',
       heroReadMore: 'Read',
       sectionTrending: 'Trending now',
-      sectionMedia: 'Videos & reads',
+      sectionMedia: 'Viral trend',
       sectionMediaIntro:
         'We alternate the videos blowing up on YouTube with articles from our newsroom. Pick how you catch up.',
       sectionLatest: 'Latest news',
@@ -116,7 +116,7 @@ export const UI_TEXT = {
       heroBadge: 'Tendència viral',
       heroReadMore: 'Llegeix',
       sectionTrending: 'El més popular',
-      sectionMedia: 'Vídeos i lectures',
+      sectionMedia: 'Tendència viral',
       sectionMediaIntro:
         'Alternem els vídeos que estan petant a YouTube amb articles de la nostra redacció. Tria com assabentar-te’n.',
       sectionLatest: 'Últimes notícies',
