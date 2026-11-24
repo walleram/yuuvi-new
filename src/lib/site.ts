@@ -38,6 +38,8 @@ export const UI_TEXT = {
       watchOnYouTube: 'Ver en YouTube',
       playVideo: 'Reproducir vídeo',
       videoViews: 'visualizaciones',
+      expand: 'Desplegar',
+      collapse: 'Contraer',
     },
     related: 'Relacionados',
     footer: {
@@ -85,6 +87,8 @@ export const UI_TEXT = {
       watchOnYouTube: 'Watch on YouTube',
       playVideo: 'Play video',
       videoViews: 'views',
+      expand: 'Expand',
+      collapse: 'Collapse',
     },
     related: 'Related',
     footer: {
@@ -132,6 +136,8 @@ export const UI_TEXT = {
       watchOnYouTube: 'Veure a YouTube',
       playVideo: 'Reproduir vídeo',
       videoViews: 'visualitzacions',
+      expand: 'Desplega',
+      collapse: 'Replega',
     },
     related: 'Relacionats',
     footer: {

@@ -30,20 +30,43 @@ for (let i = 0; i < total; i++) {
 ---
 
 <section class="mx-auto max-w-7xl px-4 pt-10 sm:px-6" aria-label={t.home.sectionMedia}>
-  <div class="mb-5">
-    <h2 class="flex items-center gap-2 text-xl font-black tracking-tight text-white sm:text-2xl">
-      <span class="inline-block h-5 w-1 rounded-full bg-gradient-to-b from-brand-pink to-brand-yellow"></span>
-      {t.home.sectionMedia}
-    </h2>
-    <p class="mt-2 max-w-2xl text-sm text-neutral-400">{t.home.sectionMediaIntro}</p>
-  </div>
-  <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
-    {feed.map((item) =>
-      item.kind === 'video' ? (
-        <VideoCard video={item.video} lang={lang} />
-      ) : (
-        <ArticleCard article={item.article} lang={lang} />
-      )
-    )}
-  </div>
+  <details class="group">
+    <summary
+      class="flex cursor-pointer list-none items-center justify-between gap-4 rounded-2xl bg-neutral-900/60 px-4 py-3 ring-1 ring-neutral-800 transition-colors hover:ring-brand-pink/50 [&::-webkit-details-marker]:hidden"
+    >
+      <h2 class="flex items-center gap-2 text-xl font-black tracking-tight text-white sm:text-2xl">
+        <span class="inline-block h-5 w-1 rounded-full bg-gradient-to-b from-brand-pink to-brand-yellow"></span>
+        {t.home.sectionMedia}
+      </h2>
+      <span class="flex shrink-0 items-center gap-2 text-sm font-semibold text-neutral-300">
+        <span class="group-open:hidden">{t.home.expand}</span>
+        <span class="hidden group-open:inline">{t.home.collapse}</span>
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="h-5 w-5 transition-transform duration-300 group-open:rotate-180"
+          aria-hidden="true"
+        >
+          <path d="M6 9l6 6 6-6" />
+        </svg>
+      </span>
+    </summary>
+
+    <div class="mt-4">
+      <p class="mb-5 max-w-2xl text-sm text-neutral-400">{t.home.sectionMediaIntro}</p>
+      <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        {feed.map((item) =>
+          item.kind === 'video' ? (
+            <VideoCard video={item.video} lang={lang} />
+          ) : (
+            <ArticleCard article={item.article} lang={lang} />
+          )
+        )}
+      </div>
+    </div>
+  </details>
 </section>
