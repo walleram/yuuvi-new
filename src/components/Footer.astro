@@ -9,7 +9,7 @@ interface Props {
 const { lang } = Astro.props;
 const t = UI_TEXT[lang];
 const year = new Date().getFullYear();
-const feedbackEmail = 'redaccion@yuuvi.com';
+const feedbackEmail = SITE.contactEmail;
 
 const taglines: Record<Lang, string> = {
   es: SITE.tagline + ' para la generación que define el futuro.',
