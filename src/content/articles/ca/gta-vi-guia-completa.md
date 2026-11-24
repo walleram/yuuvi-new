@@ -9,7 +9,7 @@ category: "gaming"
 tags: ["gta vi", "gta 6", "rockstar", "vice city", "videojocs", "gaming"]
 author: "Redacció de Yuuvi"
 coverImage: "src/assets/covers/cover-gta-vi-CA.webp"
-coverAlt: "Portada de GTA VI: posta de sol synthwave rosa i taronja amb palmeres i el text GTA VI"
+coverAlt: "Portada de GTA VI: una pickup groga clàssica arran de mar, amb palmeres, la ciutat al fons i el text GTA VI"
 featured: false
 published: true
 ---
