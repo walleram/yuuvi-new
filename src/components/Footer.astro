@@ -9,6 +9,7 @@ interface Props {
 const { lang } = Astro.props;
 const t = UI_TEXT[lang];
 const year = new Date().getFullYear();
+const feedbackEmail = 'redaccion@yuuvi.com';
 
 const taglines: Record<Lang, string> = {
   es: SITE.tagline + ' para la generación que define el futuro.',
@@ -37,14 +38,23 @@ const taglines: Record<Lang, string> = {
           href={SITE.social.x.url}
           target="_blank"
           rel="me noopener noreferrer"
-          class="mt-5 inline-flex items-center gap-2 rounded-full bg-neutral-800/60 px-3.5 py-1.5 text-sm font-semibold text-neutral-300 ring-1 ring-neutral-700 transition-colors hover:bg-neutral-800 hover:text-white"
+          class="mt-6 flex w-full items-center justify-center gap-3 rounded-2xl bg-gradient-to-r from-brand-pink to-brand-purple px-8 py-4 text-lg font-bold text-white shadow-lg shadow-brand-pink/25 transition-transform hover:scale-[1.02]"
           aria-label={`${t.footer.followX} ${SITE.social.x.handle}`}
         >
-          <svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor" aria-hidden="true">
+          <svg viewBox="0 0 24 24" class="h-6 w-6" fill="currentColor" aria-hidden="true">
             <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
           </svg>
           {t.footer.followX}
         </a>
+        <p class="mt-3 text-sm text-neutral-400">
+          {t.footer.feedback}{' '}
+          <a
+            href={`mailto:${feedbackEmail}`}
+            class="font-semibold text-brand-pink hover:underline"
+          >
+            {feedbackEmail}
+          </a>
+        </p>
       </div>
 
       {/* Categorías */}

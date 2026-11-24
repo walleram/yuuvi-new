@@ -53,6 +53,7 @@ export const UI_TEXT = {
       about: 'Sobre Yuuvi',
       contact: 'Contacto',
       followX: 'Síguenos en X',
+      feedback: '¿Tienes una opinión o quieres proponer un tema? Escríbenos a',
     },
     common: {
       by: 'Por',
@@ -102,6 +103,7 @@ export const UI_TEXT = {
       about: 'About Yuuvi',
       contact: 'Contact',
       followX: 'Follow us on X',
+      feedback: 'Got an opinion or a topic to suggest? Email us at',
     },
     common: {
       by: 'By',
@@ -151,6 +153,7 @@ export const UI_TEXT = {
       about: 'Sobre Yuuvi',
       contact: 'Contacte',
       followX: 'Segueix-nos a X',
+      feedback: 'Tens una opinió o vols proposar un tema? Escriu-nos a',
     },
     common: {
       by: 'Per',
