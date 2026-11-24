@@ -28,14 +28,14 @@ const jsonLd = [
     name: SITE.name,
     url: new URL('/ca/', Astro.site).toString(),
     logo: new URL('/favicon.svg', Astro.site).toString(),
-    sameAs: [],
+    sameAs: [SITE.social.x.url],
   },
 ];
 ---
 
 <Layout
-  title="Yuuvi | Revista de tendències per a adolescents"
-  description="Les últimes tendències de moda, música, tecnologia i estil de vida per a la generació jove. Descobreix què és viral ara."
+  title="Yuuvi | Tendències juvenils 2026: memes, moda i música"
+  description="Tendències juvenils del 2026: memes, moda, música, gaming i tecnologia. Descobreix què és viral a internet i com entendre-ho."
   lang={lang}
   jsonLd={jsonLd}
 >

@@ -11,10 +11,12 @@ import {
   authorHref,
   buildTranslationIndex,
   categoryHref,
+  extractFaq,
   findTranslations,
   homeHref,
   LANGS,
   LANG_PREFIX,
+  rankRelated,
   readingTime,
   tagHref,
 } from '../lib/articles';
@@ -90,6 +92,7 @@ const cover = await getImage({
 const coverAbsolute = new URL(cover.src, Astro.site!).toString();
 const author = findAuthor(data.author);
 const minutes = readingTime(article);
+const faq = extractFaq(article);
 
 const jsonLd = [
   {
@@ -144,6 +147,22 @@ const jsonLd = [
       },
     ],
   },
+  ...(faq.length > 0
+    ? [
+        {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          '@id': `${canonicalURL}#faq`,
+          url: canonicalURL,
+          inLanguage: lang,
+          mainEntity: faq.map((item) => ({
+            '@type': 'Question',
+            name: item.question,
+            acceptedAnswer: { '@type': 'Answer', text: item.answer },
+          })),
+        },
+      ]
+    : []),
 ];
 
 const articleMeta = {
@@ -154,9 +173,7 @@ const articleMeta = {
   authors: [data.author],
 };
 
-const related = allArticles
-  .filter((a) => a.data.category === data.category && a.id !== article.id)
-  .slice(0, 3);
+const related = rankRelated(allArticles, article, 3);
 ---
 
 <Layout

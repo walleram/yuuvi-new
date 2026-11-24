@@ -3,6 +3,9 @@ export const SITE = {
   url: 'https://www.yuuvi.cat',
   tagline: 'Tu revista de tendencias',
   contactEmail: 'redaccion@yuuvi.cat',
+  social: {
+    x: { handle: '@YuuviCAT', url: 'https://x.com/YuuviCAT' },
+  },
   localeTags: {
     es: 'es-ES',
     en: 'en-US',
@@ -47,6 +50,7 @@ export const UI_TEXT = {
       legalNotice: 'Aviso Legal',
       about: 'Sobre Yuuvi',
       contact: 'Contacto',
+      followX: 'Síguenos en X',
     },
     common: {
       by: 'Por',
@@ -93,6 +97,7 @@ export const UI_TEXT = {
       legalNotice: 'Legal notice',
       about: 'About Yuuvi',
       contact: 'Contact',
+      followX: 'Follow us on X',
     },
     common: {
       by: 'By',
@@ -139,6 +144,7 @@ export const UI_TEXT = {
       legalNotice: 'Avís legal',
       about: 'Sobre Yuuvi',
       contact: 'Contacte',
+      followX: 'Segueix-nos a X',
     },
     common: {
       by: 'Per',
@@ -213,6 +219,7 @@ export const CATEGORIES: Record<
   {
     label: Record<Lang, string>;
     color: string;
+    seoTitle: Record<Lang, string>;
     seoDescription: Record<Lang, string>;
     intro: Record<Lang, string>;
   }
@@ -220,10 +227,15 @@ export const CATEGORIES: Record<
   cultura: {
     label: { es: 'Cultura', en: 'Culture', ca: 'Cultura' },
     color: 'brand-cyan',
+    seoTitle: {
+      es: 'Memes y cultura de internet 2026 | Yuuvi',
+      en: 'Memes and internet culture 2026 | Yuuvi',
+      ca: 'Memes i cultura d’internet 2026 | Yuuvi',
+    },
     seoDescription: {
-      es: 'Cultura en Yuuvi: memes, slang, internet y las tendencias que marcan a la generación joven.',
-      en: 'Culture at Yuuvi: memes, slang, internet and the trends shaping the younger generation.',
-      ca: 'Cultura a Yuuvi: mems, slang, internet i les tendències que marquen la generació jove.',
+      es: 'Memes, slang y cultura de internet para jóvenes: las tendencias de 2026 explicadas sin ruido.',
+      en: 'Memes, slang and internet culture for young readers: the 2026 trends explained without the noise.',
+      ca: 'Mems, slang i cultura d’internet per a joves: les tendències del 2026 explicades sense soroll.',
     },
     intro: {
       es: 'Del meme que dura dos días al slang que acaba en el diccionario: aquí reunimos lo que se habla en internet antes de que llegue a los medios. Sin prisa y sin postureo.',
@@ -234,10 +246,15 @@ export const CATEGORIES: Record<
   estetica: {
     label: { es: 'Estética', en: 'Aesthetics', ca: 'Estètica' },
     color: 'brand-pink',
+    seoTitle: {
+      es: 'Estética y tendencias de moda 2026 | Yuuvi',
+      en: 'Aesthetics and fashion trends 2026 | Yuuvi',
+      ca: 'Estètica i tendències de moda 2026 | Yuuvi',
+    },
     seoDescription: {
-      es: 'Estética en Yuuvi: moda, cores, armario y estilo explicados sin snobismo.',
-      en: 'Aesthetics at Yuuvi: fashion, colours, wardrobes and style explained without snobbery.',
-      ca: 'Estètica a Yuuvi: moda, cores, armari i estil explicats sense snobisme.',
+      es: 'Moda, cores, armario y estética para jóvenes: qué se lleva en 2026 y cómo llevarlo sin snobismo.',
+      en: 'Fashion, colours, wardrobes and aesthetics for young readers: what to wear in 2026 and how to wear it.',
+      ca: 'Moda, cores, armari i estètica per a joves: què es porta el 2026 i com portar-ho sense snobisme.',
     },
     intro: {
       es: 'Qué se lleva, por qué se lleva y cómo llevarlo sin parecer un disfraz. Moda, calzado y estéticas de internet con criterio, no solo con tendencias.',
@@ -248,10 +265,15 @@ export const CATEGORIES: Record<
   gaming: {
     label: { es: 'Gaming', en: 'Gaming', ca: 'Gaming' },
     color: 'brand-purple',
+    seoTitle: {
+      es: 'Gaming y videojuegos 2026 | Yuuvi',
+      en: 'Gaming and video games 2026 | Yuuvi',
+      ca: 'Gaming i videojocs 2026 | Yuuvi',
+    },
     seoDescription: {
-      es: 'Gaming en Yuuvi: juegos indie, guías, cultura de streamers y lo que vale la pena jugar.',
-      en: "Gaming at Yuuvi: indie games, guides, streamer culture and what's actually worth playing.",
-      ca: 'Gaming a Yuuvi: jocs indie, guies, cultura de streamers i el que val la pena jugar.',
+      es: 'Videojuegos indie, guías y cultura de streamers: lo que vale la pena jugar en 2026.',
+      en: 'Indie games, guides and streamer culture: what is actually worth playing in 2026.',
+      ca: 'Videojocs indie, guies i cultura de streamers: el que val la pena jugar el 2026.',
     },
     intro: {
       es: 'Juegos que merecen tu tiempo, guías para no perderte y la cultura de streamers que los rodea. Sin hype vacío: lo que se juega y por qué.',
@@ -262,10 +284,15 @@ export const CATEGORIES: Record<
   tecnologia: {
     label: { es: 'Tecnología', en: 'Tech', ca: 'Tecnologia' },
     color: 'brand-lime',
+    seoTitle: {
+      es: 'Tecnología, apps y gadgets 2026 | Yuuvi',
+      en: 'Tech, apps and gadgets 2026 | Yuuvi',
+      ca: 'Tecnologia, apps i gadgets 2026 | Yuuvi',
+    },
     seoDescription: {
-      es: 'Tecnología en Yuuvi: apps, IA, gadgets y consejos para usar la tecnología sin que te use.',
-      en: 'Tech at Yuuvi: apps, AI, gadgets and tips to use technology without letting it use you.',
-      ca: 'Tecnologia a Yuuvi: apps, IA, gadgets i consells per fer servir la tecnologia sense que et faci servir.',
+      es: 'Apps, IA y gadgets para jóvenes: consejos de 2026 para usar la tecnología sin que te use.',
+      en: 'Apps, AI and gadgets for young readers: 2026 tips to use technology without letting it use you.',
+      ca: 'Apps, IA i gadgets per a joves: consells del 2026 per fer servir la tecnologia sense que et faci servir.',
     },
     intro: {
       es: 'Apps, IA, gadgets y trucos para usar la tecnología sin que te use. Probamos, comparamos y te contamos lo que de verdad importa.',
@@ -276,10 +303,15 @@ export const CATEGORIES: Record<
   musica: {
     label: { es: 'Música', en: 'Music', ca: 'Música' },
     color: 'brand-yellow',
+    seoTitle: {
+      es: 'Música, artistas y conciertos 2026 | Yuuvi',
+      en: 'Music, artists and concerts 2026 | Yuuvi',
+      ca: 'Música, artistes i concerts 2026 | Yuuvi',
+    },
     seoDescription: {
-      es: 'Música en Yuuvi: artistas, festivales, algoritmos y la cultura pop que suena.',
-      en: "Music at Yuuvi: artists, festivals, algorithms and the pop culture that's playing.",
-      ca: 'Música a Yuuvi: artistes, festivals, algoritmes i la cultura pop que sona.',
+      es: 'Artistas, festivales y cultura pop para jóvenes: la música que suena en 2026.',
+      en: 'Artists, festivals and pop culture for young readers: the music playing in 2026.',
+      ca: 'Artistes, festivals i cultura pop per a joves: la música que sona el 2026.',
     },
     intro: {
       es: 'Artistas, discos, festivales y la cultura pop que suena. Del algoritmo que te repite canciones a los conciertos que merecen el viaje.',

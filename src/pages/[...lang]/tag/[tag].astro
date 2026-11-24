@@ -3,7 +3,7 @@ import Layout from '@layouts/Layout.astro';
 import ArticleCard from '@components/ArticleCard.astro';
 import { getCollection } from 'astro:content';
 import { SITE, UI_TEXT, type Lang } from '../../../lib/site';
-import { articleUrl, collectTags, homeHref, LANGS, LANG_PREFIX, tagHref } from '../../../lib/articles';
+import { articleUrl, collectTags, homeHref, LANGS, LANG_PREFIX, tagHref, tagSlug } from '../../../lib/articles';
 
 interface Props {
   lang: Lang;
@@ -40,15 +40,36 @@ if (!entry) {
 }
 
 const canonicalURL = new URL(tagHref(entry.tag, lang), Astro.site!).toString();
-const title = `#${entry.tag} | Yuuvi`;
-const desctext: Record<Lang, string> = {
-  es: `Artículos sobre ${entry.tag}: guía actualizada con lo que está pasando.`,
-  en: `Articles about ${entry.tag}: an up-to-date guide to what is happening.`,
-  ca: `Articles sobre ${entry.tag}: guia actualitzada amb el que està passant.`,
-};
-const description = desctext[lang];
+const displayTag = entry.tag.charAt(0).toUpperCase() + entry.tag.slice(1);
+const title = `${displayTag} 2026 | Yuuvi`;
 const countLabel = `${entry.articles.length} ${entry.articles.length === 1 ? t.article : t.articles}`;
+const description: Record<Lang, string> = {
+  es: `Artículos sobre ${entry.tag}: ${countLabel.toLowerCase()} con guías, tendencias y claves de 2026.`,
+  en: `Articles about ${entry.tag}: ${countLabel.toLowerCase()} with guides, trends and key takeaways for 2026.`,
+  ca: `Articles sobre ${entry.tag}: ${countLabel.toLowerCase()} amb guies, tendències i claus del 2026.`,
+};
 const shouldNoindex = entry.articles.length < 4;
+const relatedTagsLabel: Record<Lang, string> = {
+  es: 'Etiquetas relacionadas',
+  en: 'Related tags',
+  ca: 'Etiquetes relacionades',
+};
+
+const allTags = collectTags(langArticles);
+const tagBySlug = new Map(allTags.map((tagEntry) => [tagEntry.slug, tagEntry]));
+const relatedCounts = new Map<string, number>();
+for (const article of entry.articles) {
+  for (const articleTag of article.data.tags) {
+    const slug = tagSlug(articleTag);
+    if (!slug || slug === tag) continue;
+    relatedCounts.set(slug, (relatedCounts.get(slug) ?? 0) + 1);
+  }
+}
+const relatedTags = [...relatedCounts.entries()]
+  .sort((a, b) => b[1] - a[1])
+  .map(([slug]) => tagBySlug.get(slug))
+  .filter((tagEntry): tagEntry is NonNullable<typeof tagEntry> => Boolean(tagEntry))
+  .slice(0, 6);
 
 const jsonLd = [
   {
@@ -57,7 +78,7 @@ const jsonLd = [
     '@id': `${canonicalURL}#collection`,
     url: canonicalURL,
     name: title,
-    description,
+    description: description[lang],
     inLanguage: lang,
     isPartOf: {
       '@type': 'WebSite',
@@ -93,7 +114,7 @@ const jsonLd = [
 
 <Layout
   title={title}
-  description={description}
+  description={description[lang]}
   lang={lang}
   canonicalURL={canonicalURL}
   jsonLd={jsonLd}
@@ -134,5 +155,23 @@ const jsonLd = [
         <ArticleCard article={a} lang={lang} size="md" />
       ))}
     </div>
+
+    {relatedTags.length > 0 && (
+      <section class="mt-10">
+        <h2 class="mb-3 text-lg font-black tracking-tight text-white">
+          {relatedTagsLabel[lang]}
+        </h2>
+        <div class="flex flex-wrap gap-2">
+          {relatedTags.map((related) => (
+            <a
+              href={tagHref(related.tag, lang)}
+              class="rounded-full border border-neutral-700 px-3 py-1 text-xs font-medium text-neutral-400 transition-colors hover:border-brand-pink hover:text-brand-pink"
+            >
+              #{related.tag}
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
   </div>
 </Layout>

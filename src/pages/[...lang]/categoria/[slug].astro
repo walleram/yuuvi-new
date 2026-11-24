@@ -45,7 +45,7 @@ const iconBySlug: Record<string, string> = {
   musica: '🎧',
 };
 
-const title = `${categoryMeta.label[lang]} | Yuuvi`;
+const title = categoryMeta.seoTitle[lang];
 const description = categoryMeta.seoDescription[lang];
 const canonicalURL = new URL(categoryHref(slug, lang), Astro.site!).toString();
 const alternates = [

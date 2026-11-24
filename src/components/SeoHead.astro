@@ -1,5 +1,5 @@
 ---
-import type { Lang } from '../lib/site';
+import { SITE, type Lang } from '../lib/site';
 
 interface ArticleMeta {
   publishedTime: string;
@@ -104,6 +104,8 @@ const otherLangs = hreflangLinks.filter((a) => a.hreflang !== 'x-default');
 
 {/* Twitter Card */}
 <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content={SITE.social.x.handle} />
+<meta name="twitter:creator" content={SITE.social.x.handle} />
 <meta name="twitter:title" content={title} />
 <meta name="twitter:description" content={description} />
 <meta name="twitter:image" content={ogUrl} />

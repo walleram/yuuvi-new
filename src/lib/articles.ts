@@ -140,3 +140,83 @@ export function collectAuthors(articles: Article[]): Map<string, Article[]> {
   }
   return map;
 }
+
+/**
+ * Artículos relacionados: primero los que comparten más tags y, a igualdad,
+ * los de la misma categoría y más recientes.
+ */
+export function rankRelated(articles: Article[], current: Article, limit = 3): Article[] {
+  const currentTags = new Set(current.data.tags.map((tag) => tag.toLowerCase()));
+
+  return articles
+    .filter((article) => article.id !== current.id)
+    .map((article) => {
+      const shared = article.data.tags.filter((tag) => currentTags.has(tag.toLowerCase())).length;
+      const sameCategory = article.data.category === current.data.category ? 1 : 0;
+      return { article, shared, score: shared * 2 + sameCategory };
+    })
+    .filter((entry) => entry.score > 0)
+    .sort(
+      (a, b) =>
+        b.score - a.score ||
+        b.shared - a.shared ||
+        b.article.data.pubDate.valueOf() - a.article.data.pubDate.valueOf(),
+    )
+    .slice(0, limit)
+    .map((entry) => entry.article);
+}
+
+export interface FaqItem {
+  question: string;
+  answer: string;
+}
+
+const FAQ_HEADING = /^##\s+(Preguntas frecuentes|Preguntes freqüents|Frequently asked questions|FAQ)\s*$/im;
+
+function cleanMarkdown(text: string): string {
+  return text
+    .replace(/\[([^\]]+)\]\([^)]*\)/g, '$1')
+    .replace(/[*_`>#]/g, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+/**
+ * Extrae las preguntas y respuestas de la sección "Preguntas frecuentes"
+ * para generar el JSON-LD de tipo FAQPage a partir del contenido visible.
+ */
+export function extractFaq(article: Article): FaqItem[] {
+  const body = article.body ?? '';
+  const headingIndex = body.search(FAQ_HEADING);
+  if (headingIndex === -1) return [];
+
+  const afterHeading = body.indexOf('\n', headingIndex);
+  const rest = body.slice(afterHeading === -1 ? body.length : afterHeading + 1);
+  const end = rest.search(/^##\s+/m);
+  const section = end === -1 ? rest : rest.slice(0, end);
+
+  const items: FaqItem[] = [];
+  let question: string | null = null;
+  let answerLines: string[] = [];
+
+  const flush = () => {
+    if (question && answerLines.length > 0) {
+      items.push({ question, answer: cleanMarkdown(answerLines.join(' ')) });
+    }
+  };
+
+  for (const rawLine of section.split(/\r?\n/)) {
+    const line = rawLine.trim();
+    const match = line.match(/^\*\*(.+?\?)\*\*$/);
+    if (match) {
+      flush();
+      question = cleanMarkdown(match[1]);
+      answerLines = [];
+    } else if (question && line) {
+      answerLines.push(line);
+    }
+  }
+  flush();
+
+  return items.filter((item) => item.question && item.answer).slice(0, 8);
+}
