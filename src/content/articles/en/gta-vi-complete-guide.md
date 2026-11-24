@@ -10,7 +10,7 @@ tags: ["gta vi", "gta 6", "rockstar", "vice city", "video games", "gaming"]
 author: "Yuuvi Editorial"
 coverImage: "src/assets/covers/cover-gta-vi-EN.webp"
 coverAlt: "GTA VI cover: a classic yellow pickup by the sea with palm trees, the city skyline and the text GTA VI"
-featured: false
+featured: true
 published: true
 ---
 

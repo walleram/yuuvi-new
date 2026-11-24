@@ -10,7 +10,7 @@ tags: ["gta vi", "gta 6", "rockstar", "vice city", "videojocs", "gaming"]
 author: "Redacció de Yuuvi"
 coverImage: "src/assets/covers/cover-gta-vi-CA.webp"
 coverAlt: "Portada de GTA VI: una pickup groga clàssica arran de mar, amb palmeres, la ciutat al fons i el text GTA VI"
-featured: false
+featured: true
 published: true
 ---
 
