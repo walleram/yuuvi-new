@@ -27,19 +27,42 @@ for (let i = 0; i < total; i++) {
   const article = articles[i];
   if (article) feed.push({ kind: 'article', article });
 }
+
+const VISIBLE = 4;
+const visibleFeed = feed.slice(0, VISIBLE);
+const hiddenFeed = feed.slice(VISIBLE);
 ---
 
 <section class="mx-auto max-w-7xl px-4 pt-10 sm:px-6" aria-label={t.home.sectionMedia}>
-  <details class="group">
-    <summary
-      class="flex cursor-pointer list-none items-center justify-between gap-4 rounded-2xl bg-neutral-900/60 px-4 py-3 ring-1 ring-neutral-800 transition-colors hover:ring-brand-pink/50 [&::-webkit-details-marker]:hidden"
-    >
-      <h2 class="flex items-center gap-2 text-xl font-black tracking-tight text-white sm:text-2xl">
-        <span class="inline-block h-5 w-1 rounded-full bg-gradient-to-b from-brand-pink to-brand-yellow"></span>
-        {t.home.sectionMedia}
-      </h2>
-      <span class="flex shrink-0 items-center gap-2 text-sm font-semibold text-neutral-300">
-        <span class="group-open:hidden">{t.home.expand}</span>
+  <div class="mb-5">
+    <h2 class="flex items-center gap-2 text-xl font-black tracking-tight text-white sm:text-2xl">
+      <span class="inline-block h-5 w-1 rounded-full bg-gradient-to-b from-brand-pink to-brand-yellow"></span>
+      {t.home.sectionMedia}
+    </h2>
+    <p class="mt-2 max-w-2xl text-sm text-neutral-400">{t.home.sectionMediaIntro}</p>
+  </div>
+
+  {/* Fila fija: scroll horizontal en móvil, una fila en escritorio */}
+  <div
+    class="flex snap-x snap-mandatory gap-4 overflow-x-auto pb-2 sm:grid sm:grid-cols-2 sm:overflow-visible sm:pb-0 lg:grid-cols-4"
+  >
+    {visibleFeed.map((item) => (
+      <div class="w-[78%] shrink-0 snap-start sm:w-auto sm:shrink">
+        {item.kind === 'video' ? (
+          <VideoCard video={item.video} lang={lang} />
+        ) : (
+          <ArticleCard article={item.article} lang={lang} />
+        )}
+      </div>
+    ))}
+  </div>
+
+  {hiddenFeed.length > 0 && (
+    <details class="group mt-5">
+      <summary
+        class="flex cursor-pointer list-none items-center justify-center gap-2 rounded-2xl bg-neutral-900/60 px-4 py-3 text-sm font-semibold text-neutral-300 ring-1 ring-neutral-800 transition-colors hover:ring-brand-pink/50 [&::-webkit-details-marker]:hidden"
+      >
+        <span class="group-open:hidden">{t.home.expand} ({hiddenFeed.length})</span>
         <span class="hidden group-open:inline">{t.home.collapse}</span>
         <svg
           viewBox="0 0 24 24"
@@ -53,13 +76,10 @@ for (let i = 0; i < total; i++) {
         >
           <path d="M6 9l6 6 6-6" />
         </svg>
-      </span>
-    </summary>
+      </summary>
 
-    <div class="mt-4">
-      <p class="mb-5 max-w-2xl text-sm text-neutral-400">{t.home.sectionMediaIntro}</p>
-      <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
-        {feed.map((item) =>
+      <div class="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        {hiddenFeed.map((item) =>
           item.kind === 'video' ? (
             <VideoCard video={item.video} lang={lang} />
           ) : (
@@ -67,6 +87,6 @@ for (let i = 0; i < total; i++) {
           )
         )}
       </div>
-    </div>
-  </details>
+    </details>
+  )}
 </section>
